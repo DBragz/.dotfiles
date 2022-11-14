@@ -1,19 +1,29 @@
 # .dotfiles
 
-## PowerShell
+Repository for setting up my virtual environments.
 
-Initial scripts to set up my PowerShell environment.
+## Windows
+
+Sets up my Windows environment.
 
 ### Prerequisites
 
 1. Open up PowerShell as **Administrator**.
 
-2. Run the following command.
+2. Run the following commands
 
-```shell
+```posh
 Set-ExecutionPolicy AllSigned
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 ```
+
+## Mac
+
+Sets up my Mac environment.
+
+## Linux
+
+Sets up my Linux environment.
 
 ## Authors
 
