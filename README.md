@@ -21,11 +21,6 @@ Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 .\.dotfiles\install.ps1
 ```
 
-Run the following commands
-
-```posh
-```
-
 ## Mac
 
 Sets up my Mac environment.
