@@ -6,15 +6,24 @@ Repository for setting up my virtual environments.
 
 Sets up my Windows environment.
 
-### Prerequisites
-
 1. Open up PowerShell as **Administrator**.
 
-2. Run the following commands
+2. Clone repository.
+
+3. Enable PowerShell scripts.
+
+4. Initialize environment.
 
 ```posh
+git clone git@github.com:DBragz/.dotfiles.git
 Set-ExecutionPolicy AllSigned
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+.\.dotfiles\install.ps1
+```
+
+Run the following commands
+
+```posh
 ```
 
 ## Mac
