@@ -10,14 +10,20 @@ Sets up my Windows environment.
 
 2. Clone repository.
 
+```posh
+git clone git@github.com:DBragz/.dotfiles.git
+```
+
 3. Enable PowerShell scripts.
+
+```posh
+Set-ExecutionPolicy AllSigned
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+```
 
 4. Initialize environment.
 
 ```posh
-git clone git@github.com:DBragz/.dotfiles.git
-Set-ExecutionPolicy AllSigned
-Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 .\.dotfiles\install.ps1
 ```
 
