@@ -12,3 +12,5 @@ set noswapfile
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+
+let mapleader = " "
