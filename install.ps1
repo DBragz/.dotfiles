@@ -12,5 +12,3 @@ Invoke-WebRequest -useb get.scoop.sh | Invoke-Expression
 
 scoop bucket add main
 scoop bucket add extras
-
-scoop install winget
