@@ -17,3 +17,5 @@ scoop install neovim
 
 Copy-Item .\.vimrc C:\Users\DBrags\AppData\Local\nvim\init.vim
 
+winget install -e --id Microsoft.PowerShell
+
