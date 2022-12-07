@@ -4,10 +4,14 @@
 #
 # Author: Daniel Ribeirinha-Braga
 #
-# Description: Initial installation script for my Linux environment.
+# Description: Initial installation script for my Unix environment.
 #
 
-echo "Running Linux Install Script!"
+echo "Running Unix Install Script!"
 
-cat /etc/os-release | grep "ID"
+if [ "$(uname)" == "Darwin" ]; then
+  echo "I am MacOS!"
+else
+  echo "I am Linux!"
+fi
 
