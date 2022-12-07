@@ -7,14 +7,7 @@
 # Description: Initial installation script for my Linux environment.
 #
 
-init() {
-  echo "Running Linux Install Script!"
-}
+echo "Running Linux Install Script!"
 
-oscheck() {
-  cat /etc/os-release
-}
-
-init
-oscheck
+cat /etc/os-release | grep "ID"
 
