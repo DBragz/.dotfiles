@@ -8,7 +8,7 @@
 #
 
 init () {
-  echo "Running Linux Install Script!";
+  echo "Running Linux Install Script!"
 }
 
 init
