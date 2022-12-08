@@ -19,7 +19,7 @@ OS="$(cat /etc/os-release | grep ID)"
 
 case $OS in 
   *"alpine"* )
-    /bin/sh alpine.sh
+    /bin/sh os/alpine.sh
     ;;
 esac
 
