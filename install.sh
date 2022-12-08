@@ -15,3 +15,11 @@ else
   echo "I am Linux!"
 fi
 
+OS="$(cat /etc/os-release | grep ID)"
+
+case $OS in 
+  *"alpine"* )
+    /bin/sh alpine.sh
+    ;;
+esac
+
