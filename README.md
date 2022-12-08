@@ -4,8 +4,6 @@ Repository for setting up my virtual environments.
 
 ## Windows
 
-Sets up my Windows environment.
-
 1. Download and install [**App Installer**](https://apps.microsoft.com/store/detail/app-installer/9NBLGGH4NNS1?hl=en-us&gl=us).
 
 2. Open up Windows PowerShell as **Administrator**.
@@ -27,20 +25,30 @@ Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 git clone git@github.com:DBragz/.dotfiles.git
 ```
 
-7. Initialize Chocolatey and Scoop package managers.
+7. Run initialization script.
 
 ```pwsh
-.\.dotfiles\install.ps1
+Set-Location .\.dotfiles\
+.\install.ps1
 ```
 
 ## Mac
 
-Sets up my Mac environment.
+1. Run initialization script.
+
+```sh
+./install.sh
+```
 
 ## Linux
 
-Sets up my Linux environment.
+1. Run initialization script.
+
+```sh
+./install.sh
+```
 
 ## Authors
 
 - [Daniel Ribeirinha-Braga](https://github.com/DBragz)
+

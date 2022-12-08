@@ -4,7 +4,7 @@
 #
 # Author: Daniel Ribeirinha-Braga
 #
-# Description: Initial installation script for my Unix environment.
+# Description: Installation script for my Unix environment.
 #
 
 echo "Running Unix Install Script!"

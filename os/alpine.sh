@@ -4,7 +4,7 @@
 #
 # Author: Daniel Ribeirinha-Braga
 #
-# Description: Initial installation script for my alpine environment.
+# Description: Installation script for my alpine environment.
 #
 
 echo "Running Alpine Install Script!"
