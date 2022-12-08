@@ -10,16 +10,16 @@
 echo "Running Unix Install Script!"
 
 if [ "$(uname)" == "Darwin" ]; then
-  echo "I am MacOS!"
+   /bin/sh os/mac.sh
 else
-  echo "I am Linux!"
+
+  OS="$(cat /etc/os-release | grep ID)"
+
+  case $OS in 
+    *"alpine"* )
+      /bin/sh os/alpine.sh
+      ;;
+  esac
+
 fi
-
-OS="$(cat /etc/os-release | grep ID)"
-
-case $OS in 
-  *"alpine"* )
-    /bin/sh os/alpine.sh
-    ;;
-esac
 
