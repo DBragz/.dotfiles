@@ -34,18 +34,38 @@ Set-Location .\.dotfiles\
 
 ## Mac
 
-1. Run initialization script.
+1. Clone repository.
 
-```sh
+```ash
+git clone git@github.com:DBragz/.dotfiles.git
+```
+
+2. Run initialization script.
+
+```zsh
+cd .dotfiles/
 ./install.sh
 ```
 
 ## Linux
 
-1. Run initialization script.
+1. Clone repository.
+
+```ash
+git clone git@github.com:DBragz/.dotfiles.git
+```
+
+2. Run initialization script.
+
+```ash
+cd .dotfiles/
+./install.sh
+```
+
+3. Source the `.ashrc` file.  
 
 ```sh
-./install.sh
+source $HOME/.ashrc
 ```
 
 ## Authors
