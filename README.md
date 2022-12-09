@@ -36,7 +36,7 @@ Set-Location .\.dotfiles\
 
 1. Clone repository.
 
-```ash
+```zsh
 git clone git@github.com:DBragz/.dotfiles.git
 ```
 
@@ -62,9 +62,11 @@ cd .dotfiles/
 ./install.sh
 ```
 
-3. Source the `.ashrc` file.  
+### Alpine
 
-```sh
+1. Source the `.ashrc` file.  
+
+```ash
 source $HOME/.ashrc
 ```
 
