@@ -9,7 +9,7 @@
 
 echo 'Running Unix Install Script!'
 
-if [ '$(uname)' == 'Darwin' ]; then
+if [ "$(uname)" == "Darwin" ]; then
    /bin/sh os/mac.sh
 else
 
