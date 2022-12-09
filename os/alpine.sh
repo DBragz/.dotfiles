@@ -12,4 +12,5 @@ echo 'Running Alpine Install Script!'
 echo 'alias r='$HOME/.dotfiles/ish+x.sh'' > $HOME/.ashrc
 echo 'alias u='$HOME/.dotfiles/ish-x.sh'' >> $HOME/.ashrc
 echo 'alias g="git status"' >> $HOME/.ashrc
+echo 'alias l="ls -la"' >> $HOME/.ashrc
 
