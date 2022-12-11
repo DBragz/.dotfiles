@@ -67,7 +67,7 @@ cd .dotfiles/
 1. Source the `.ashrc` file.  
 
 ```ash
-source $HOME/.ashrc
+source $HOME/.profile
 ```
 
 ## Authors
