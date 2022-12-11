@@ -3,7 +3,7 @@
 # Name: alpine.sh
 #
 # Author: Daniel Ribeirinha-Braga
-ý
+#
 # Description: Installation script for my alpine environment.
 #
 
