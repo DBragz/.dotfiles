@@ -11,3 +11,5 @@ echo 'Running Unix Uninstall Script!'
 
 rm $HOME/.profile
 
+apk del vim
+
