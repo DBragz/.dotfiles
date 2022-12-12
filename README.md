@@ -64,7 +64,7 @@ cd .dotfiles/
 
 ### Alpine
 
-1. Source the `.ashrc` file.  
+1. Source the `.profile` file.  
 
 ```ash
 source $HOME/.profile
