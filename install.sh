@@ -10,14 +10,14 @@
 echo 'Running Unix Install Script!'
 
 if [ "$(uname)" == "Darwin" ]; then
-   /bin/sh os/mac.sh
+   /bin/sh $HOME/.dotfiles/os/mac.sh
 else
 
   OS="$(cat /etc/os-release | grep ID)"
 
   case $OS in 
     *'alpine'* )
-      /bin/sh os/alpine.sh
+      /bin/sh $HOME/.dotfiles/os/alpine.sh
       ;;
   esac
 
