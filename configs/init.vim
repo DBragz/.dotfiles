@@ -14,10 +14,3 @@ set incsearch
 
 let mapleader = " "
 
-call plug#begin()
-"Plug 'preservim/NERDTree'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
-call plug#end()
-
-"let NERDTreeShowHidden=1
-
