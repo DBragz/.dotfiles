@@ -9,6 +9,8 @@
 
 echo 'Running Alpine Install Script!'
 
+rm /etc/motd
+
 cp $HOME/.dotfiles/configs/.profile $HOME/
 cp $HOME/.dotfiles/configs/motd /etc/
 cp $HOME/.dotfiles/configs/.vimrc $HOME/
