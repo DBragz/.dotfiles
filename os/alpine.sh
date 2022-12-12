@@ -10,6 +10,7 @@
 echo 'Running Alpine Install Script!'
 
 cp $HOME/.dotfiles/configs/.profile $HOME/
+cp $HOME/.dotfiles/configs/motd /etc/
 cp $HOME/.dotfiles/configs/.vimrc $HOME/
 
 if ! command -v vim &> /dev/null
