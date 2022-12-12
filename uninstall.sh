@@ -11,5 +11,5 @@ echo 'Running Unix Uninstall Script!'
 
 rm $HOME/.profile
 
-apk del vim
+apk del vim tmux mandoc man-pages
 
