@@ -15,8 +15,14 @@ cp $HOME/.dotfiles/configs/.vimrc $HOME/
 
 if ! command -v vim &> /dev/null
 then
-    echo 'ERROR: vim could not be found'
-    echo 'Installing vim'
-    apk add vim
+  echo 'ERROR: vim could not be found'
+  echo 'Installing vim'
+  apk add vim
 fi
 
+if ! command -v tmux &> /dev/null
+then
+  echo 'ERROR: tmux could not be found'
+  echo 'Installing tmux'
+  apk add tmux
+fi
