@@ -26,3 +26,11 @@ then
   echo 'Installing tmux'
   apk add tmux
 fi
+
+if ! command -v man &> /dev/null
+then
+  echo 'ERROR: man could not be found'
+  echo 'Installing man'
+  apk add mandoc man-pages
+fi
+
