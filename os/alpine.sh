@@ -36,6 +36,13 @@ then
   apk add mandoc man-pages
 fi
 
+if ! command -v fzf  &> /dev/null
+then
+  echo 'ERROR: fzf could not be found'
+  echo 'Installing fzf'
+  apk add fzf
+fi
+
 if ! command -v starship &> /dev/null
 then
   echo 'ERROR: starship could not be found'
