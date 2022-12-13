@@ -9,7 +9,11 @@
 
 echo 'Running Unix Uninstall Script!'
 
-rm $HOME/.profile
+OS="$(cat /etc/os-release | grep ID)"
 
-apk del vim tmux mandoc man-pages
+case $OS in 
+  *'alpine'* )
+    /bin/sh $HOME/.dotfiles/os/alpine_uninstall.sh
+    ;;
+esac
 
