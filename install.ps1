@@ -15,7 +15,7 @@ scoop bucket add extras
 
 winget install -e --id Microsoft.PowerShell
 
-scoop install neovim starship
+scoop install starship fzf neovim
 
 Copy-Item $env:HOMEPATH\.dotfiles\Microsoft.PowerShell_profile.ps1 $PROFILE
 
