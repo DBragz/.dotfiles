@@ -15,7 +15,11 @@ scoop bucket add extras
 
 winget install -e --id Microsoft.PowerShell
 
-scoop install starship fzf neovim
+scoop install clink starship fzf neovim
+
+New-Item -Type Directory $env:LOCALAPPDATA\clink
+
+Copy-Item $env:HOMEPATH\.dotfiles\configs\starship.lua $env:LOCALAPPDATA\clink\
 
 Copy-Item $env:HOMEPATH\.dotfiles\Microsoft.PowerShell_profile.ps1 $PROFILE
 
