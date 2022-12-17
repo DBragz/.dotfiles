@@ -23,3 +23,5 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\starship.lua $env:LOCALAPPDATA\clink\
 
 Copy-Item $env:HOMEPATH\.dotfiles\Microsoft.PowerShell_profile.ps1 $PROFILE
 
+Copy-Item $env:HOMEPATH\.dotfiles\configs\init.lua $env:LOCALAPPDATA\nvim\
+
