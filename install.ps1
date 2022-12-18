@@ -17,6 +17,12 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\plugins.lua $env:LOCALAPPDATA\nvim\lua
 
 git clone https://github.com/wbthomason/packer.nvim $env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim
 
+if(-not ((Get-Host).Version.Major -eq 7)){
+	Write-Host "Error: PowerShell 7 could not be found"
+	Write-Host "Installing PowerShell 7"
+	winget install -e --id Microsoft.PowerShell
+}
+
 if(-not (Get-Command choco -errorAction SilentlyContinue)){
 	Write-Host "Error: choco could not be found"
 	Write-Host "Installing chocolately"
@@ -29,12 +35,6 @@ if(-not (Get-Command scoop -errorAction SilentlyContinue)){
 	Invoke-WebRequest -useb get.scoop.sh | Invoke-Expression
 	scoop bucket add main
 	scoop bucket add extras
-}
-
-if(-not ((Get-Host).Version.Major -eq 7)){
-	Write-Host "Error: PowerShell 7 could not be found"
-	Write-Host "Installing PowerShell 7"
-	winget install -e --id Microsoft.PowerShell
 }
 
 if(-not (Get-Command starship -errorAction silentlyContinue)){
