@@ -6,7 +6,6 @@
 	Author: Daniel Ribeirinha-Braga - dmrbraga@gmail.com
 #>
 
-
 New-Item -Type Directory -Force $env:LOCALAPPDATA\clink
 New-Item -Type Directory -Force $env:LOCALAPPDATA\nvim\lua\
 
