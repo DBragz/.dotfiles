@@ -15,17 +15,13 @@ Set-ExecutionPolicy AllSigned
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 ```
 
-4. Close Windows PowerShell.
-
-5. Open up another Windows PowerShell not as **Administrator**.
-
-6. Clone repository.
+4. Clone repository.
 
 ```pwsh
 git clone git@github.com:DBragz/.dotfiles.git
 ```
 
-7. Run initialization script.
+5. Run initialization script.
 
 ```pwsh
 Set-Location .\.dotfiles\
