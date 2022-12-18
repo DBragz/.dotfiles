@@ -27,5 +27,4 @@ winget install -e --id Microsoft.PowerShell
 
 scoop install clink starship fzf neovim
 
-git clone https://github.com/wbthomason/packer.nvim $env:LOCALAPPDATA\nvim\lua\plugins\packer\
-
+git clone https://github.com/wbthomason/packer.nvim $env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim
