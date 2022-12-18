@@ -17,8 +17,6 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\plugins.lua $env:LOCALAPPDATA\nvim\lua
 
 git clone https://github.com/wbthomason/packer.nvim $env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim
 
-choco install clink-maintained -y --force
-
 if(-not (Get-Command choco -errorAction SilentlyContinue)){
 	Write-Host "Error: choco could not be found"
 	Write-Host "Installing chocolately"
@@ -56,4 +54,6 @@ if(-not (Get-Command neovim -errorAction silentlyContinue)){
 	Write-Host "Installing neovim"
 	scoop install neovim
 }
+
+choco install clink-maintained -y --force
 
