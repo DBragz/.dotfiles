@@ -4,4 +4,4 @@ print("      /,    /`)")
 print("      \\\\\"--\\\\")
 
 require('remap')
-
+require('plugins')
