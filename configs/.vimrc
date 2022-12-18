@@ -12,6 +12,5 @@ set undofile
 set incsearch
 
 let mapleader = " "
-map <leader>t :E<CR>
-
+map <leader>e :E<CR>
 
