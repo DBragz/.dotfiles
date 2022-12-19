@@ -28,6 +28,12 @@ Set-Location .\.dotfiles\
 .\install.ps1
 ```
 
+6. Click **Y** then **Enter** to install PowerShell 7.
+
+7. Right click **PowerShell** and go to **Properties**. It is important to note that the following steps can also be used in **Command Prompt**.
+
+8. Select the **Fonts** tab and select **MesloLGL NFM** and click **OK**.
+
 ## Mac
 
 1. Clone repository.
