@@ -8,6 +8,7 @@
 
 New-Item -Type Directory -Force $env:LOCALAPPDATA\clink
 New-Item -Type Directory -Force $env:LOCALAPPDATA\nvim\lua\
+New-Item -Type File -Force $Profile
 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\Microsoft.PowerShell_profile.ps1 $PROFILE
 Copy-Item $env:HOMEPATH\.dotfiles\configs\starship.lua $env:LOCALAPPDATA\clink\
