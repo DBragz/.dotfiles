@@ -37,6 +37,12 @@ if(-not (Get-Command scoop -errorAction SilentlyContinue)){
 	scoop bucket add extras
 }
 
+if(-not (Get-Command oh-my-posh -errorAction SilentlyContinue)){
+	Write-Host "Error: oh-my-posh could not be found"
+	Write-Host "Installing oh-my-posh"
+	winget install JanDeDobbeleer.OhMyPosh -s winget
+}
+
 if(-not (Get-Command starship -errorAction silentlyContinue)){
 	Write-Host "Error: starship could not be found"
 	Write-Host "Installing starship"
@@ -56,4 +62,10 @@ if(-not (Get-Command neovim -errorAction silentlyContinue)){
 }
 
 choco install clink-maintained -y --force
+
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Machine)
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Process)
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::User)
+
+oh-my-posh font install Meslo
 
