@@ -1,7 +1,7 @@
 <# .SYNOPSIS
 	Windows Profile Settings
 .DESCRIPTION
-  My default Windows PowerShell settings.
+	My default Windows PowerShell settings.
 .NOTES
 	Author: Daniel Ribeirinha-Braga - dmrbraga@gmail.com
 #>
