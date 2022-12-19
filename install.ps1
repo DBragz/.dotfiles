@@ -16,10 +16,16 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\plugins.lua $env:LOCALAPPDATA\nvim\lua
 
 git clone https://github.com/wbthomason/packer.nvim $env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim
 
-if((Get-Host).Version.Major -eq 5){
-	Write-Host "Error: PowerShell 5 found requires PowerShell 7"
+if(-not (Get-Command pwsh --errorAction SilentlyContinue){
+	Write-Host "Error: PowerShell 7 not found"
 	Write-Host "Installing PowerShell 7"
 	winget install -e --id Microsoft.PowerShell
+}
+
+if(-not (Get-Command wt -errorAction silentlyContinue)){
+	Write-Host "Error: Windows Terminal could not be found"
+	Write-Host "Installing Windows Terminal"
+	scoop install windows-terminal
 }
 
 if(-not (Get-Command choco -errorAction SilentlyContinue)){
