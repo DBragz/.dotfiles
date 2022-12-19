@@ -28,7 +28,7 @@ Set-Location .\.dotfiles\
 .\install.ps1
 ```
 
-6. Click Y to install PowerShell 7.
+6. Click **Y** then **Enter** to install PowerShell 7.
 
 7. Right click **PowerShell** and go to **Properties**. **Note:** The following steps can also be used in **Command Prompt**.
 
