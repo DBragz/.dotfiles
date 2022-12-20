@@ -30,6 +30,7 @@
             "keys": "alt+shift+d"
         }
     ],
+    "defaultProfile": "{fc1b0c19-b509-4895-8870-96a31cec6774}",
     "profiles":
     {
       "defaults":
@@ -37,7 +38,26 @@
         "font":
         {
           "face": "MesloLGS NF"
+        },
+        "startingDirectory": "%USERPROFILE%"
+      },
+      "list":
+      [
+        {
+          "guid": "{7ab673f8-cd15-46d5-b157-e3b7c46ede7e}",
+          "name": "Command Prompt",
+          "commandline": "%SYSTEMROOT%\\System32\\cmd.exe"
+        },
+        {
+          "guid": "{c4da8eb5-d03f-4473-9651-f798072f211c}",
+          "name": "Windows PowerShell",
+          "commandline": "%SYSTEMROOT%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+        },
+        {
+          "guid": "{fc1b0c19-b509-4895-8870-96a31cec6774}",
+          "name": "PowerShell",
+          "commandline": "%ProgramFiles%\\PowerShell\\7\\pwsh.exe"
         }
-      }
+      ]
     }
 }
