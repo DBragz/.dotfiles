@@ -2,6 +2,7 @@
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "theme": "dark",
+    "defaultProfile": "{fc1b0c19-b509-4895-8870-96a31cec6774}",
     "actions": 
     [
         {
@@ -30,7 +31,6 @@
             "keys": "alt+shift+d"
         }
     ],
-    "defaultProfile": "{fc1b0c19-b509-4895-8870-96a31cec6774}",
     "profiles":
     {
       "defaults":
