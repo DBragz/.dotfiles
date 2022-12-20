@@ -37,7 +37,7 @@ Set-Location .\.dotfiles\
 
 8. Right click **PowerShell** and go to **Properties**. It is important to note that the following steps can also be used in **Command Prompt** and **Windows Terminal**.
 
-9. Select the **Fonts** tab and select **MesloLGL NFM** and click **OK**.
+9. Select the **Fonts** tab and select **MesloLGS NF**, if not available select **MesloLGS NFM**, and click **OK**.
 
 ## Mac
 
