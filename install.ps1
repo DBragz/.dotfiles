@@ -11,22 +11,23 @@ New-Item -Type Directory -Force $env:LOCALAPPDATA\nvim\lua\
 New-Item -Type File -Force $Profile
 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\Microsoft.PowerShell_profile.ps1 $PROFILE
-Copy-Item $env:HOMEPATH\.dotfiles\settings.json $env:LOCALAPPDATA\Packages\Microsoft.4297127D64EC6_8wekyb3d8bbwe\LocalState\ 
+Copy-Item $env:HOMEPATH\.dotfiles\configs\settings.json $env:LOCALAPPDATA\Microsoft\"Windows Terminal" 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\starship.lua $env:LOCALAPPDATA\clink\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\init.lua $env:LOCALAPPDATA\nvim\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\remap.lua $env:LOCALAPPDATA\nvim\lua\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\plugins.lua $env:LOCALAPPDATA\nvim\lua\
+
 git clone https://github.com/wbthomason/packer.nvim $env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim
 
 choco install clink-maintained -y --force
 
-if(-not (Get-Command pwsh --errorAction SilentlyContinue){
+if(-not (Get-Command pwsh -errorAction SilentlyContinue)){
 	Write-Host "Error: PowerShell 7 not found"
 	Write-Host "Installing PowerShell 7"
 	winget install -e --id Microsoft.PowerShell
 }
 
-if(-not (Get-Command wt -errorAction silentlyContinue)){
+if(-not (Get-Command wt -errorAction SilentlyContinue)){
 	Write-Host "Error: Windows Terminal could not be found"
 	Write-Host "Installing Windows Terminal"
 	scoop install windows-terminal
