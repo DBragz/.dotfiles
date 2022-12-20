@@ -6,6 +6,7 @@ set nu
 set rnu
 set udir
 set noswapfile
+set undofile
 set undodir=~/.vim/undodir
 set incsearch
 
