@@ -13,5 +13,8 @@ set exrc
 set hidden
 
 let mapleader = " "
+let maplocalleader = "g"
+
 map <leader>e :E<CR>
+map <localleader>e :E<CR>
 
