@@ -8,7 +8,7 @@
 
 New-Item -Type Directory -Force $env:LOCALAPPDATA\clink
 New-Item -Type Directory -Force $env:LOCALAPPDATA\nvim\lua\
-New-Item -Type File -Force $Profile
+New-Item -Type File -Force $PROFILE
 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\Microsoft.PowerShell_profile.ps1 $PROFILE
 Copy-Item $env:HOMEPATH\.dotfiles\configs\settings.json $env:LOCALAPPDATA\Microsoft\"Windows Terminal" 
