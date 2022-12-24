@@ -8,6 +8,7 @@
 
 New-Item -Type Directory -Force $env:LOCALAPPDATA\clink
 New-Item -Type Directory -Force $env:LOCALAPPDATA\nvim\lua\
+New-Item -Type Directory -Force $env:LOCALAPPDATA\nvim\after\
 New-Item -Type File -Force $PROFILE
 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\Microsoft.PowerShell_profile.ps1 $PROFILE
@@ -16,6 +17,7 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\starship.lua $env:LOCALAPPDATA\clink\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\init.lua $env:LOCALAPPDATA\nvim\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\remap.lua $env:LOCALAPPDATA\nvim\lua\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\plugins.lua $env:LOCALAPPDATA\nvim\lua\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\telescope.lua $env:LOCALAPPDATA\nvim\lua\after\
 
 git clone https://github.com/wbthomason/packer.nvim $env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim
 
