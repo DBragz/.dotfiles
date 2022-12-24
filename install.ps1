@@ -8,7 +8,7 @@
 
 New-Item -Type Directory -Force $env:LOCALAPPDATA\clink
 New-Item -Type Directory -Force $env:LOCALAPPDATA\nvim\lua\
-New-Item -Type Directory -Force $env:LOCALAPPDATA\nvim\after\
+New-Item -Type Directory -Force $env:LOCALAPPDATA\nvim\lua\after\
 New-Item -Type File -Force $PROFILE
 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\Microsoft.PowerShell_profile.ps1 $PROFILE
