@@ -6,38 +6,42 @@ Repository for setting up my virtual environments.
 
 1. Download and install [**App Installer**](https://apps.microsoft.com/store/detail/app-installer/9NBLGGH4NNS1?hl=en-us&gl=us).
 
-2. Open up Windows PowerShell as **Administrator**.
+2. Click the **Windows** key and search and then click on **Developer Settings**.
 
-3. Enable PowerShell scripts.
+3. Under **Developer Mode** turn **On** the setting **Install apps from any source, including loose files.**
+
+4. Open up Windows PowerShell as **Administrator**.
+
+5. Enable PowerShell scripts.
 
 ```pwsh
 Set-ExecutionPolicy AllSigned
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 ```
-4. Change directory to **HOMEPATH**
+6. Change directory to **HOMEPATH**
 
 ```pwsh
 Set-Location $env:HOMEPATH
 ```
 
-5. Clone repository.
+7. Clone repository.
 
 ```pwsh
 git clone git@github.com:DBragz/.dotfiles.git
 ```
 
-6. Run initialization script.
+8. Run initialization script.
 
 ```pwsh
 Set-Location .\.dotfiles\
 .\install.ps1
 ```
 
-7. Click **Y** then **Enter** to install PowerShell 7.
+9. Click **Y** then **Enter** to install PowerShell 7.
 
-8. Right click **PowerShell** and go to **Properties**. It is important to note that the following steps can also be used in **Command Prompt** and **Windows Terminal**.
+10. Right click **PowerShell** and go to **Properties**. It is important to note that the following steps can also be used in **Command Prompt** and **Windows Terminal**.
 
-9. Select the **Fonts** tab and select **MesloLGS NF**, if not available select **MesloLGS NFM**, and click **OK**.
+11. Select the **Fonts** tab and select **MesloLGS NF**, if not available select **MesloLGS NFM**, and click **OK**.
 
 ## Mac
 
@@ -58,13 +62,13 @@ cd .dotfiles/
 
 1. Clone repository.
 
-```ash
+```sh
 git clone git@github.com:DBragz/.dotfiles.git
 ```
 
 2. Run initialization script.
 
-```ash
+```sh
 cd .dotfiles/
 ./install.sh
 ```
