@@ -9,7 +9,8 @@ return require('packer').startup {
 		}
 		use { 
 			'https://github.com/nvim-telescope/telescope.nvim.git',
-			as = 'nvim-telescop/telescope.nvim', tag = '0.1.0',
+			as = 'nvim-telescope/telescope.nvim', tag = '0.1.0',
 		}
 	end
 }
+
