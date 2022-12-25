@@ -15,6 +15,7 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\Microsoft.PowerShell_profile.ps1 $PROF
 Copy-Item $env:HOMEPATH\.dotfiles\configs\settings.json $env:LOCALAPPDATA\Microsoft\"Windows Terminal" 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\starship.lua $env:LOCALAPPDATA\clink\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\init.lua $env:LOCALAPPDATA\nvim\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\options.lua $env:LOCALAPPDATA\nvim\lua\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\remap.lua $env:LOCALAPPDATA\nvim\lua\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\plugins.lua $env:LOCALAPPDATA\nvim\lua\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\telescope.lua $env:LOCALAPPDATA\nvim\lua\after\
