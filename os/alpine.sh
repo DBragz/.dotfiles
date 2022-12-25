@@ -50,3 +50,14 @@ then
   apk add starship
 fi
 
+if ! command -v curl &> /dev/null
+then
+  echo 'Error: curl could not be found'
+  echo 'Installing curl'
+  apk add curl
+fi
+
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+
