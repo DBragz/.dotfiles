@@ -7,5 +7,5 @@
 # Description: Installation script for my Mac environment.
 #
 
-echo "Running Mac Install Script!"
+echo "Completed Mac Install Script!"
 

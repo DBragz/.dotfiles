@@ -7,8 +7,6 @@
 # Description: Installation script for my alpine environment.
 #
 
-echo 'Running Alpine Install Script!'
-
 rm /etc/motd
 
 cp $HOME/.dotfiles/configs/.profile $HOME/
@@ -59,5 +57,8 @@ fi
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+
+echo 'Completed Alpine Install Script!'
 
 
