@@ -28,5 +28,6 @@ endif
 call plug#begin()
   Plug 'junegunn/vim-plug'
   Plug 'tpope/vim-fugitive'
+  Plug 'scrooloose/nerdtree'
 call plug#end()
 
