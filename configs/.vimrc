@@ -29,6 +29,7 @@ call plug#begin()
   Plug 'junegunn/vim-plug'
   Plug 'tpope/vim-fugitive'
   Plug 'scrooloose/nerdtree'
+  Plug 'scrooloose/syntastic'
 call plug#end()
 
 nnoremap <leader>n :NERDTreeFocus<CR>
