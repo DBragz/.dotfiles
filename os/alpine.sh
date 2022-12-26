@@ -13,6 +13,12 @@ cp $HOME/.dotfiles/configs/.profile $HOME/
 cp $HOME/.dotfiles/configs/motd /etc/
 cp $HOME/.dotfiles/configs/.vimrc $HOME/
 
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+cd ~/.vim/bundle && \
+  git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
+
 if ! command -v vim &> /dev/null
 then
   echo 'Error: vim could not be found'
