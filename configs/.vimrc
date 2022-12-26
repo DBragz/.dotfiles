@@ -1,3 +1,5 @@
+colorscheme murphy
+
 set ts=2 sts=2 shiftwidth=2
 set et
 set si
@@ -16,8 +18,8 @@ set hidden
 let mapleader = " "
 let maplocalleader = "g"
 
-map <leader>e :E<CR>
-map <localleader>e :E<CR>
+map <leader>e :Ex<CR>
+map <localleader>e :Ex<CR>
 
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
