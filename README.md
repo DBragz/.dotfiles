@@ -75,10 +75,20 @@ cd .dotfiles/
 
 ### Alpine
 
+**Note:** These steps continue after running through the **Linux** section.
+
 1. Source the `.profile` file.  
 
 ```ash
 source $HOME/.profile
+```
+
+2. Open Vim and install Vim plugins.
+
+
+```ash
+vim
+:PlugInstall
 ```
 
 ## Authors

@@ -7,13 +7,17 @@
 # Description: Installation script for my alpine environment.
 #
 
-echo 'Running Alpine Install Script!'
-
 rm /etc/motd
 
 cp $HOME/.dotfiles/configs/.profile $HOME/
 cp $HOME/.dotfiles/configs/motd /etc/
 cp $HOME/.dotfiles/configs/.vimrc $HOME/
+
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+cd ~/.vim/bundle && \
+  git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
 
 if ! command -v vim &> /dev/null
 then
@@ -59,5 +63,8 @@ fi
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+
+echo 'Completed Alpine Install Script!'
 
 

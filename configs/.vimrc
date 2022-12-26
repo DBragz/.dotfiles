@@ -1,3 +1,5 @@
+colorscheme murphy
+
 set ts=2 sts=2 shiftwidth=2
 set et
 set si
@@ -16,8 +18,8 @@ set hidden
 let mapleader = " "
 let maplocalleader = "g"
 
-map <leader>e :E<CR>
-map <localleader>e :E<CR>
+map <leader>e :Ex<CR>
+map <localleader>e :Ex<CR>
 
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -27,7 +29,28 @@ endif
 
 call plug#begin()
   Plug 'junegunn/vim-plug'
-  Plug 'tpope/vim-fugitive'
   Plug 'scrooloose/nerdtree'
+  Plug 'tpope/vim-fugitive'
+  Plug 'scrooloose/syntastic'
 call plug#end()
+
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+autocmd VimEnter * NERDTree | wincmd p
+
+let NERDTreeShowHidden = 1
+
+execute pathogen#infect()
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
