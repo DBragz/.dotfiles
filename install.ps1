@@ -19,6 +19,7 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\options.lua $env:LOCALAPPDATA\nvim\lua
 Copy-Item $env:HOMEPATH\.dotfiles\configs\remap.lua $env:LOCALAPPDATA\nvim\lua\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\plugins.lua $env:LOCALAPPDATA\nvim\lua\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\telescope.lua $env:LOCALAPPDATA\nvim\lua\after\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\colors.lua $env:LOCALAPPDATA\nvim\lua\after\
 
 git clone https://github.com/wbthomason/packer.nvim $env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim
 
