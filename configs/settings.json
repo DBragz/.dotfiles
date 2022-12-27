@@ -41,6 +41,8 @@
         {
           "face": "MesloLGS NF"
         },
+        "opacity": 0,
+        "useAcrylic": true,
         "startingDirectory": "%USERPROFILE%"
       },
       "list":
