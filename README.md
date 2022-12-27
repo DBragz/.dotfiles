@@ -75,7 +75,7 @@ cd .dotfiles/
 
 ### Alpine
 
-**Note:** These steps continue after running through the **Linux** section.
+**Note:** These steps continue after running through the [Linux](https://github.com/DBragz/.dotfiles#linux) section.
 
 1. Source the `.profile` file.  
 
