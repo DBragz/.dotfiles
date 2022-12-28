@@ -7,7 +7,7 @@
 # Description: Installation script for my Unix environment.
 #
 
-echo 'Running Unix Install Script!'
+echo "Running Unix Install Script!"
 
 if [ "$(uname)" == "Darwin" ]; then
    /bin/sh $HOME/.dotfiles/os/mac.sh
@@ -16,7 +16,7 @@ else
   OS="$(cat /etc/os-release | grep ID)"
 
   case $OS in 
-    *'alpine'* )
+    *"alpine"* )
       /bin/sh $HOME/.dotfiles/os/alpine.sh
       ;;
   esac
