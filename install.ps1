@@ -39,13 +39,13 @@ if(-not (Get-Command wt -errorAction SilentlyContinue)){
 
 if(-not (Get-Command choco -errorAction SilentlyContinue)){
 	Write-Host "Error: choco could not be found"
-	Write-Host "Installing chocolately"
+	Write-Host "Installing Chocolately"
 	Invoke-WebRequest -useb chocolatey.org/install.ps1 | Invoke-Expression
 }
 
 if(-not (Get-Command scoop -errorAction SilentlyContinue)){
 	Write-Host "Error: scoop could not be found"
-	Write-Host "Installing scoop"
+	Write-Host "Installing Scoop"
 	Invoke-WebRequest -useb get.scoop.sh | Invoke-Expression
 	scoop bucket add main
 	scoop bucket add extras
@@ -53,13 +53,13 @@ if(-not (Get-Command scoop -errorAction SilentlyContinue)){
 
 if(-not (Get-Command oh-my-posh -errorAction SilentlyContinue)){
 	Write-Host "Error: oh-my-posh could not be found"
-	Write-Host "Installing oh-my-posh"
+	Write-Host "Installing Oh My Posh"
 	winget install JanDeDobbeleer.OhMyPosh -s winget
 }
 
 if(-not (Get-Command starship -errorAction silentlyContinue)){
 	Write-Host "Error: starship could not be found"
-	Write-Host "Installing starship"
+	Write-Host "Installing Starship"
 	scoop install starship
 }
 
@@ -71,7 +71,7 @@ if(-not (Get-Command fzf -errorAction silentlyContinue)){
 
 if(-not (Get-Command nvim -errorAction silentlyContinue)){
 	Write-Host "Error: neovim could not be found"
-	Write-Host "Installing neovim"
+	Write-Host "Installing Neovim"
 	scoop install neovim
 }
 
