@@ -28,10 +28,10 @@ if empty(glob(data_dir . "/autoload/plug.vim"))
 endif
 
 call plug#begin()
-  Plug "junegunn/vim-plug"
-  Plug "scrooloose/nerdtree"
-  Plug "tpope/vim-fugitive"
-  Plug "scrooloose/syntastic"
+  Plug 'junegunn/vim-plug'
+  Plug 'scrooloose/nerdtree'
+  Plug 'tpope/vim-fugitive'
+  Plug 'scrooloose/syntastic'
 call plug#end()
 
 nnoremap <leader>n :NERDTreeFocus<CR>
