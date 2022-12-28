@@ -39,10 +39,6 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
-autocmd VimEnter * NERDTree | wincmd p
-
-let NERDTreeShowHidden = 1
-
 execute pathogen#infect()
 
 set statusline+=%#warningmsg#
