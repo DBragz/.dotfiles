@@ -4,5 +4,5 @@
 -- Author: Daniel Ribeirinha-Braga
 --
 
-load(io.popen('starship init cmd'):read("*a"))()
+load(io.popen("starship init cmd"):read("*a"))()
 

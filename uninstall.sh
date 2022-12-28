@@ -7,12 +7,12 @@
 # Description: Uninstallation script for my Unix environment.
 #
 
-echo 'Running Unix Uninstall Script!'
+echo "Running Unix Uninstall Script!"
 
 OS="$(cat /etc/os-release | grep ID)"
 
 case $OS in 
-  *'alpine'* )
+  *"alpine"* )
     /bin/sh $HOME/.dotfiles/os/alpine_uninstall.sh
     ;;
 esac
