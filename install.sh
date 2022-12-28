@@ -7,7 +7,7 @@
 # Description: Installation script for my Unix environment.
 #
 
-echo "Running Unix Install Script!"
+echo "Running Unix install script!"
 
 if [ "$(uname)" == "Darwin" ]; then
    /bin/sh $HOME/.dotfiles/os/mac.sh

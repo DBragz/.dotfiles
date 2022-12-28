@@ -6,6 +6,8 @@
 	Author: Daniel Ribeirinha-Braga - dmrbraga@gmail.com
 #>
 
+Write-Host "Running Windows uninstall script"
+
 Remove-Item -Type Directory -Force -Recurse $env:LOCALAPPDATA\clink
 Remove-Item -Type Directory -Force -Recurse $env:LOCALAPPDATA\nvim\lua\
 Remove-Item -Type File -Force $PROFILE
@@ -53,3 +55,4 @@ if(Get-Command nvim -errorAction silentlyContinue){
 	scoop install neovim
 }
 
+Write-Host "Completed Windows uninstall script"

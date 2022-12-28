@@ -7,7 +7,7 @@
 # Description: Uninstallation script for my Unix environment.
 #
 
-echo "Running Unix Uninstall Script!"
+echo "Running Unix uninstall script!"
 
 OS="$(cat /etc/os-release | grep ID)"
 

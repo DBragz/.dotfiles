@@ -7,5 +7,5 @@
 # Description: Uninstallation script for my Mac environment.
 #
 
-echo "Completed Mac Uninstall Script!"
+echo "Completed Mac uninstall script!"
 

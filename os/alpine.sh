@@ -22,21 +22,21 @@ cd ~/.vim/bundle && \
 if ! command -v vim &> /dev/null
 then
   echo "Error: vim could not be found"
-  echo "Installing vim"
+  echo "Installing Vim"
   apk add vim
 fi
 
 if ! command -v tmux &> /dev/null
 then
   echo "Error: tmux could not be found"
-  echo "Installing tmux"
+  echo "Installing Tmux"
   apk add tmux
 fi
 
 if ! command -v man &> /dev/null
 then
   echo "Error: man could not be found"
-  echo "Installing man"
+  echo "Installing mandoc"
   apk add mandoc man-pages
 fi
 
@@ -50,19 +50,19 @@ fi
 if ! command -v starship &> /dev/null
 then
   echo "Error: starship could not be found"
-  echo "Installing starship"
+  echo "Installing Starship"
   apk add starship
 fi
 
 if ! command -v curl &> /dev/null
 then
   echo "Error: curl could not be found"
-  echo "Installing curl"
+  echo "Installing cURL"
   apk add curl
 fi
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-echo "Completed Alpine Install Script!"
+echo "Completed Alpine install script!"
 

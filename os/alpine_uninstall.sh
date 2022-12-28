@@ -11,5 +11,5 @@ rm $HOME/.profile
 
 apk del vim tmux mandoc man-pages fzf starship curl
 
-echo "Completed Alpine Uninstall Script!"
+echo "Completed Alpine uninstall script!"
 

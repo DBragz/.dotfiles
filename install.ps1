@@ -6,6 +6,8 @@
 	Author: Daniel Ribeirinha-Braga - dmrbraga@gmail.com
 #>
 
+Write-Host "Running Windows install script"
+
 New-Item -Type Directory -Force $env:LOCALAPPDATA\clink
 New-Item -Type Directory -Force $env:LOCALAPPDATA\nvim\lua\
 New-Item -Type Directory -Force $env:LOCALAPPDATA\nvim\after\plugin\
@@ -76,4 +78,6 @@ if(-not (Get-Command nvim -errorAction silentlyContinue)){
 }
 
 oh-my-posh font install Meslo
+
+Write-Host "Completed Windows install script"
 
