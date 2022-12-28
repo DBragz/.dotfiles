@@ -17,6 +17,7 @@ cp $HOME/.dotfiles/configs/remap.lua $HOME/.config/nvim/lua/
 cp $HOME/.dotfiles/configs/plugins.lua $HOME/.config/nvim/lua/
 cp $HOME/.dotfiles/configs/telescope.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/colors.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/treesitter.lua $HOME/.config/nvim/after/plugin/
 
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
