@@ -43,6 +43,15 @@ Set-Location .\.dotfiles\
 
 11. Select the **Fonts** tab and select **MesloLGS NF**, if not available select **MesloLGS NFM**, and click **OK**.
 
+12. Open up a new **Terminal** window **not** in **Administrator** mode.
+
+13. Open up nvim and install plugins using packer.
+
+```pwsh
+nvim
+:PackerSync
+```
+
 ## Mac
 
 1. Clone repository.
