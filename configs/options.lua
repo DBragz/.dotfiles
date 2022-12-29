@@ -7,7 +7,7 @@ vim.opt.nu = true
 vim.opt.rnu = true
 vim.opt.swapfile = false
 vim.opt.undofile = true
-vim.opt.undodir = "~/.vim/undodir"
+vim.opt.undodir = ".vim/undodir"
 vim.opt.incsearch = true
 
 vim.opt.exrc = true
