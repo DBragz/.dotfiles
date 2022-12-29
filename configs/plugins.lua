@@ -8,6 +8,7 @@ return require("packer").startup {
       requires = { {"nvim-lua/plenary.nvim"} }
     }
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use("nvim-treesitter/playground")
     use({
       "kyazdani42/nvim-tree.lua",
       requires = {
