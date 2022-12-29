@@ -78,6 +78,12 @@ if(-not (Get-Command nvim -errorAction silentlyContinue)){
 	scoop install neovim
 }
 
+if(-not (Get-Command gcc -errorAction silentlyContinue)){
+	Write-Host "Error: GNU Compiler Collection could not be found"
+	Write-Host "Installing gcc"
+	scoop install gcc
+}
+
 oh-my-posh font install Meslo
 
 Write-Host "Completed Windows install script"
