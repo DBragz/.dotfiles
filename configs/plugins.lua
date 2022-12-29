@@ -15,6 +15,9 @@ return require("packer").startup {
         "kyazdani42/nvim-web-devicons", -- optional, for file icons
       },
     })
+    use("nvim-treesitter/playground")
+    use("theprimeagen/harpoon")
+    use("mbbill/undotree")
   end
 }
 

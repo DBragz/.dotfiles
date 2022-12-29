@@ -23,6 +23,9 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\plugins.lua $env:LOCALAPPDATA\nvim\lua
 Copy-Item $env:HOMEPATH\.dotfiles\configs\telescope.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\colors.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\treesitter.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\harpoon.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\undotree.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\fugitive.lua $env:LOCALAPPDATA\nvim\after\plugin\
 
 git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
 
