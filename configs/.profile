@@ -7,6 +7,6 @@ alias gs="git status"
 alias ga="git add ."
 alias gd="git diff"
 alias gc="git commit -m $1"
-alias gp="git push origin"
-alias gp="git pull"
+alias gpush="git push origin"
+alias gpull="git pull"
 
