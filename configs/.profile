@@ -3,10 +3,10 @@ alias u=$HOME/.dotfiles/uninstall.sh
 alias l="ls -la"
 alias e=exit
 alias c=clear
-alias s="git status"
-alias a="git add ."
-alias d="git diff"
-alias commit="git commit -m $1"
-alias push="git push origin"
-alias pull="git pull"
+alias gs="git status"
+alias ga="git add ."
+alias gd="git diff"
+alias gc="git commit -m $1"
+alias gp="git push origin"
+alias gp="git pull"
 
