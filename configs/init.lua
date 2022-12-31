@@ -4,6 +4,5 @@ print("      /,    /`)")
 print("      \\\\\"--\\\\")
 
 require("options")
-require("remap")
 require("plugins")
 
