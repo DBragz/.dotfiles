@@ -1,10 +1,10 @@
 HOME = ""
 
-if os.getenv("HOME") == nil
+if os.getenv("HOME") ~= nil
   then
-    HOME = os.getenv("HOMEPATH")
-  else
     HOME = os.getenv("HOME")
+  else
+    HOME = os.getenv("HOMEPATH")
   end
 
 vim.opt.ts = 2
