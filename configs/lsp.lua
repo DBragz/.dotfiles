@@ -5,7 +5,9 @@ lsp.preset('recommended')
 lsp.ensure_installed({
   "jdtls",
   "pylsp",
-  "sumneko_lua"
+  "tsserver",
+  "sumneko_lua",
+  "bashls"
 })
 
 lsp.setup()
