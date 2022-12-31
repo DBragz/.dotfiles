@@ -3,7 +3,6 @@ vim.cmd("echo \"Oi from plugins!\"")
 return require("packer").startup {
   function(use)
     use "wbthomason/packer.nvim"
-    use "nvim-tree/nvim-tree.lua"
     use {
       "nvim-telescope/telescope.nvim", tag = "0.1.0",
       requires = { {"nvim-lua/plenary.nvim"} }
@@ -12,7 +11,7 @@ return require("packer").startup {
     use({
       "kyazdani42/nvim-tree.lua",
       requires = {
-        "kyazdani42/nvim-web-devicons", -- optional, for file icons
+        "kyazdani42/nvim-web-devicons",
       },
     })
     use("nvim-treesitter/playground")
