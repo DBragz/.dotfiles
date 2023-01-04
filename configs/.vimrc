@@ -8,8 +8,8 @@ set nu
 set rnu
 set udir
 set noswapfile
+set undodir=$HOME/.vim/undodir
 set undofile
-set undodir=".vim/undodir"
 set incsearch
 
 set exrc
@@ -34,10 +34,7 @@ call plug#begin()
   Plug 'scrooloose/syntastic'
 call plug#end()
 
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+nnoremap <leader>t :NERDTreeToggle<CR>
 
 execute pathogen#infect()
 
