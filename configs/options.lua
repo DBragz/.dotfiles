@@ -26,4 +26,5 @@ vim.opt.termguicolors = true
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
+vim.api.nvim_set_hl(0, "colorcolumn", { bg="DarkCyan" })
 
