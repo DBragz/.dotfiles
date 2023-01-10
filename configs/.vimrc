@@ -34,6 +34,8 @@ call plug#begin()
   Plug 'scrooloose/syntastic'
 call plug#end()
 
+let NERDTreeShowHidden=1
+
 nnoremap <leader>t :NERDTreeToggle<CR>
 
 execute pathogen#infect()
