@@ -30,17 +30,14 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 if ! command -v brew &> /dev/null
 then
   echo "Error: Homebrew could not be found"
-  echo "Install brew"
+  echo "Installing brew"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-  echo "Install Cask"
-  brew install cask
 fi
 
 if ! command -v starship &> /dev/null
 then
   echo "Error: Starship could not be found"
-  echo "Install starship"
+  echo "Installing starship"
   brew install starship
 fi
 
@@ -55,7 +52,6 @@ if ! command -v nvim &> /dev/null
 then
   echo "Error: Neovim could not be found"
   echo "Install nvim"
-  brew install gcc
   brew install neovim
 fi
 
