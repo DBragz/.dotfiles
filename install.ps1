@@ -24,7 +24,6 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\remap.lua $env:LOCALAPPDATA\nvim\after
 Copy-Item $env:HOMEPATH\.dotfiles\configs\tive.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\tree.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\treesitter.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lsp.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\undotree.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\lsp.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\telescope.lua $env:LOCALAPPDATA\nvim\after\plugin\
