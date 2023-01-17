@@ -43,7 +43,7 @@
         "face": "MesloLGS NF",
         "size": 8
       },
-      "opacity": 0,
+      "opacity": 70,
       "useAcrylic": true,
       "startingDirectory": "%USERPROFILE%"
     },
