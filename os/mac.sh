@@ -8,8 +8,8 @@
 #
 
 mkdir -p $HOME/.config/nvim/
-mkdir -p $HOME/.config/lua/
-mkdir -p $HOME/.config/after/plugin/
+mkdir -p $HOME/.config/nvim/lua/
+mkdir -p $HOME/.config/nvim/after/plugin/
 
 cp $HOME/.dotfiles/configs/.zshrc $HOME
 cp $HOME/.dotfiles/configs/init.lua $HOME/.config/nvim/
