@@ -33,6 +33,8 @@ then
   echo "Error: Homebrew could not be found"
   echo "Installing brew"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo "Installing Meslo Nerd Font"
+  brew install font-meslo-lg-nerd-font
 fi
 
 if ! command -v starship &> /dev/null

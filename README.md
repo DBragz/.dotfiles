@@ -67,6 +67,17 @@ cd .dotfiles/
 ./install.sh
 ```
 
+3. Click **command** and **,** and go to **Profiles** -> **Text**. It is important to note that the following steps can also be used in **Terminal** and **iTerm*.
+
+4. Select the **Fonts** tab and select **MesloLGS Nerd Font**, if not available select **MesloLGS NFM**, and click **OK**.
+
+5. Open up nvim and install plugins using packer.
+
+```pwsh
+nvim
+:PackerSync
+```
+
 ## Linux
 
 1. Clone repository.
