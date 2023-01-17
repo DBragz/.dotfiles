@@ -40,7 +40,8 @@
       "colorScheme": "DBragz",
       "font":
       {
-        "face": "MesloLGS NF"
+        "face": "MesloLGS NF",
+        "size": 8
       },
       "opacity": 0,
       "useAcrylic": true,
