@@ -2,9 +2,9 @@
 #
 # Name: mac_uninstall.sh
 #
-# Author: Daniel Ribeirinha-Braga
-#
 # Description: Uninstallation script for my Mac environment.
+#
+# Author: Daniel Ribeirinha-Braga
 #
 
 echo "Completed Mac uninstall script!"

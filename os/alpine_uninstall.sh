@@ -2,9 +2,9 @@
 #
 # Name: alpine_uninstall.sh
 #
-# Author: Daniel Ribeirinha-Braga
-#
 # Description: Uninstallation script for my Alpine environment.
+#
+# Author: Daniel Ribeirinha-Braga
 #
 
 rm $HOME/.profile

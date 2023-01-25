@@ -2,9 +2,9 @@
 #
 # Name: alpine.sh
 #
-# Author: Daniel Ribeirinha-Braga
-#
 # Description: Installation script for my alpine environment.
+#
+# Author: Daniel Ribeirinha-Braga
 #
 
 rm /etc/motd

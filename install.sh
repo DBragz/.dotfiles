@@ -2,9 +2,9 @@
 #
 # Name: install.sh
 #
-# Author: Daniel Ribeirinha-Braga
-#
 # Description: Installation script for my Unix environment.
+#
+# Author: Daniel Ribeirinha-Braga
 #
 
 echo "Running Unix install script!"
