@@ -1,5 +1,5 @@
 <# .SYNOPSIS
-	Windows Environment Initialization
+	Windows environment initialization
 .DESCRIPTION
 	Installation script for my Windows environment.
 .NOTES
