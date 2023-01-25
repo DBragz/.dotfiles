@@ -1,3 +1,11 @@
+#
+# Name: .profile
+#
+# Author: Daniel Ribeirinha-Braga
+#
+# Description: Profile file for Alpine unix operating system.
+#
+
 alias i=$HOME/.dotfiles/install.sh
 alias u=$HOME/.dotfiles/uninstall.sh
 alias l="ls -la"

@@ -1,1 +1,9 @@
+#
+#
+#
+#
+#
+#
+
 eval "$(starship init zsh)"
+

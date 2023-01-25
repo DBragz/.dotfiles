@@ -1,3 +1,11 @@
+"
+" Name: .vimrc
+"
+" Author: Daniel Ribeirinha-Braga
+"
+" Description: Profile vim file.
+"
+
 colorscheme murphy
 
 set ts=2 sts=2 shiftwidth=2
