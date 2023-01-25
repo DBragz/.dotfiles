@@ -3,7 +3,8 @@
 .DESCRIPTION
 	Installation script for my Windows environment.
 .NOTES
-	Author: Daniel Ribeirinha-Braga - dmrbraga@gmail.com
+	Author: Daniel Ribeirinha-Braga
+  Name: install.ps1
 #>
 
 Write-Host "Running Windows install script"

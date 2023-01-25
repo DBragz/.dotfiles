@@ -3,7 +3,8 @@
 .DESCRIPTION
 	Uninstallation script for my Windows environment.
 .NOTES
-	Author: Daniel Ribeirinha-Braga - dmrbraga@gmail.com
+	Author: Daniel Ribeirinha-Braga
+  Name: uninstall.ps1
 #>
 
 Write-Host "Running Windows uninstall script"
