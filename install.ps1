@@ -14,7 +14,7 @@ New-Item -Type Directory -Force $env:LOCALAPPDATA\nvim\lua\
 New-Item -Type Directory -Force $env:LOCALAPPDATA\nvim\after\plugin\
 New-Item -Type File -Force $PROFILE
 
-Copy-Item $env:HOMEPATH\.dotfiles\configs\json\Microsoft.PowerShell_profile.ps1 $PROFILE
+Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\Microsoft.PowerShell_profile.ps1 $PROFILE
 Copy-Item $env:HOMEPATH\.dotfiles\configs\json\terminal.json $env:LOCALAPPDATA\Microsoft\"Windows Terminal" 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\starship.lua $env:LOCALAPPDATA\clink\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\init.lua $env:LOCALAPPDATA\nvim\
