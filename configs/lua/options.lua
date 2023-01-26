@@ -9,8 +9,10 @@ HOME = ""
 if os.getenv("HOME") ~= nil
   then
     HOME = os.getenv("HOME")
+    print("Unix")
   else
     HOME = os.getenv("HOMEPATH")
+    print("Windows")
   end
 
 vim.opt.ts = 2
