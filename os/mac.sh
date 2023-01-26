@@ -58,5 +58,19 @@ then
   brew install neovim
 fi
 
+if ! command -v lua &> /dev/null
+then
+  echo "Error: Lua could not be found"
+  echo "Install lua"
+  brew install lua
+fi
+
+if ! command -v luarocks &> /dev/null
+then
+  echo "Error: LuaRocks could not be found"
+  echo "Install luarocks"
+  brew install luarocks
+fi
+
 echo "Completed Mac install script!"
 
