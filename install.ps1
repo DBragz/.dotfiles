@@ -14,21 +14,21 @@ New-Item -Type Directory -Force $env:LOCALAPPDATA\nvim\lua\
 New-Item -Type Directory -Force $env:LOCALAPPDATA\nvim\after\plugin\
 New-Item -Type File -Force $PROFILE
 
-Copy-Item $env:HOMEPATH\.dotfiles\configs\Microsoft.PowerShell_profile.ps1 $PROFILE
-Copy-Item $env:HOMEPATH\.dotfiles\configs\terminal.json $env:LOCALAPPDATA\Microsoft\"Windows Terminal" 
-Copy-Item $env:HOMEPATH\.dotfiles\configs\starship.lua $env:LOCALAPPDATA\clink\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\init.lua $env:LOCALAPPDATA\nvim\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\options.lua $env:LOCALAPPDATA\nvim\lua\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\plugins.lua $env:LOCALAPPDATA\nvim\lua\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\colors.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\remap.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\tive.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\tree.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\treesitter.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\undotree.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lsp.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\telescope.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\harpoon.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\json\Microsoft.PowerShell_profile.ps1 $PROFILE
+Copy-Item $env:HOMEPATH\.dotfiles\configs\json\terminal.json $env:LOCALAPPDATA\Microsoft\"Windows Terminal" 
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\starship.lua $env:LOCALAPPDATA\clink\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\init.lua $env:LOCALAPPDATA\nvim\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\options.lua $env:LOCALAPPDATA\nvim\lua\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\plugins.lua $env:LOCALAPPDATA\nvim\lua\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\colors.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\remap.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\tive.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\tree.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\treesitter.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\undotree.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\lsp.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\telescope.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\harpoon.lua $env:LOCALAPPDATA\nvim\after\plugin\
 
 git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
 

@@ -11,19 +11,19 @@ mkdir -p $HOME/.config/nvim/
 mkdir -p $HOME/.config/nvim/lua/
 mkdir -p $HOME/.config/nvim/after/plugin/
 
-cp $HOME/.dotfiles/configs/.zshrc $HOME
-cp $HOME/.dotfiles/configs/init.lua $HOME/.config/nvim/
-cp $HOME/.dotfiles/configs/options.lua $HOME/.config/nvim/lua/
-cp $HOME/.dotfiles/configs/plugins.lua $HOME/.config/nvim/lua/
-cp $HOME/.dotfiles/configs/colors.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/remap.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/tive.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/tree.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/treesitter.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/undotree.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/lsp.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/telescope.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/harpoon.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/profiles/.zshrc $HOME
+cp $HOME/.dotfiles/configs/lua/init.lua $HOME/.config/nvim/
+cp $HOME/.dotfiles/configs/lua/options.lua $HOME/.config/nvim/lua/
+cp $HOME/.dotfiles/configs/lua/plugins.lua $HOME/.config/nvim/lua/
+cp $HOME/.dotfiles/configs/lua/colors.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/lua/remap.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/lua/tive.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/lua/tree.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/lua/treesitter.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/lua/undotree.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/lua/lsp.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/lua/telescope.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/lua/harpoon.lua $HOME/.config/nvim/after/plugin/
 
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim

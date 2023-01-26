@@ -9,9 +9,9 @@
 
 rm /etc/motd
 
-cp $HOME/.dotfiles/configs/.profile $HOME/
+cp $HOME/.dotfiles/configs/profiles/.profile $HOME/
 cp $HOME/.dotfiles/configs/motd /etc/
-cp $HOME/.dotfiles/configs/.vimrc $HOME/
+cp $HOME/.dotfiles/configs/profiles/.vimrc $HOME/
 
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
