@@ -1,3 +1,9 @@
+--
+-- Name: lsp.lua
+-- Description: Neovim Language Server Processing (LSP) zero plugin settings.
+-- Author: Daniel Ribeirinha-Braga
+--
+
 local lsp = require('lsp-zero')
 
 lsp.preset('recommended')

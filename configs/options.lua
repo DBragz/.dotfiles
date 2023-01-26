@@ -1,3 +1,9 @@
+--
+-- Name: options.lua
+-- Description: Neovim options settings.
+-- Author: Daniel Ribeirinha-Braga
+--
+
 HOME = ""
 
 if os.getenv("HOME") ~= nil

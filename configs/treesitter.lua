@@ -1,3 +1,9 @@
+--
+-- Name: .lua
+-- Description: Neovim treesitter plugin settings.
+-- Author: Daniel Ribeirinha-Braga
+--
+
 require("nvim-treesitter.configs").setup {
 
   ensure_installed = { "java", "python", "javascript", "typescript", "lua", "bash" },
