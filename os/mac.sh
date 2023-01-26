@@ -44,18 +44,18 @@ then
   brew install starship
 fi
 
-if ! command -v gcc &> /dev/null
-then
-  echo "Error: GNU Compiler Collection could not be found"
-  echo "Install gcc"
-  brew install gcc
-fi
-
 if ! command -v nvim &> /dev/null
 then
   echo "Error: Neovim could not be found"
   echo "Install nvim"
   brew install neovim
+fi
+
+if ! command -v gcc &> /dev/null
+then
+  echo "Error: GNU Compiler Collection could not be found"
+  echo "Install gcc"
+  brew install gcc
 fi
 
 if ! command -v lua &> /dev/null
