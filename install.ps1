@@ -80,8 +80,14 @@ if (-not (Get-Command fzf -errorAction silentlyContinue)) {
 
 if (-not (Get-Command nvim -errorAction silentlyContinue)) {
   Write-Host "Error: Neovim could not be found"
-  Write-Host "Installing Neovim"
+  Write-Host "Installing neovim"
   scoop install neovim
+}
+
+if (-not (Get-Command java -errorAction silentlyContinue)) {
+  Write-Host "Error: Java could not be found"
+  Write-Host "Installing openjdk"
+  scoop install openjdk
 }
 
 if (-not (Get-Command node -errorAction silentlyContinue)) {
@@ -93,7 +99,7 @@ if (-not (Get-Command node -errorAction silentlyContinue)) {
 if (-not (Get-Command lua -errorAction silentlyContinue)) {
   Write-Host "Error: Lua could not be found"
   Write-Host "Installing lua"
-  choco install lua -y
+  choco install lua -y 
 }
 
 if (-not (Get-Command gcc -errorAction silentlyContinue)) {

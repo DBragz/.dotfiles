@@ -56,6 +56,11 @@ if(Get-Command nvim -errorAction silentlyContinue){
 	scoop uninstall neovim
 }
 
+if(Get-Command java -errorAction silentlyContinue){
+	Write-Host "Uninstalling OpenJDK"
+	scoop uninstall openjdk
+}
+
 if(Get-Command node -errorAction silentlyContinue){
 	Write-Host "Uninstalling Node.js"
 	scoop uninstall node

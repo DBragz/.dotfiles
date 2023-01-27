@@ -7,7 +7,7 @@
 # Author: Daniel Ribeirinha-Braga
 #
 
-brew uninstall starship fzf nvim node lua luarocks gcc
+brew uninstall starship fzf nvim openjdk node lua luarocks gcc
 
 echo "Completed Mac uninstall script!"
 

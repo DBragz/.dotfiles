@@ -58,6 +58,13 @@ then
   brew install neovim
 fi
 
+if ! command -v java &> /dev/null || $(java) == **The operation couldn’t be completed.**
+then
+  echo "Error: Java could not be found"
+  echo "Installing openjdk"
+  brew install openjdk
+fi
+
 if ! command -v node &> /dev/null
 then
   echo "Error: Node.js could not be found"
