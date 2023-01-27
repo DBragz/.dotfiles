@@ -61,12 +61,12 @@ if(Get-Command node -errorAction silentlyContinue){
 	scoop uninstall node
 }
 
-if(Get-Command node -errorAction silentlyContinue){
+if(Get-Command lua -errorAction silentlyContinue){
 	Write-Host "Uninstalling Lua"
 	choco uninstall lua -y
 }
 
-if(Get-Command node -errorAction silentlyContinue){
+if(Get-Command gcc -errorAction silentlyContinue){
 	Write-Host "Uninstalling GNU Compiler Collection"
 	scoop uninstall gcc 
 }
