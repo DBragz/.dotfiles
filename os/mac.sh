@@ -44,32 +44,46 @@ then
   brew install starship
 fi
 
+if ! command -v fzf &> /dev/null
+then
+  echo "Error: Command-line fuzzy finder could not be found"
+  echo "Installing fzf"
+  brew install fzf
+fi
+
 if ! command -v nvim &> /dev/null
 then
   echo "Error: Neovim could not be found"
-  echo "Install nvim"
+  echo "Installing nvim"
   brew install neovim
 fi
 
-if ! command -v gcc &> /dev/null
+if ! command -v node &> /dev/null
 then
-  echo "Error: GNU Compiler Collection could not be found"
-  echo "Install gcc"
-  brew install gcc
+  echo "Error: Node.js could not be found"
+  echo "Installing node"
+  brew install node
 fi
 
 if ! command -v lua &> /dev/null
 then
   echo "Error: Lua could not be found"
-  echo "Install lua"
+  echo "Installing lua"
   brew install lua
 fi
 
 if ! command -v luarocks &> /dev/null
 then
   echo "Error: LuaRocks could not be found"
-  echo "Install luarocks"
+  echo "Installing luarocks"
   brew install luarocks
+fi
+
+if ! command -v gcc &> /dev/null
+then
+  echo "Error: GNU Compiler Collection could not be found"
+  echo "Installing gcc"
+  brew install gcc
 fi
 
 echo "Completed Mac install script!"

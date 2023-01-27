@@ -47,13 +47,28 @@ if(Get-Command starship -errorAction silentlyContinue){
 }
 
 if(Get-Command fzf -errorAction silentlyContinue){
-	Write-Host "Uninstalling fzf"
+	Write-Host "Uninstalling command-line fuzzy finder"
 	scoop uninstall fzf
 }
 
 if(Get-Command nvim -errorAction silentlyContinue){
 	Write-Host "Uninstalling Neovim"
-	scoop install neovim
+	scoop uninstall neovim
+}
+
+if(Get-Command node -errorAction silentlyContinue){
+	Write-Host "Uninstalling Node.js"
+	scoop uninstall node
+}
+
+if(Get-Command node -errorAction silentlyContinue){
+	Write-Host "Uninstalling Lua"
+	choco uninstall lua -y
+}
+
+if(Get-Command node -errorAction silentlyContinue){
+	Write-Host "Uninstalling GNU Compiler Collection"
+	scoop uninstall gcc 
 }
 
 Write-Host "Completed Windows uninstall script"

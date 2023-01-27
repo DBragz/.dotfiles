@@ -36,52 +36,64 @@ choco install clink-maintained -y --force
 
 if (-not (Get-Command pwsh -errorAction SilentlyContinue)) {
   Write-Host "Error: PowerShell 7 not found"
-  Write-Host "Installing PowerShell 7"
+  Write-Host "Installing Microsoft.PowerShell"
   winget install -e --id Microsoft.PowerShell
 }
 
 if (-not (Get-Command wt -errorAction SilentlyContinue)) {
   Write-Host "Error: Windows Terminal could not be found"
-  Write-Host "Installing Windows Terminal"
+  Write-Host "Installing windows-terminal"
   scoop install windows-terminal
 }
 
 if (-not (Get-Command choco -errorAction SilentlyContinue)) {
-  Write-Host "Error: choco could not be found"
-  Write-Host "Installing Chocolately"
+  Write-Host "Error: Chocolately could not be found"
+  Write-Host "Installing choco"
   Invoke-WebRequest -useb chocolatey.org/install.ps1 | Invoke-Expression
 }
 
 if (-not (Get-Command scoop -errorAction SilentlyContinue)) {
-  Write-Host "Error: scoop could not be found"
-  Write-Host "Installing Scoop"
+  Write-Host "Error: Scoop could not be found"
+  Write-Host "Installing scoop"
   Invoke-WebRequest -useb get.scoop.sh | Invoke-Expression
   scoop bucket add main
   scoop bucket add extras
 }
 
 if (-not (Get-Command oh-my-posh -errorAction SilentlyContinue)) {
-  Write-Host "Error: oh-my-posh could not be found"
-  Write-Host "Installing Oh My Posh"
+  Write-Host "Error: Oh My Posh could not be found"
+  Write-Host "Installing oh-my-posh"
   winget install JanDeDobbeleer.OhMyPosh -s winget
 }
 
 if (-not (Get-Command starship -errorAction silentlyContinue)) {
-  Write-Host "Error: starship could not be found"
-  Write-Host "Installing Starship"
+  Write-Host "Error: Starship could not be found"
+  Write-Host "Installing starship"
   scoop install starship
 }
 
 if (-not (Get-Command fzf -errorAction silentlyContinue)) {
-  Write-Host "Error: fzf could not be found"
+  Write-Host "Error: Command-line fuzzy finder could not be found"
   Write-Host "Installing fzf"
   scoop install fzf
 }
 
 if (-not (Get-Command nvim -errorAction silentlyContinue)) {
-  Write-Host "Error: neovim could not be found"
+  Write-Host "Error: Neovim could not be found"
   Write-Host "Installing Neovim"
   scoop install neovim
+}
+
+if (-not (Get-Command node -errorAction silentlyContinue)) {
+  Write-Host "Error: Node.js could not be found"
+  Write-Host "Installing node"
+  scoop install node
+}
+
+if (-not (Get-Command lua -errorAction silentlyContinue)) {
+  Write-Host "Error: Lua could not be found"
+  Write-Host "Installing lua"
+  choco install lua -y
 }
 
 if (-not (Get-Command gcc -errorAction silentlyContinue)) {
