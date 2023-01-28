@@ -58,7 +58,9 @@ then
   brew install neovim
 fi
 
-if ! command -v java &> /dev/null || $(java) == **The operation couldn’t be completed.**
+java=$(java -version 2>&1)
+
+if [[ "${java}" == *"Unable to locate a Java Runtime."* ]]
 then
   echo "Error: Java could not be found"
   echo "Installing openjdk"
