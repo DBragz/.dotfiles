@@ -38,6 +38,7 @@ endif
 call plug#begin()
   Plug 'junegunn/vim-plug'
   Plug 'scrooloose/nerdtree'
+  Plug 'ryanoasis/vim-devicons'
   Plug 'tpope/vim-fugitive'
   Plug 'scrooloose/syntastic'
 call plug#end()
