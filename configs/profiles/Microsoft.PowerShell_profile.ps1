@@ -9,21 +9,22 @@
 
 Set-Alias -Name i -Value $env:HOMEPATH/.dotfiles/install.ps1
 Set-Alias -Name u -Value $env:HOMEPATH/.dotfiles/uninstall.ps1
-Set-Alias -Name e -Value exit
+Function Exit { exit }
+Set-Alias -Name e -Value Exit
 Set-Alias -Name c -Value Clear-Host
 Set-Alias -Name l -Value Get-ChildItem
-Function git-status { git status }
-Set-Alias -Name gs -Value git-status
-Function git-add { git add . }
-Set-Alias -Name ga -Value git-add
-Function git-diff { git diff }
-Set-Alias -Name gd -Value git-diff
-Function git-commit { git commit -m $args[1] }
-Set-Alias -Name gcommit -Value git-commit
-Function git-push { git push origin }
-Set-Alias -Name gpush -Value git-push
-Function git-pull { git pull }
-Set-Alias -Name gpull -Value git-pull
+Function Git-Status { git status }
+Set-Alias -Name gs -Value Git-Status
+Function Git-Add { git add . }
+Set-Alias -Name ga -Value Git-Add
+Function Git-Diff { git diff }
+Set-Alias -Name gd -Value Git-Diff
+Function Git-Commit { git commit -m $args[1] }
+Set-Alias -Name gcommit -Value Git-Commit
+Function Git-Push { git push origin }
+Set-Alias -Name gpush -Value Git-Push
+Function Git-Pull { git pull }
+Set-Alias -Name gpull -Value Git-Pull
 
 Invoke-Expression (&starship init powershell)
 
