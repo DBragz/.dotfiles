@@ -37,6 +37,13 @@ then
   brew install font-meslo-lg-nerd-font
 fi
 
+if ! command -v tmux &> /dev/null
+then
+  echo "Error: Terminal multiplexer could not be found"
+  echo "Installing tmux"
+  brew install tmux
+fi
+
 if ! command -v starship &> /dev/null
 then
   echo "Error: Starship could not be found"
