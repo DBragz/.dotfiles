@@ -24,6 +24,7 @@ cp $HOME/.dotfiles/configs/lua/undotree.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/lua/lsp.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/lua/telescope.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/lua/harpoon.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/json/vscode.json $HOME/Library/Application\ Support/Code/User/settings.json 
 
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
@@ -63,6 +64,13 @@ then
   echo "Error: Neovim could not be found"
   echo "Installing nvim"
   brew install neovim
+fi
+
+if ! command -v code &> /dev/null
+then
+  echo "Error: Visual Studio Code could not be found"
+  echo "Installing code"
+  brew install code
 fi
 
 java=$(java -version 2>&1)

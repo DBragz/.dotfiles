@@ -29,6 +29,7 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\undotree.lua $env:LOCALAPPDATA\nvi
 Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\lsp.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\telescope.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\harpoon.lua $env:LOCALAPPDATA\nvim\after\plugin\
+cp $env:HOMEPATH\.dotfiles\configs\json\vscode.json $env:HOME\settings.json 
 
 git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
 
@@ -81,6 +82,12 @@ if (-not (Get-Command fzf -errorAction silentlyContinue)) {
 if (-not (Get-Command nvim -errorAction silentlyContinue)) {
   Write-Host "Error: Neovim could not be found"
   Write-Host "Installing neovim"
+  scoop install neovim
+}
+
+if (-not (Get-Command code -errorAction silentlyContinue)) {
+  Write-Host "Error: Visual Studio code could not be found"
+  Write-Host "Installing code"
   scoop install neovim
 }
 
