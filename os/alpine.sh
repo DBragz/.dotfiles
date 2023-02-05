@@ -19,11 +19,11 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 cd ~/.vim/bundle && \
   git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
 
-if ! command -v vim &> /dev/null
+if ! command -v man &> /dev/null
 then
-  echo "Error: vim could not be found"
-  echo "Installing Vim"
-  apk add vim
+  echo "Error: man could not be found"
+  echo "Installing mandoc"
+  apk add mandoc man-pages
 fi
 
 if ! command -v tmux &> /dev/null
@@ -33,11 +33,18 @@ then
   apk add tmux
 fi
 
-if ! command -v man &> /dev/null
+if ! command -v starship &> /dev/null
 then
-  echo "Error: man could not be found"
-  echo "Installing mandoc"
-  apk add mandoc man-pages
+  echo "Error: starship could not be found"
+  echo "Installing Starship"
+  apk add starship
+fi
+
+if ! command -v vim &> /dev/null
+then
+  echo "Error: vim could not be found"
+  echo "Installing Vim"
+  apk add vim
 fi
 
 if ! command -v fzf  &> /dev/null
@@ -45,13 +52,6 @@ then
   echo "Error: fzf could not be found"
   echo "Installing fzf"
   apk add fzf
-fi
-
-if ! command -v starship &> /dev/null
-then
-  echo "Error: starship could not be found"
-  echo "Installing Starship"
-  apk add starship
 fi
 
 if ! command -v curl &> /dev/null
