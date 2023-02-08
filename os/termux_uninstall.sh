@@ -7,6 +7,6 @@
 # Author: Daniel Ribeirinha-Braga
 #
 
-pkg uninstall man tmux fzf vim
+pkg uninstall man tmux fzf vim openssh
 
 echo "Completed Termux uninstall script!"
