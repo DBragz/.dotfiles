@@ -12,6 +12,7 @@
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "typescript.updateImportsOnFileMove.enabled" : "always",
   "workbench.iconTheme" : "material-icon-theme",
+  "window.zoomLevel": 1,
   "workbench.colorCustomizations" : {
     "activityBar.foreground" : "#00FFFF",
     "dropdown.listBackground" : "#000000",
@@ -50,7 +51,5 @@
     "scrollbarSlider.background" : "#00FFFF",
     "editorOverviewRuler.border" : "#00FFFF",
     "foreground" : "#00FFFF"
-  },
-  "terminal.external.osxExec": "iTerm.app",
-  "window.zoomLevel": 1
+  }
 }
