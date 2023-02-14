@@ -31,7 +31,7 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\telescope.lua $env:LOCALAPPDATA\nv
 Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\harpoon.lua $env:LOCALAPPDATA\nvim\after\plugin\
 cp $env:HOMEPATH\.dotfiles\configs\json\vscode.json $env:HOME\settings.json 
 
-if (-not Test-Path "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim" -PathType Container) {
+if (-not (Test-Path "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim" -PathType Container)) {
   git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
 }
 
