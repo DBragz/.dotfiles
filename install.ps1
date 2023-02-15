@@ -9,10 +9,21 @@
 
 Write-Host "Running Windows install script"
 
-New-Item -Type Directory -Force $env:LOCALAPPDATA\clink
-New-Item -Type Directory -Force $env:LOCALAPPDATA\nvim\lua\
-New-Item -Type Directory -Force $env:LOCALAPPDATA\nvim\after\plugin\
-New-Item -Type File -Force $PROFILE
+if (-not (Test-Path $env:LOCALAPPDATA\clink -PathType Container)) {
+  New-Item -Type Directory $env:LOCALAPPDATA\clink
+}
+
+if (-not (Test-Path $env:LOCALAPPDATA\nvim\lua\ -PathType Container)) {
+  New-Item -Type Directory $env:LOCALAPPDATA\nvim\lua\
+}
+
+if (-not (Test-Path $env:LOCALAPPDATA\nvim\after\plugin\ -PathType Container)) {
+  New-Item -Type Directory $env:LOCALAPPDATA\nvim\after\plugin\
+}
+
+if (-not (Test-Path $PROFILE -PathType Leaf)) {
+  New-Item -Type File $PROFILE
+}
 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\Microsoft.PowerShell_profile.ps1 $PROFILE
 Copy-Item $env:HOMEPATH\.dotfiles\configs\json\terminal.json $env:LOCALAPPDATA\Microsoft\"Windows Terminal" 
