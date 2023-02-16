@@ -4,7 +4,10 @@
 -- Author: Daniel Ribeirinha-Braga
 --
 
-local lsp = require('lsp-zero')
+vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition)
+--vim.keymap.set("n", "", )
+
+local lsp = require("lsp-zero")
 
 lsp.preset('recommended')
 
@@ -12,8 +15,18 @@ lsp.ensure_installed({
   "jdtls",
   "pylsp",
   "tsserver",
-  "sumneko_lua",
+  "lua_ls",
   "bashls"
+})
+
+lsp.configure("lua_ls", {
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { "vim" }
+      }
+    }
+  }
 })
 
 lsp.setup()

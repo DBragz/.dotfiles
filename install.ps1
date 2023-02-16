@@ -1,9 +1,9 @@
 <# .SYNOPSIS
-	Windows environment initialization
+  Windows environment initialization
 .DESCRIPTION
-	Installation script for my Windows environment.
+  Installation script for my Windows environment.
 .NOTES
-	Author: Daniel Ribeirinha-Braga
+  Author: Daniel Ribeirinha-Braga
   Name: install.ps1
 #>
 
