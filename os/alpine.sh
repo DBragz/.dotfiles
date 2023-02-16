@@ -13,10 +13,10 @@ cp $HOME/.dotfiles/configs/profiles/.profile $HOME/
 cp $HOME/.dotfiles/configs/motd /etc/
 cp $HOME/.dotfiles/configs/profiles/.vimrc $HOME/
 
-if [ ! -d ~/.vim/autoload || ! -d ~/.vim/bundle ]; then
-  mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-fi
+#if [ ! -d ~/.vim/autoload || ! -d ~/.vim/bundle ]; then
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+#fi
 
 cd ~/.vim/bundle && \
   git clone --depth=1 https://github.com/vim-syntastic/syntastic.git

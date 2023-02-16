@@ -17,4 +17,5 @@ alias gd="git diff"
 alias gcommit="git commit -m $1"
 alias gpush="git push origin"
 alias gpull="git pull"
+alias m="man $1"
 
