@@ -5,7 +5,6 @@
 --
 
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
-
---vim.keymap.set("n", "<leader>ga", vim.cmd.Git.Add)
---vim.keymap.set("n", "", vim.cmd.)
+vim.keymap.set("n", "<leader>ga", ":G add .<CR>")
+vim.keymap.set("n", "<leader>gp", ":G push<CR>")
 
