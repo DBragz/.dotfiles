@@ -18,6 +18,7 @@ alias gcommit="git commit -m $1"
 alias gpush="git push origin"
 alias gpull="git pull"
 alias m="man $1"
+alias t=tmux
 
 eval "$(starship init zsh)"
 
