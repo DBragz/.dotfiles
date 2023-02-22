@@ -13,4 +13,5 @@ vim.keymap.set("n", "<leader>w", ":w<CR>")
 vim.keymap.set("n", "<leader>ps", ":PackerSync<CR>")
 vim.keymap.set("n", "<leader>so", ":so<CR>")
 vim.keymap.set("n", "<C-_>", function() print("control /") end)
+vim.keymap.set("n", "<leader>p", function() print(_G) end)
 
