@@ -53,7 +53,15 @@
     "foreground" : "#00FFFF",
     "titleBar.activeBackground": "#000000",
     "titleBar.activeForeground": "#00FFFF",
+    "titleBar.border": "#00FFFF",
+    "titleBar.": "#00FFFF",
     "statusBar.background": "#000000",
-    "statusBar.foreground": "#00FFFF"
+    "statusBar.foreground": "#00FFFF",
+    "quickInput.background": "#000000",
+    "quickInput.foreground": "#00FFFF",
+    "list.dropBackground": "#000000",
+    "list.focusBackground": "#00FFFF",
+    "menu.background": "#000000",
+    "menu.foreground": "#00FFFF"
   }
 }
