@@ -50,6 +50,10 @@
     "notifications.background" : "#000000",
     "scrollbarSlider.background" : "#00FFFF",
     "editorOverviewRuler.border" : "#00FFFF",
-    "foreground" : "#00FFFF"
+    "foreground" : "#00FFFF",
+    "titleBar.activeBackground": "#000000",
+    "titleBar.activeForeground": "#00FFFF",
+    "statusBar.background": "#000000",
+    "statusBar.foreground": "#00FFFF"
   }
 }
