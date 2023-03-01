@@ -109,6 +109,7 @@ if (-not (Get-Command code -errorAction silentlyContinue)) {
 if (-not (Get-Command java -errorAction silentlyContinue)) {
   Write-Host "Error: Java could not be found"
   Write-Host "Installing openjdk"
+  scoop bucket add java
   scoop install openjdk
 }
 
