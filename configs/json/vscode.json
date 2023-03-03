@@ -50,6 +50,29 @@
     "notifications.background" : "#000000",
     "scrollbarSlider.background" : "#00FFFF",
     "editorOverviewRuler.border" : "#00FFFF",
-    "foreground" : "#00FFFF"
+    "foreground" : "#00FFFF",
+    "titleBar.activeBackground": "#000000",
+    "titleBar.activeForeground": "#00FFFF",
+    "titleBar.border": "#00FFFF",
+    "titleBar.": "#00FFFF",
+    "quickInput.background": "#000000",
+    "quickInput.foreground": "#00FFFF",
+    "list.dropBackground": "#000000",
+    "list.focusBackground": "#00FFFF",
+    "menu.background": "#000000",
+    "menu.foreground": "#00FFFF",
+    "markdown.preview.backgroundColor": "#000000",
+    "markdown.preview.text": "#00FFFF",
+    "markdown.preview.color": "#00FFFF"
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+          "scope": "string",
+          "settings": {
+             "foreground": "#FFFFFF"
+          }
+      }
+    ]
   }
 }
