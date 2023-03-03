@@ -8,10 +8,10 @@ HOME = ""
 
 if os.getenv("HOME") ~= nil
   then
-    HOME = os.getenv("HOME")
+    HOME = tostring(os.getenv("HOME"))
     print("Unix")
   else
-    HOME = os.getenv("HOMEPATH")
+    HOME = tostring(os.getenv("HOMEPATH"))
     print("Windows")
   end
 
