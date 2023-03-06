@@ -19,7 +19,7 @@ Function Git-Add { git add . }
 Set-Alias -Name ga -Value Git-Add
 Function Git-Diff { git diff }
 Set-Alias -Name gd -Value Git-Diff
-Function Git-Commit { git commit -m $args[1] }
+Function Git-Commit { git commit -m $args[0] }
 Set-Alias -Name gcommit -Value Git-Commit
 Function Git-Push { git push origin }
 Set-Alias -Name gpush -Value Git-Push
