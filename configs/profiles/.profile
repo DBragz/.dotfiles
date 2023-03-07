@@ -14,9 +14,9 @@ alias l="ls -la"
 alias gs="git status"
 alias ga="git add ."
 alias gd="git diff"
-alias gcommit="git commit -m $1"
-alias gpush="git push origin"
-alias gpull="git pull"
+alias gc="git commit -m $1"
+alias gph="git push origin"
+alias gpl="git pull"
 alias m="man $1"
 alias t=tmux
 

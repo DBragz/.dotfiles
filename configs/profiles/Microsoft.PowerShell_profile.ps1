@@ -20,11 +20,11 @@ Set-Alias -Name ga -Value Git-Add
 Function Git-Diff { git diff }
 Set-Alias -Name gd -Value Git-Diff
 Function Git-Commit { git commit -m $args[0] }
-Set-Alias -Name gcommit -Value Git-Commit
+Set-Alias -Name gc -Value Git-Commit
 Function Git-Push { git push origin }
-Set-Alias -Name gpush -Value Git-Push
+Set-Alias -Name gph -Value Git-Push
 Function Git-Pull { git pull }
-Set-Alias -Name gpull -Value Git-Pull
+Set-Alias -Name gpl -Value Git-Pull
 
 Invoke-Expression (&starship init powershell)
 
