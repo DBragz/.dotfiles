@@ -42,12 +42,18 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\telescope.lua $env:LOCALAPPDATA\nv
 Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\harpoon.lua $env:LOCALAPPDATA\nvim\after\plugin\
 cp $env:HOMEPATH\.dotfiles\configs\json\vscode.json $env:HOME\settings.json 
 
-if (-not (Test-Path $env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim -PathType Container)) {
-  git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
+if (-not (Get-Command scoop -errorAction SilentlyContinue)) {
+  Write-Host "Error: Scoop could not be found"
+  Write-Host "Installing scoop"
+  Invoke-WebRequest -useb get.scoop.sh | Invoke-Expression
+  scoop bucket add main
+  scoop bucket add extras
 }
 
-if (-not (Test-Path $env:CLINK_DIR -PathType Container)) {
-  choco install clink-maintained -y
+if (-not (Get-Command choco -errorAction SilentlyContinue)) {
+  Write-Host "Error: Chocolately could not be found"
+  Write-Host "Installing choco"
+  Invoke-WebRequest -useb chocolatey.org/install.ps1 | Invoke-Expression
 }
 
 if (-not (Get-Command pwsh -errorAction SilentlyContinue)) {
@@ -62,18 +68,8 @@ if (-not (Get-Command wt -errorAction SilentlyContinue)) {
   scoop install windows-terminal
 }
 
-if (-not (Get-Command choco -errorAction SilentlyContinue)) {
-  Write-Host "Error: Chocolately could not be found"
-  Write-Host "Installing choco"
-  Invoke-WebRequest -useb chocolatey.org/install.ps1 | Invoke-Expression
-}
-
-if (-not (Get-Command scoop -errorAction SilentlyContinue)) {
-  Write-Host "Error: Scoop could not be found"
-  Write-Host "Installing scoop"
-  Invoke-WebRequest -useb get.scoop.sh | Invoke-Expression
-  scoop bucket add main
-  scoop bucket add extras
+if (-not (Test-Path $env:CLINK_DIR -PathType Container)) {
+  choco install clink-maintained -y
 }
 
 if (-not (Get-Command oh-my-posh -errorAction SilentlyContinue)) {
@@ -100,10 +96,14 @@ if (-not (Get-Command nvim -errorAction silentlyContinue)) {
   scoop install neovim
 }
 
+if (-not (Test-Path $env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim -PathType Container)) {
+  git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
+}
+
 if (-not (Get-Command code -errorAction silentlyContinue)) {
   Write-Host "Error: Visual Studio code could not be found"
   Write-Host "Installing code"
-  scoop install neovim
+  scoop install code
 }
 
 if (-not (Get-Command java -errorAction silentlyContinue)) {

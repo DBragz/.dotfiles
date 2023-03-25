@@ -15,7 +15,7 @@ cp $HOME/.dotfiles/configs/profiles/.zshrc $HOME
 cp $HOME/.dotfiles/configs/lua/init.lua $HOME/.config/nvim/
 cp $HOME/.dotfiles/configs/lua/options.lua $HOME/.config/nvim/lua/
 cp $HOME/.dotfiles/configs/lua/plugins.lua $HOME/.config/nvim/lua/
-cp $HOME/.dotfiles/configs/lua/colors.lua $HOME/.config/nvim/after/plugin/
+c $HOME/.dotfiles/configs/lua/colors.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/lua/remap.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/lua/tive.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/lua/tree.lua $HOME/.config/nvim/after/plugin/
@@ -25,20 +25,6 @@ cp $HOME/.dotfiles/configs/lua/lsp.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/lua/telescope.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/lua/harpoon.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/json/vscode.json $HOME/Library/Application\ Support/Code/User/settings.json 
-
-if [ ! -d ~/.local/share/nvim/site/pack/packer/start/packer.nvim ]; then
-  git clone --depth 1 https://github.com/wbthomason/packer.nvim\
-    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-fi
-
-if ! command -v brew &> /dev/null
-then
-  echo "Error: Homebrew could not be found"
-  echo "Installing brew"
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  echo "Installing Meslo Nerd Font"
-  brew install font-meslo-lg-nerd-font
-fi
 
 if ! command -v tmux &> /dev/null
 then
@@ -66,6 +52,20 @@ then
   echo "Error: Neovim could not be found"
   echo "Installing nvim"
   brew install neovim
+fi
+
+if [ ! -d ~/.local/share/nvim/site/pack/packer/start/packer.nvim ]; then
+  git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+fi
+
+if ! command -v brew &> /dev/null
+then
+  echo "Error: Homebrew could not be found"
+  echo "Installing brew"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo "Installing Meslo Nerd Font"
+  brew install font-meslo-lg-nerd-font
 fi
 
 if ! command -v code &> /dev/null
