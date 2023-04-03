@@ -15,7 +15,7 @@ cp $HOME/.dotfiles/configs/profiles/.zshrc $HOME
 cp $HOME/.dotfiles/configs/lua/init.lua $HOME/.config/nvim/
 cp $HOME/.dotfiles/configs/lua/options.lua $HOME/.config/nvim/lua/
 cp $HOME/.dotfiles/configs/lua/plugins.lua $HOME/.config/nvim/lua/
-c $HOME/.dotfiles/configs/lua/colors.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/lua/colors.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/lua/remap.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/lua/tive.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/lua/tree.lua $HOME/.config/nvim/after/plugin/
