@@ -75,5 +75,5 @@
     "titleBar.border": "#00FFFF",
     "widget.shadow": "#000000"
   },
-  "workbench.iconTheme": "material-icon-theme"
+  "workbench.iconTheme": "vscode-icons"
 }
