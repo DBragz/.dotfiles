@@ -1,6 +1,5 @@
 {
   "editor.detectIndentation": false,
-  "editor.fencedCodeHighlight.markerColor": "#FFFFFF",
   "editor.formatOnSave": true,
   "editor.insertSpaces": true,
   "editor.suggestSelection": "first",
