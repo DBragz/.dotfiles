@@ -2,7 +2,7 @@
 
 Repository for setting up my virtual environments.
 
-## Windows
+## Windows 10
 
 1. Download and install [**App Installer**](https://apps.microsoft.com/store/detail/app-installer/9NBLGGH4NNS1?hl=en-us&gl=us).
 
