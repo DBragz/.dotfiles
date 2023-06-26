@@ -8,7 +8,7 @@ vim.cmd("echo \"Oi from plugins!\"")
 
 return require("packer").startup {
   function(use)
-    use "wbthomason/packer.nvim"
+    use("wbthomason/packer.nvim")
     use("mbbill/undotree")
     use("tpope/vim-fugitive")
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -45,6 +45,7 @@ return require("packer").startup {
         {'rafamadriz/friendly-snippets'},
       }
     }
+    use("github/copilog.vim")
   end
 }
 
