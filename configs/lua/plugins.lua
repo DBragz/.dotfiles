@@ -45,7 +45,6 @@ return require("packer").startup {
         {'rafamadriz/friendly-snippets'},
       }
     }
-    use("github/copilog.vim")
   end
 }
 
