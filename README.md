@@ -2,6 +2,27 @@
 
 Repository for setting up my virtual environments.
 
+## Windows 11
+
+1. Install Git.
+
+```pwsh
+winget install --id Git.Git -e --source winget
+```
+
+2. Clone repository.
+
+```pwsh
+git clone git@github.com:DBragz/.dotfiles.git
+```
+
+3. Run initialization script.
+
+```pwsh
+Set-Location .\.dotfiles\
+.\install.ps1
+```
+
 ## Windows 10
 
 1. Download and install [**App Installer**](https://apps.microsoft.com/store/detail/app-installer/9NBLGGH4NNS1?hl=en-us&gl=us).
