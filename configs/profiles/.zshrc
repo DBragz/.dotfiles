@@ -17,6 +17,7 @@ alias gd="git diff"
 alias gct="git commit -m $1"
 alias gph="git push origin"
 alias gpl="git pull"
+alias grh="git reset --hard HEAD"
 alias m="man $1"
 alias t=tmux
 

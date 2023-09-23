@@ -25,6 +25,8 @@ Function Git-Push { git push origin }
 Set-Alias -Name gph -Value Git-Push
 Function Git-Pull { git pull }
 Set-Alias -Name gpl -Value Git-Pull
+Function Git-Reset-Head { git reset --hard HEAD }
+Set-Alias -Name grh -Value Git-Reset-Head
 
 Invoke-Expression (&starship init powershell)
 
