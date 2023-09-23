@@ -130,7 +130,7 @@ if (-not (Get-Command gcc -errorAction silentlyContinue)) {
 }
 
 if (-not (Test-Path $env:SystemRoot\Fonts\Meslo* -PathType Leaf)) {
-  oh-my-posh font install Meslo
+  oh-my-posh font install --user Meslo
 }
 
 Write-Host "Completed Windows install script"
