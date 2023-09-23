@@ -52,15 +52,7 @@ if (-not (Get-Command scoop -errorAction SilentlyContinue)) {
   scoop bucket add extras
 }
 
-# Start-Process powershell -Verb runAs
-
 scoop install main/clink
-
-#if (-not (Get-Command choco -errorAction SilentlyContinue)) {
-#  Write-Host "Error: Chocolately could not be found"
-#  Write-Host "Installing choco"
-#  Invoke-WebRequest -useb chocolatey.org/install.ps1 | Invoke-Expression
-#}
 
 if (-not (Get-Command pwsh -errorAction SilentlyContinue)) {
   Write-Host "Error: PowerShell 7 not found"
@@ -75,7 +67,7 @@ if (-not (Get-Command wt -errorAction SilentlyContinue)) {
 }
 
 if (-not (Test-Path $env:CLINK_DIR -PathType Container)) {
-  choco install clink-maintained -y
+  scoop install clink
 }
 
 if (-not (Get-Command oh-my-posh -errorAction SilentlyContinue)) {
@@ -128,7 +120,7 @@ if (-not (Get-Command node -errorAction silentlyContinue)) {
 if (-not (Get-Command lua -errorAction silentlyContinue)) {
   Write-Host "Error: Lua could not be found"
   Write-Host "Installing lua"
-  choco install lua -y 
+  scoop install lua 
 }
 
 if (-not (Get-Command gcc -errorAction silentlyContinue)) {
