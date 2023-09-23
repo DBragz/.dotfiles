@@ -56,11 +56,11 @@ if (-not (Get-Command scoop -errorAction SilentlyContinue)) {
 
 scoop install main/clink
 
-if (-not (Get-Command choco -errorAction SilentlyContinue)) {
-  Write-Host "Error: Chocolately could not be found"
-  Write-Host "Installing choco"
-  Invoke-WebRequest -useb chocolatey.org/install.ps1 | Invoke-Expression
-}
+#if (-not (Get-Command choco -errorAction SilentlyContinue)) {
+#  Write-Host "Error: Chocolately could not be found"
+#  Write-Host "Installing choco"
+#  Invoke-WebRequest -useb chocolatey.org/install.ps1 | Invoke-Expression
+#}
 
 if (-not (Get-Command pwsh -errorAction SilentlyContinue)) {
   Write-Host "Error: PowerShell 7 not found"
