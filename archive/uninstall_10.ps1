@@ -7,7 +7,7 @@
   Name: uninstall.ps1
 #>
 
-Write-Host "Running Windows uninstall script"
+Write-Host "Running Windows 10 uninstall script"
 
 Remove-Item -Type Directory -Force -Recurse $env:LOCALAPPDATA\clink
 Remove-Item -Type Directory -Force -Recurse $env:LOCALAPPDATA\nvim\lua\

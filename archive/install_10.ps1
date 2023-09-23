@@ -7,7 +7,7 @@
   Name: install.ps1
 #>
 
-Write-Host "Running Windows install script"
+Write-Host "Running Windows 10 install script"
 
 if (-not (Test-Path $env:LOCALAPPDATA\clink -PathType Container)) {
   New-Item -Type Directory $env:LOCALAPPDATA\clink
