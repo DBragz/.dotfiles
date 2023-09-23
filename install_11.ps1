@@ -52,7 +52,11 @@ if (-not (Get-Command scoop -errorAction SilentlyContinue)) {
   scoop bucket add extras
 }
 
-scoop install main/clink
+if (-not (Get-Command clink -errorAction SilentContinue)) {
+  Write-Host "Error: Clink could not be found"
+  Write-Host "Installing clink"
+  scoop install clink
+}
 
 if (-not (Get-Command pwsh -errorAction SilentlyContinue)) {
   Write-Host "Error: PowerShell 7 not found"
@@ -64,10 +68,6 @@ if (-not (Get-Command wt -errorAction SilentlyContinue)) {
   Write-Host "Error: Windows Terminal could not be found"
   Write-Host "Installing windows-terminal"
   scoop install windows-terminal
-}
-
-if (-not (Test-Path $env:CLINK_DIR -PathType Container)) {
-  scoop install clink
 }
 
 if (-not (Get-Command oh-my-posh -errorAction SilentlyContinue)) {
