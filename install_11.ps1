@@ -100,8 +100,8 @@ if (-not (Test-Path $env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nv
 
 if (-not (Get-Command code -errorAction silentlyContinue)) {
   Write-Host "Error: Visual Studio code could not be found"
-  Write-Host "Installing code"
-  scoop install code
+  Write-Host "Installing vscode"
+  scoop install vscode
 }
 
 if (-not (Get-Command java -errorAction silentlyContinue)) {
@@ -114,7 +114,7 @@ if (-not (Get-Command java -errorAction silentlyContinue)) {
 if (-not (Get-Command node -errorAction silentlyContinue)) {
   Write-Host "Error: Node.js could not be found"
   Write-Host "Installing node"
-  scoop install node
+  scoop install node-lts
 }
 
 if (-not (Get-Command lua -errorAction silentlyContinue)) {
