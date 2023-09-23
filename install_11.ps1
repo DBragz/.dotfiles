@@ -1,13 +1,13 @@
 <# .SYNOPSIS
-  Windows 10 environment initialization
+  Windows 11 environment initialization
 .DESCRIPTION
-  Installation script for my Windows 10 environment.
+  Installation script for my Windows 11 environment.
 .NOTES
   Author: Daniel Ribeirinha-Braga
   Name: install.ps1
 #>
 
-Write-Host "Running Windows 10 install script"
+Write-Host "Running Windows 11 install script"
 
 if (-not (Test-Path $env:LOCALAPPDATA\clink -PathType Container)) {
   New-Item -Type Directory $env:LOCALAPPDATA\clink
