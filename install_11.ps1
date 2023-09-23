@@ -114,7 +114,7 @@ if (-not (Get-Command java -errorAction silentlyContinue)) {
 if (-not (Get-Command node -errorAction silentlyContinue)) {
   Write-Host "Error: Node.js could not be found"
   Write-Host "Installing node"
-  scoop install node-lts
+  scoop install nodejs-lts
 }
 
 if (-not (Get-Command lua -errorAction silentlyContinue)) {
