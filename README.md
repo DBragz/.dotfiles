@@ -12,9 +12,9 @@ Repository for setting up my virtual environments.
 winget install --id Git.Git -e --source winget
 ```
 
-3. Exit terminal
+3. Exit **Terminal**.
 
-4. Locate the **Terminal** icon, right click it, and select **Run as administrator**.
+4. Open a new **Terminal**.
 
 5. Clone repository.
 
@@ -45,6 +45,7 @@ Set-Location .\.dotfiles\
 Set-ExecutionPolicy AllSigned
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 ```
+
 6. Change directory to **HOMEPATH**
 
 ```pwsh
