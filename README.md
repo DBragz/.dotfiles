@@ -4,19 +4,25 @@ Repository for setting up my virtual environments.
 
 ## Windows 11
 
-1. Install Git.
+1. Open **Terminal** application.
+
+2. Install Git.
 
 ```pwsh
 winget install --id Git.Git -e --source winget
 ```
 
-2. Clone repository.
+3. Exit terminal
+
+4. Locate the **Terminal** icon, right click it, and select **Run as administrator**.
+
+5. Clone repository.
 
 ```pwsh
-git clone git@github.com:DBragz/.dotfiles.git
+git clone https://github.com/DBragz/.dotfiles.git
 ```
 
-3. Run initialization script.
+6. Run initialization script.
 
 ```pwsh
 Set-Location .\.dotfiles\

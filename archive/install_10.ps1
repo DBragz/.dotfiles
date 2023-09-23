@@ -1,7 +1,7 @@
 <# .SYNOPSIS
-  Windows environment initialization
+  Windows 10 environment initialization
 .DESCRIPTION
-  Installation script for my Windows environment.
+  Installation script for my Windows 10 environment.
 .NOTES
   Author: Daniel Ribeirinha-Braga
   Name: install.ps1

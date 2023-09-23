@@ -1,7 +1,7 @@
 <# .SYNOPSIS
-  Windows Environment Uninstialization
+  Windows 10 Environment Uninstialization
 .DESCRIPTION
-  Uninstallation script for my Windows environment.
+  Uninstallation script for my Windows 10 environment.
 .NOTES
   Author: Daniel Ribeirinha-Braga
   Name: uninstall.ps1
