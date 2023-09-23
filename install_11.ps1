@@ -52,6 +52,10 @@ if (-not (Get-Command scoop -errorAction SilentlyContinue)) {
   scoop bucket add extras
 }
 
+# Start-Process powershell -Verb runAs
+
+scoop install main/clink
+
 if (-not (Get-Command choco -errorAction SilentlyContinue)) {
   Write-Host "Error: Chocolately could not be found"
   Write-Host "Installing choco"
