@@ -132,7 +132,7 @@ if (-not (Get-Command gcc -errorAction silentlyContinue)) {
   scoop install gcc
 }
 
-if (-not (Test-Path $env:SystemRoot\Fonts\Meslo* -PathType Leaf)) {
+if ((Get-ChildItem $env:LOCALAPPDATA\Microsoft\Windows\Fonts\ | Out-String -Stream | Select-String -Pattern "Meslo").Count -eq 0) {
   oh-my-posh font install Meslo --user
 }
 
