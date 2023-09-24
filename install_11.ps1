@@ -40,6 +40,11 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\harpoon.lua $env:LOCALAPPDATA\nvim
 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\starship.lua $env:LOCALAPPDATA\clink\
 
+if (-not (Test-Path $env:LOCALAPPDATA\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\)) { 
+  New-Item -Type Directory $env:LOCALAPPDATA\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\
+}
+
+New-Item -Type Directory -Path "$env:LOCALAPPDATA\Microsoft\Windows Terminal\"
 Copy-Item $env:HOMEPATH\.dotfiles\configs\json\terminal.json $env:LOCALAPPDATA\Microsoft\"Windows Terminal" 
 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\Microsoft.PowerShell_profile.ps1 $PROFILE
