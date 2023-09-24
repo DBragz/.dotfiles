@@ -40,10 +40,7 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\harpoon.lua $env:LOCALAPPDATA\nvim
 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\starship.lua $env:LOCALAPPDATA\clink\
 
-if (-not (Test-Path $env:LOCALAPPDATA\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\)) { 
-  New-Item -Type Directory $env:LOCALAPPDATA\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\
-}
-Copy-Item $env:HOMEPATH\.dotfiles\configs\json\terminal.json $env:LOCALAPPDATA\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json 
+Copy-Item $env:HOMEPATH\.dotfiles\configs\json\terminal.json $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json 
 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\Microsoft.PowerShell_profile.ps1 $PROFILE
 
