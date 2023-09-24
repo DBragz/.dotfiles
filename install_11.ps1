@@ -55,7 +55,7 @@ if (-not (Get-Command scoop -errorAction SilentlyContinue)) {
   scoop bucket add extras
 }
 
-if (-not (Get-Command clink -errorAction SilentContinue)) {
+if (-not (Get-Command clink -errorAction SilentlyContinue)) {
   Write-Host "Error: Clink could not be found"
   Write-Host "Installing clink"
   scoop install clink
