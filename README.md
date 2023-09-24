@@ -16,13 +16,19 @@ winget install --id Git.Git -e --source winget
 
 4. Open a new **Terminal**.
 
-5. Clone repository.
+5. Enable PowerShell scripts.
+
+```pwsh
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+```
+
+6. Clone repository.
 
 ```pwsh
 git clone https://github.com/DBragz/.dotfiles.git
 ```
 
-6. Run initialization script.
+7. Run initialization script.
 
 ```pwsh
 Set-Location .\.dotfiles\
