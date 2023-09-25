@@ -19,6 +19,7 @@ winget install --id Git.Git -e --source winget
 5. Enable PowerShell scripts.
 
 ```pwsh
+Set-ExecutionPolicy AllSigned
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 ```
 
