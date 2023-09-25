@@ -52,6 +52,8 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\lsp.lua $env:LOCALAPPDATA\nvim\aft
 Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\telescope.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\harpoon.lua $env:LOCALAPPDATA\nvim\after\plugin\
 
+Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\.ideavimrc $env:HOMEPATH\
+
 Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\starship.lua $env:LOCALAPPDATA\clink\
 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\json\terminal.json $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json 
