@@ -9,6 +9,20 @@
 
 Write-Host "Running Windows 11 install script"
 
+if (-not (Get-Command scoop -errorAction SilentlyContinue)) {
+  Write-Host "Error: Scoop could not be found"
+  Write-Host "Installing scoop"
+  Invoke-WebRequest -useb get.scoop.sh | Invoke-Expression
+  scoop bucket add main
+  scoop bucket add extras
+}
+
+if (-not (Get-Command choco -errorAction SilentlyContinue)) {
+  Write-Host "Error: Chocolately could not be found"
+  Write-Host "Installing choco"
+  Invoke-WebRequest -useb chocolatey.org/install.ps1 | Invoke-Expression
+}
+
 if (-not (Test-Path $env:LOCALAPPDATA\clink -PathType Container)) {
   New-Item -Type Directory $env:LOCALAPPDATA\clink
 }
@@ -46,14 +60,6 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\Microsoft.PowerShell_profile.
 
 New-Item -Type Directory -Path $env:HOMEPATH\AppData\Roaming\Code\User\
 cp $env:HOMEPATH\.dotfiles\configs\json\vscode.json $env:HOMEPATH\AppData\Roaming\Code\User\settings.json 
-
-if (-not (Get-Command scoop -errorAction SilentlyContinue)) {
-  Write-Host "Error: Scoop could not be found"
-  Write-Host "Installing scoop"
-  Invoke-WebRequest -useb get.scoop.sh | Invoke-Expression
-  scoop bucket add main
-  scoop bucket add extras
-}
 
 if (-not (Get-Command clink -errorAction SilentlyContinue)) {
   Write-Host "Error: Clink could not be found"
