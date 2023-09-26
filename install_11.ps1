@@ -20,7 +20,9 @@ if (-not (Get-Command scoop -errorAction SilentlyContinue)) {
 if (-not (Get-Command choco -errorAction SilentlyContinue)) {
   Write-Host "Error: Chocolately could not be found"
   Write-Host "Installing choco"
-  Invoke-WebRequest -useb chocolatey.org/install.ps1 | Invoke-Expression
+  if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)){
+    Start-Process powershell -Verb runAs "& Invoke-WebRequest -useb chocolatey.org/install.ps1 | Invoke-Expression"
+  }
 }
 
 if (-not (Test-Path $env:LOCALAPPDATA\clink -PathType Container)) {
@@ -60,7 +62,9 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\json\terminal.json $env:LOCALAPPDATA\P
 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\Microsoft.PowerShell_profile.ps1 $PROFILE
 
-New-Item -Type Directory -Path $env:HOMEPATH\AppData\Roaming\Code\User\
+if (-not (Test-Path $env:HOMEPATH\AppData\Roaming\Code\User\ -PathType Container)) {
+  New-Item -Type Directory -Path $env:HOMEPATH\AppData\Roaming\Code\User\
+}
 cp $env:HOMEPATH\.dotfiles\configs\json\vscode.json $env:HOMEPATH\AppData\Roaming\Code\User\settings.json 
 
 if (-not (Get-Command clink -errorAction SilentlyContinue)) {
