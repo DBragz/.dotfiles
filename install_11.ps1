@@ -49,7 +49,7 @@ if (-not (Get-Command oh-my-posh -errorAction SilentlyContinue)) {
   winget install JanDeDobbeleer.OhMyPosh -s winget
 }
 
-if ((Get-ChildItem $env:LOCALAPPDATA\Microsoft\Windows\Fonts\ | Out-String -Stream | Select-String -Pattern "Meslo").Count -eq 0) {
+if ((Get-ChildItem C:\Windows\Fonts\ | Out-String -Stream | Select-String -Pattern "Meslo").Count -eq 0) {
   if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)){
     Start-Process -Wait powershell -Verb runAs "oh-my-posh font install Meslo"
   } 
