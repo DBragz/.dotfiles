@@ -25,48 +25,6 @@ if (-not (Get-Command choco -errorAction SilentlyContinue)) {
   }
 }
 
-if (-not (Test-Path $env:LOCALAPPDATA\clink -PathType Container)) {
-  New-Item -Type Directory $env:LOCALAPPDATA\clink
-}
-
-if (-not (Test-Path $env:LOCALAPPDATA\nvim\lua\ -PathType Container)) {
-  New-Item -Type Directory $env:LOCALAPPDATA\nvim\lua\
-}
-
-if (-not (Test-Path $env:LOCALAPPDATA\nvim\after\plugin\ -PathType Container)) {
-  New-Item -Type Directory $env:LOCALAPPDATA\nvim\after\plugin\
-}
-
-if (-not (Test-Path $PROFILE -PathType Leaf)) {
-  New-Item -Type File $PROFILE -Force
-}
-
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\init.lua $env:LOCALAPPDATA\nvim\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\options.lua $env:LOCALAPPDATA\nvim\lua\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\plugins.lua $env:LOCALAPPDATA\nvim\lua\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\colors.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\remap.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\tive.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\tree.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\treesitter.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\undotree.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\lsp.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\telescope.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\harpoon.lua $env:LOCALAPPDATA\nvim\after\plugin\
-
-Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\.ideavimrc $env:HOMEPATH\
-
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\starship.lua $env:LOCALAPPDATA\clink\
-
-Copy-Item $env:HOMEPATH\.dotfiles\configs\json\terminal.json $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json 
-
-Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\Microsoft.PowerShell_profile.ps1 $PROFILE
-
-if (-not (Test-Path $env:HOMEPATH\AppData\Roaming\Code\User\ -PathType Container)) {
-  New-Item -Type Directory -Path $env:HOMEPATH\AppData\Roaming\Code\User\
-}
-cp $env:HOMEPATH\.dotfiles\configs\json\vscode.json $env:HOMEPATH\AppData\Roaming\Code\User\settings.json 
-
 if (-not (Get-Command clink -errorAction SilentlyContinue)) {
   Write-Host "Error: Clink could not be found"
   Write-Host "Installing clink"
@@ -89,6 +47,12 @@ if (-not (Get-Command oh-my-posh -errorAction SilentlyContinue)) {
   Write-Host "Error: Oh My Posh could not be found"
   Write-Host "Installing oh-my-posh"
   winget install JanDeDobbeleer.OhMyPosh -s winget
+}
+
+if ((Get-ChildItem $env:LOCALAPPDATA\Microsoft\Windows\Fonts\ | Out-String -Stream | Select-String -Pattern "Meslo").Count -eq 0) {
+  if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)){
+    Start-Process -Wait powershell -Verb runAs "oh-my-posh font install Meslo"
+  } 
 }
 
 if (-not (Get-Command starship -errorAction silentlyContinue)) {
@@ -144,11 +108,47 @@ if (-not (Get-Command gcc -errorAction silentlyContinue)) {
   scoop install gcc
 }
 
-if ((Get-ChildItem $env:LOCALAPPDATA\Microsoft\Windows\Fonts\ | Out-String -Stream | Select-String -Pattern "Meslo").Count -eq 0) {
-  if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)){
-    Start-Process -Wait powershell -Verb runAs "oh-my-posh font install Meslo"
-  } 
+if (-not (Test-Path $env:LOCALAPPDATA\clink -PathType Container)) {
+  New-Item -Type Directory $env:LOCALAPPDATA\clink
 }
+
+if (-not (Test-Path $env:LOCALAPPDATA\nvim\lua\ -PathType Container)) {
+  New-Item -Type Directory $env:LOCALAPPDATA\nvim\lua\
+}
+
+if (-not (Test-Path $env:LOCALAPPDATA\nvim\after\plugin\ -PathType Container)) {
+  New-Item -Type Directory $env:LOCALAPPDATA\nvim\after\plugin\
+}
+
+if (-not (Test-Path $PROFILE -PathType Leaf)) {
+  New-Item -Type File $PROFILE -Force
+}
+
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\init.lua $env:LOCALAPPDATA\nvim\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\options.lua $env:LOCALAPPDATA\nvim\lua\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\plugins.lua $env:LOCALAPPDATA\nvim\lua\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\colors.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\remap.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\tive.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\tree.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\treesitter.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\undotree.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\lsp.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\telescope.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\harpoon.lua $env:LOCALAPPDATA\nvim\after\plugin\
+
+Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\.ideavimrc $env:HOMEPATH\
+
+Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\starship.lua $env:LOCALAPPDATA\clink\
+
+Copy-Item $env:HOMEPATH\.dotfiles\configs\json\terminal.json $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json 
+
+Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\Microsoft.PowerShell_profile.ps1 $PROFILE
+
+if (-not (Test-Path $env:HOMEPATH\AppData\Roaming\Code\User\ -PathType Container)) {
+  New-Item -Type Directory -Path $env:HOMEPATH\AppData\Roaming\Code\User\
+}
+cp $env:HOMEPATH\.dotfiles\configs\json\vscode.json $env:HOMEPATH\AppData\Roaming\Code\User\settings.json 
 
 Write-Host "Completed Windows install script"
 
