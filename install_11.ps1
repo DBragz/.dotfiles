@@ -21,7 +21,7 @@ if (-not (Get-Command choco -errorAction SilentlyContinue)) {
   Write-Host "Error: Chocolately could not be found"
   Write-Host "Installing choco"
   if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)){
-    Start-Process powershell -Verb runAs "& Invoke-WebRequest -useb chocolatey.org/install.ps1 | Invoke-Expression"
+    Start-Process -Wait powershell -Verb runAs "& Invoke-WebRequest -useb chocolatey.org/install.ps1 | Invoke-Expression"
   }
 }
 
@@ -145,7 +145,9 @@ if (-not (Get-Command gcc -errorAction silentlyContinue)) {
 }
 
 if ((Get-ChildItem $env:LOCALAPPDATA\Microsoft\Windows\Fonts\ | Out-String -Stream | Select-String -Pattern "Meslo").Count -eq 0) {
-  oh-my-posh font install Meslo --user
+  if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)){
+    Start-Process -Wait powershell -Verb runAs "oh-my-posh font install Meslo"
+  } 
 }
 
 Write-Host "Completed Windows install script"
