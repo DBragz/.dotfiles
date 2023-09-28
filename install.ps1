@@ -26,17 +26,11 @@ if (-not (Get-Command choco -errorAction SilentlyContinue)) {
   }
 }
 
-if (-not (Get-Command pwsh -errorAction SilentlyContinue)) {
-  Write-Host "Error: PowerShell 7 not found"
-  Write-Host "Installing Microsoft.PowerShell"
-  winget install -e --id Microsoft.PowerShell
+if (-not (Get-Command starship -errorAction silentlyContinue)) {
+  Write-Host "Error: Starship could not be found"
+  Write-Host "Installing starship"
+  scoop install starship
 }
-
-if (-not (Test-Path $PROFILE -PathType Leaf)) {
-  New-Item -Type File $PROFILE -Force
-}
-
-Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\Microsoft.PowerShell_profile.ps1 $PROFILE
 
 if (-not (Get-Command clink -errorAction SilentlyContinue)) {
   Write-Host "Error: Clink could not be found"
@@ -49,6 +43,24 @@ if (-not (Test-Path $env:LOCALAPPDATA\clink -PathType Container)) {
 }
 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\starship.lua $env:LOCALAPPDATA\clink\
+
+if (-not (Get-Command pwsh -errorAction SilentlyContinue)) {
+  Write-Host "Error: PowerShell 7 not found"
+  Write-Host "Installing Microsoft.PowerShell"
+  winget install -e --id Microsoft.PowerShell
+}
+
+if (-not (Test-Path $env:USERPROFILE\OneDrive\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1 -PathType Leaf)) {
+  New-Item -Type File $env:USERPROFILE\OneDrive\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1 -Force
+}
+
+Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\Microsoft.PowerShell_profile.ps1 $env:USERPROFILE\OneDrive\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+
+if (-not (Test-Path $env:USERPROFILE\OneDrive\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 -PathType Leaf)) {
+  New-Item -Type File $env:USERPROFILE\OneDrive\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 -Force
+}
+
+Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\Microsoft.PowerShell_profile.ps1 $env:USERPROFILE\OneDrive\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
 
 if (-not (Get-Command wt -errorAction SilentlyContinue)) {
   Write-Host "Error: Windows Terminal could not be found"
@@ -68,12 +80,6 @@ if ((Get-ChildItem C:\Windows\Fonts\ | Out-String -Stream | Select-String -Patte
   if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)){
     Start-Process -Wait powershell -Verb runAs "oh-my-posh font install Meslo"
   } 
-}
-
-if (-not (Get-Command starship -errorAction silentlyContinue)) {
-  Write-Host "Error: Starship could not be found"
-  Write-Host "Installing starship"
-  scoop install starship
 }
 
 if (-not (Get-Command fzf -errorAction silentlyContinue)) {
