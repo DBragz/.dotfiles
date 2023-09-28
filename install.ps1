@@ -15,6 +15,7 @@ if (-not (Get-Command scoop -errorAction SilentlyContinue)) {
   Invoke-WebRequest -useb get.scoop.sh | Invoke-Expression
   scoop bucket add main
   scoop bucket add extras
+  scoop bucket add versions
 }
 
 if (-not (Get-Command choco -errorAction SilentlyContinue)) {
