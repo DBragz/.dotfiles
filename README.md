@@ -26,7 +26,7 @@ Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 6. Clone repository.
 
 ```pwsh
-git clone https://github.com/DBragz/.dotfiles.git
+git clone git@github.com:DBragz/.dotfiles.git
 ```
 
 7. Run initialization script.
