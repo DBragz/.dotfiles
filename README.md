@@ -19,7 +19,6 @@ winget install --id Git.Git -e --source winget
 5. Enable PowerShell scripts.
 
 ```pwsh
-Set-ExecutionPolicy AllSigned
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 ```
 
@@ -68,7 +67,7 @@ git clone git@github.com:DBragz/.dotfiles.git
 8. Run initialization script.
 
 ```pwsh
-Set-Location .\.dotfiles\
+Set-Location .\archive\.dotfiles\
 .\install.ps1
 ```
 
