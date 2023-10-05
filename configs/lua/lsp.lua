@@ -15,28 +15,26 @@ vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
 --vim.keymap.set("n", "[d", vim.lsp.buf.goto_prev)
 --vim.keymap.set("n", "<C-h>", vim.lsp.buf.signature_help)
 
-local lsp = require("lsp-zero")
+local lsp_zero = require('lsp-zero')
 
-lsp.preset('recommended')
+lsp_zero.on_attach(function(client, bufnr)
+  lsp_zero.default_keymaps({buffer = bufnr})
+end)
 
-lsp.ensure_installed({
-  "clangd",
-  "jdtls",
-  "pylsp",
-  "tsserver",
-  "lua_ls",
-  "bashls"
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  -- Replace the language servers listed here 
+  -- with the ones you want to install
+  ensure_installed = {
+    'clangd',
+    'jdtls',
+    'lua_ls',
+    'powershell_es',
+    --'pylsp',
+    --'tsserver',
+  },
+  handlers = {
+    lsp_zero.default_setup,
+  },
 })
-
-lsp.configure("lua_ls", {
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { "vim" }
-      }
-    }
-  }
-})
-
-lsp.setup()
 
