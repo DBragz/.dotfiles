@@ -8,6 +8,7 @@
 
 alias i=$HOME/.dotfiles/install.sh
 alias u=$HOME/.dotfiles/uninstall.sh
+alias dh="cat $HOME/.profile"
 alias e=exit
 alias c=clear
 alias l="ls -la"
@@ -17,7 +18,10 @@ alias gd="git diff"
 alias gct="git commit -m $1"
 alias gph="git push origin"
 alias gpl="git pull"
-alias grh="git reset --hard HEAD"
+alias grhh="git reset --hard HEAD"
+alias grh="git reset --hard $1"
+alias glg="git log $1"
+alias gd="git diff"
 alias m="man $1"
 alias t=tmux
 
