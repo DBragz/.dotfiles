@@ -22,7 +22,7 @@ winget install --id Git.Git -e --source winget
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 ```
 
-6. Clone repository.
+6. From your home directory clone the repository.
 
 ```pwsh
 git clone git@github.com:DBragz/.dotfiles.git
@@ -65,7 +65,7 @@ Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 Set-Location $env:HOMEPATH
 ```
 
-7. Clone repository.
+7. From your home directory clone the repository.
 
 ```pwsh
 git clone git@github.com:DBragz/.dotfiles.git
@@ -95,7 +95,7 @@ nvim
 
 ## Mac
 
-1. Clone repository.
+1. From your home directory clone the repository.
 
 ```zsh
 git clone git@github.com:DBragz/.dotfiles.git
@@ -121,7 +121,7 @@ nvim
 
 ## Linux
 
-1. Clone repository.
+1. From your home directory clone the repository.
 
 ```sh
 git clone git@github.com:DBragz/.dotfiles.git
