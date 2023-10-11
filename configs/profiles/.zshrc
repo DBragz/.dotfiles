@@ -8,7 +8,7 @@
 
 alias i=$HOME/.dotfiles/install.sh
 alias u=$HOME/.dotfiles/uninstall.sh
-alias dh="cat $HOME/.zshrc"
+alias dh="bat $HOME/.zshrc"
 alias e=exit
 alias c=clear
 alias l="ls -la"

@@ -25,10 +25,17 @@ then
   pkg install man
 fi
 
+if ! command -v bat &> /dev/null
+then
+  echo "Error: Bat could not be found"
+  echo "Installing bat"
+  pkg install vim
+fi
+
 if ! command -v vim &> /dev/null
 then
-  echo "Error: vim could not be found"
-  echo "Installing VIM - Vi IMproved"
+  echo "Error: Vim could not be found"
+  echo "Installing vim"
   pkg install vim
 fi
 

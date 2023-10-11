@@ -82,6 +82,12 @@ if ((Get-ChildItem C:\Windows\Fonts\ | Out-String -Stream | Select-String -Patte
   } 
 }
 
+if (-not (Get-Command bat -errorAction silentlyContinue)) {
+  Write-Host "Error: Bat could not be found"
+  Write-Host "Installing bat"
+  scoop install bat
+}
+
 if (-not (Get-Command fzf -errorAction silentlyContinue)) {
   Write-Host "Error: Command-line fuzzy finder could not be found"
   Write-Host "Installing fzf"
@@ -120,7 +126,7 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\telescope.lua $env:LOCALAPPDATA\nv
 Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\harpoon.lua $env:LOCALAPPDATA\nvim\after\plugin\
 
 if (-not (Get-Command code -errorAction silentlyContinue)) {
-  Write-Host "Error: Visual Studio code could not be found"
+  Write-Host "Error: Visual Studio Code could not be found"
   Write-Host "Installing vscode"
   scoop install vscode
 }

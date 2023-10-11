@@ -9,7 +9,7 @@
 
 Set-Alias -Name i -Value $env:HOMEPATH/.dotfiles/install.ps1
 Set-Alias -Name u -Value $env:HOMEPATH/.dotfiles/uninstall.ps1
-Function Dotfiles-Help { Get-Content $PROFILE }
+Function Dotfiles-Help { bat $PROFILE }
 Set-Alias -Name dh -Value Dotfiles-Help
 Function Exit { exit }
 Set-Alias -Name e -Value Exit

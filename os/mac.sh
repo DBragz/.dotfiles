@@ -47,6 +47,14 @@ then
   brew install fzf
 fi
 
+if ! command -v bat &> /dev/null
+then
+  echo "Error: Bat could not be found"
+  echo "Installing bat"
+  brew install bat
+fi
+
+
 if ! command -v nvim &> /dev/null
 then
   echo "Error: Neovim could not be found"

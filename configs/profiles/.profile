@@ -8,7 +8,7 @@
 
 alias i=$HOME/.dotfiles/install.sh
 alias u=$HOME/.dotfiles/uninstall.sh
-alias dh="cat $HOME/.profile"
+alias dh="bat $HOME/.profile"
 alias e=exit
 alias c=clear
 alias l="ls -la"
