@@ -24,8 +24,8 @@ end)
 require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {
-    'clangd',
-    'jdtls',
+    --'clangd',
+    --'jdtls',
     'lua_ls',
     'powershell_es',
     --'pylsp',
