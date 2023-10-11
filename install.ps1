@@ -129,6 +129,7 @@ if (-not (Get-Command code -errorAction silentlyContinue)) {
   Write-Host "Error: Visual Studio Code could not be found"
   Write-Host "Installing vscode"
   scoop install vscode
+  scoop reset vscode
 }
 
 if (-not (Get-Command docker -errorAction silentlyContinue)) {
@@ -151,12 +152,14 @@ if (-not (Get-Command java -errorAction silentlyContinue)) {
   Write-Host "Installing openjdk"
   scoop bucket add java
   scoop install openjdk
+  scoop reset openjdk
 }
 
 if (-not (Get-Command node -errorAction silentlyContinue)) {
   Write-Host "Error: Node.js could not be found"
   Write-Host "Installing node"
   scoop install nodejs-lts
+  scoop reset nodejs-lts
 }
 
 if (-not (Get-Command lua -errorAction silentlyContinue)) {
@@ -169,6 +172,7 @@ if (-not (Get-Command gcc -errorAction silentlyContinue)) {
   Write-Host "Error: GNU Compiler Collection could not be found"
   Write-Host "Installing gcc"
   scoop install gcc
+  scoop reset gcc
 }
 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\.ideavimrc $env:HOMEPATH\
