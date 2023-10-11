@@ -1,7 +1,7 @@
 --
--- Name: plugins.lua
+-- Name:        plugins.lua
 -- Description: Neovim plugins settings.
--- Author: Daniel Ribeirinha-Braga
+-- Author:      Daniel Ribeirinha-Braga
 --
 
 vim.cmd("echo \"Oi from plugins!\"")

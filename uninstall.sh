@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# Name: uninstall.sh
+# Name:         uninstall.sh
 #
-# Description: Uninstallation script for my Unix environment.
+# Description:  Uninstallation script for my Unix environment.
 #
-# Author: Daniel Ribeirinha-Braga
+# Author:       Daniel Ribeirinha-Braga
 #
 
 echo "Running Unix uninstall script!"

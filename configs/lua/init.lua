@@ -1,7 +1,7 @@
 --
--- Name: init.lua
+-- Name:        init.lua
 -- Description: Neovim initialization settings.
--- Author: Daniel Ribeirinha-Braga
+-- Author:      Daniel Ribeirinha-Braga
 --
 
 print("           __")

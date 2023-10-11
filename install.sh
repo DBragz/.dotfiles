@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# Name: install.sh
+# Name:         install.sh
 #
-# Description: Installation script for my Unix environment.
+# Description:  Installation script for my Unix environment.
 #
-# Author: Daniel Ribeirinha-Braga
+# Author:       Daniel Ribeirinha-Braga
 #
 
 echo "Running Unix install script!"

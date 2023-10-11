@@ -1,7 +1,7 @@
 --
--- Name: harpoon.lua
+-- Name:        harpoon.lua
 -- Description: Neovim harpoon plugin settings.
--- Author: Daniel Ribeirinha-Braga
+-- Author:      Daniel Ribeirinha-Braga
 --
 
 local mark = require("harpoon.mark")

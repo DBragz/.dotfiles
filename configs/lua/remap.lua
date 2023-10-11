@@ -1,7 +1,7 @@
 --
--- Name: remap.lua
+-- Name:        remap.lua
 -- Description: Neovim remap settings.
--- Author: Daniel Ribeirinha-Braga
+-- Author:      Daniel Ribeirinha-Braga
 --
 
 vim.g.maplocalleader = "g"

@@ -1,7 +1,7 @@
 --
--- Name: telescope.lua
+-- Name:        telescope.lua
 -- Description: Neovim telescope plugin settings.
--- Author: Daniel Ribeirinha-Braga
+-- Author:      Daniel Ribeirinha-Braga
 --
 
 local builtin = require("telescope.builtin")

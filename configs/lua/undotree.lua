@@ -1,7 +1,7 @@
 --
--- Name: undotree.lua
+-- Name:        undotree.lua
 -- Description: Neovim undotree plugin settings.
--- Author: Daniel Ribeirinha-Braga
+-- Author:      Daniel Ribeirinha-Braga
 --
 
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)

@@ -4,7 +4,7 @@
   Uninstallation script for my Windows 10 environment.
 .NOTES
   Author: Daniel Ribeirinha-Braga
-  Name: uninstall_10.ps1
+  Name:   uninstall_10.ps1
 #>
 
 Write-Host "Running Windows 10 uninstall script"

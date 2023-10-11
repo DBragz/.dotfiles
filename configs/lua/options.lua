@@ -1,7 +1,7 @@
 --
--- Name: options.lua
+-- Name:        options.lua
 -- Description: Neovim options settings.
--- Author: Daniel Ribeirinha-Braga
+-- Author:      Daniel Ribeirinha-Braga
 --
 
 HOME = ""

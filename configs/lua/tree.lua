@@ -1,7 +1,7 @@
 --
--- Name: tree.lua
+-- Name:        tree.lua
 -- Description: Neovim nvim-tree plugin settings.
--- Author: Daniel Ribeirinha-Braga
+-- Author:      Daniel Ribeirinha-Braga
 --
 
 require("nvim-tree").setup()

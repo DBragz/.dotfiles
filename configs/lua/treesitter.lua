@@ -1,23 +1,23 @@
 --
--- Name: treesitter.lua
+-- Name:        treesitter.lua
 -- Description: Neovim treesitter plugin settings.
--- Author: Daniel Ribeirinha-Braga
+-- Author:      Daniel Ribeirinha-Braga
 --
 
---require("nvim-treesitter.configs").setup {
---  ensure_installed = {
---    "java",
+require("nvim-treesitter.configs").setup {
+  ensure_installed = {
+    "java",
 --    "python",
 --    "javascript",
 --    "typescript",
---    "lua",
+    "lua",
 --    "bash",
---  },
---  sync_install = false,
---  auto_install = true,
---  highlight = {
---    enable = true,
---    additional_vim_regex_highlighting = false,
---  },
---}
+  },
+  sync_install = false,
+  auto_install = true,
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+}
 

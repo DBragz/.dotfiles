@@ -1,7 +1,7 @@
 --
--- Name: lsp.lua
+-- Name:        lsp.lua
 -- Description: Neovim Language Server Processing (LSP) zero plugin settings.
--- Author: Daniel Ribeirinha-Braga
+-- Author:      Daniel Ribeirinha-Braga
 --
 
 vim.keymap.set("n", "gd", vim.lsp.buf.definition)
