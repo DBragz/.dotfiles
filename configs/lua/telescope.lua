@@ -4,7 +4,7 @@
 -- Author:      Daniel Ribeirinha-Braga
 --
 
-local builtin = require("telescope.builtin")
+--local builtin = require("telescope.builtin")
 
 --vim.keymap.set("n", "<leader>ht", builtin.help_tags)
 --vim.keymap.set("n", "<leader>ff", builtin.find_files)

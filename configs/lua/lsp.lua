@@ -4,10 +4,10 @@
 -- Author:      Daniel Ribeirinha-Braga
 --
 
-vim.keymap.set("n", "gd", vim.lsp.buf.definition)
-vim.keymap.set("n", "K", vim.lsp.buf.hover)
-vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
-vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
+--vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+--vim.keymap.set("n", "K", vim.lsp.buf.hover)
+--vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+--vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
 
 --vim.keymap.set("n", "<leader>vws", vim.lsp.buf.workspace_symbol)
 --vim.keymap.set("n", "<leader>vd", vim.lsp.buf.open_float)
@@ -15,25 +15,25 @@ vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
 --vim.keymap.set("n", "[d", vim.lsp.buf.goto_prev)
 --vim.keymap.set("n", "<C-h>", vim.lsp.buf.signature_help)
 
-local lsp_zero = require('lsp-zero')
+--local lsp_zero = require('lsp-zero')
 
-lsp_zero.on_attach(function(client, bufnr)
-  lsp_zero.default_keymaps({buffer = bufnr})
-end)
+--lsp_zero.on_attach(function(client, bufnr)
+--  lsp_zero.default_keymaps({buffer = bufnr})
+--end)
 
-require('mason').setup({})
-require('mason-lspconfig').setup({
-  ensure_installed = {
-    --'clangd',
-    'bashls',
-    'lua_ls',
-    'jdtls',
-    'powershell_es',
-    --'pylsp',
-    --'tsserver',
-  },
-  handlers = {
-    lsp_zero.default_setup,
-  },
-})
+--require('mason').setup({})
+--require('mason-lspconfig').setup({
+--  ensure_installed = {
+--    'clangd',
+--    'bashls',
+--    'lua_ls',
+--    'jdtls',
+--    'powershell_es',
+--    'pylsp',
+--    'tsserver',
+--  },
+--  handlers = {
+--    lsp_zero.default_setup,
+--  },
+--})
 
