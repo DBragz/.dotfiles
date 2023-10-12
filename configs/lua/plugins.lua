@@ -9,6 +9,15 @@ vim.cmd("echo \"Oi from plugins!\"")
 return require("packer").startup {
   function(use)
     use('wbthomason/packer.nvim')
+    use {
+      "folke/which-key.nvim",
+      config = function()
+        vim.o.timeout = true
+        vim.o.timeoutlen = 300
+        require("which-key").setup {
+        }
+      end
+    }
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
