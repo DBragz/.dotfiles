@@ -14,8 +14,6 @@
       }
     ]
   },
-  "eslint.format.enable": true,
-  "eslint.run": "onSave",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "git.confirmSync": true,
@@ -75,5 +73,16 @@
     "titleBar.border": "#00FFFF",
     "widget.shadow": "#000000"
   },
-  "workbench.iconTheme": "vscode-icons"
+  "workbench.iconTheme": "vscode-icons",
+  "solidity.telemetry": false,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "whichkey.show"
+      ],
+    }
+  ]
 }
