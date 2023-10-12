@@ -176,7 +176,5 @@ if (-not (Get-Command gcc -errorAction silentlyContinue)) {
   scoop reset gcc
 }
 
-Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\.ideavimrc $env:HOMEPATH\
-
 Write-Host "Completed Windows 11 install script"
 
