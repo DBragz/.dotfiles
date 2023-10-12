@@ -18,6 +18,12 @@ return require("packer").startup {
         }
       end
     }
+    use({
+      'kyazdani42/nvim-tree.lua',
+      requires = {
+        'kyazdani42/nvim-web-devicons',
+      },
+    })
 --    use('mbbill/undotree')
 --    use('tpope/vim-fugitive')
 --    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -27,12 +33,6 @@ return require("packer").startup {
 --      'nvim-telescope/telescope.nvim', tag = '0.1.0',
 --      requires = { {'nvim-lua/plenary.nvim'} }
 --    }
---    use({
---      'kyazdani42/nvim-tree.lua',
---      requires = {
---        'kyazdani42/nvim-web-devicons',
---      },
---    })
 --    use {
 --      'VonHeikemen/lsp-zero.nvim',
 --      requires = {
