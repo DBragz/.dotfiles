@@ -24,7 +24,7 @@ return require("packer").startup {
         'kyazdani42/nvim-web-devicons',
       },
     })
---    use('mbbill/undotree')
+    use('mbbill/undotree')
 --    use('tpope/vim-fugitive')
 --    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 --    use('nvim-treesitter/playground')

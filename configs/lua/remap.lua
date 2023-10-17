@@ -15,3 +15,4 @@ vim.keymap.set("n", "<leader>ps", ":PackerSync<CR>")
 --vim.keymap.set("n", "<leader>tsu", ":TSUpdate<CR>")
 --vim.keymap.set("n", "<C-_>", function() print("Comment out code!") end)
 --vim.keymap.set("n", "<leader>p", function() print('Search project!') end)
+

@@ -4,7 +4,7 @@
 -- Author:      Daniel Ribeirinha-Braga
 --
 
---vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+--vim.keymap.set("n", "<leader>gs", ":G status<CR>")
 --vim.keymap.set("n", "<leader>ga", ":G add .<CR>")
 --vim.keymap.set("n", "<leader>gct", ":G commit -m ")
 --vim.keymap.set("n", "<leader>gmai", function(":G commit -m " .. args[1] end)
