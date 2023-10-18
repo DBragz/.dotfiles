@@ -6,8 +6,6 @@
 
 require("nvim-tree").setup()
 
-local args = {...}
-
-vim.keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>")
-vim.keymap.set("n", "<leader>tr", ":NvimTreeResize ")
+vim.keymap.set("n", "<leader>n", ":NvimTreeToggle<CR>")
+vim.keymap.set("n", "<leader>nt", ":NvimTreeResize ")
 

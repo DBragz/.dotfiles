@@ -26,13 +26,12 @@ return require("packer").startup {
     })
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
---    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
---    use('nvim-treesitter/playground')
---    use('theprimeagen/harpoon')
---    use {
---      'nvim-telescope/telescope.nvim', tag = '0.1.0',
---      requires = { {'nvim-lua/plenary.nvim'} }
---    }
+    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.0',
+      requires = { {'nvim-lua/plenary.nvim'} }
+    }
+    use('theprimeagen/harpoon')
 --    use {
 --      'VonHeikemen/lsp-zero.nvim',
 --      requires = {

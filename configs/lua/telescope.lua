@@ -4,11 +4,9 @@
 -- Author:      Daniel Ribeirinha-Braga
 --
 
---local builtin = require("telescope.builtin")
-
---vim.keymap.set("n", "<leader>ht", builtin.help_tags)
---vim.keymap.set("n", "<leader>ff", builtin.find_files)
---vim.keymap.set("n", "<leader>gf", builtin.git_files)
---vim.keymap.set("n", "<leader>d", builtin.diagnostics)
---vim.keymap.set("n", "<leader>gr", builtin.lsp_references)
+vim.keymap.set("n", "<leader>th", ":Telescope help_tags<CR>")
+vim.keymap.set("n", "<leader>tf", ":Telescope find_files<CR>")
+vim.keymap.set("n", "<leader>tg", ":Telescope git_files<CR>")
+vim.keymap.set("n", "<leader>td", ":Telescope diagnostics<CR>")
+vim.keymap.set("n", "<leader>tl", ":Telescope lsp_references<CR>")
 
