@@ -21,7 +21,7 @@ cp $HOME/.dotfiles/configs/lua/tive.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/lua/tree.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/lua/treesitter.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/lua/undotree.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/lua/lsp.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/lua/server.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/lua/telescope.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/lua/harpoon.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/json/vscode.json $HOME/Library/Application\ Support/Code/User/settings.json 
