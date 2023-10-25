@@ -113,6 +113,12 @@ if (-not (Get-Command java -errorAction silentlyContinue)) {
   scoop install openjdk
 }
 
+if (-not (Get-Command python -errorAction silentlyContinue)) {
+  Write-Host "Error: Python could not be found"
+  Write-Host "Installing python"
+  scoop install python
+}
+
 if (-not (Get-Command node -errorAction silentlyContinue)) {
   Write-Host "Error: Node.js could not be found"
   Write-Host "Installing node"
