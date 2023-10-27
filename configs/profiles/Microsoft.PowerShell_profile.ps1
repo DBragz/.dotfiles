@@ -16,7 +16,7 @@ Set-Alias -Name e -Value Exit
 Set-Alias -Name c -Value Clear-Host
 Set-Alias -Name l -Value Get-ChildItem
 Function Git-Init { git init }
-Set-Alias -Name git -Value Git-Init
+Set-Alias -Name gint -Value Git-Init
 Function Git-Status { git status }
 Set-Alias -Name gs -Value Git-Status
 Function Git-Add { git add . }
