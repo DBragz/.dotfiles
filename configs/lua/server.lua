@@ -1,5 +1,5 @@
 --
--- Name:        lsp.lua
+-- Name:        server.lua
 -- Description: Neovim Language Server Processing (LSP) zero plugin settings.
 -- Author:      Daniel Ribeirinha-Braga
 --

@@ -1,3 +1,4 @@
+#!/bin/zsh
 #
 # Name: .zshrc
 #
@@ -6,12 +7,13 @@
 # Description: Profile file for Oh My Zsh shell.
 #
 
+alias dh="cat $HOME/.zshrc"
 alias i=$HOME/.dotfiles/install.sh
 alias u=$HOME/.dotfiles/uninstall.sh
-alias dh="bat $HOME/.zshrc"
 alias e=exit
 alias c=clear
 alias l="ls -la"
+alias gi="git init"
 alias gs="git status"
 alias ga="git add ."
 alias gd="git diff"

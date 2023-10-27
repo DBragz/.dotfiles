@@ -6,12 +6,13 @@
 # Description: Profile file for Alpine unix operating system.
 #
 
+alias dh="cat $HOME/.profile"
 alias i=$HOME/.dotfiles/install.sh
 alias u=$HOME/.dotfiles/uninstall.sh
-alias dh="bat $HOME/.profile"
 alias e=exit
 alias c=clear
 alias l="ls -la"
+alias gi="git init"
 alias gs="git status"
 alias ga="git add ."
 alias gd="git diff"

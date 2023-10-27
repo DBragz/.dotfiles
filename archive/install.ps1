@@ -3,8 +3,8 @@
 .DESCRIPTION
   Installation script for my Windows 10 environment.
 .NOTES
-  Author: Daniel Ribeirinha-Braga
   Name:   install_10.ps1
+  Author: Daniel Ribeirinha-Braga
 #>
 
 Write-Host "Running Windows 10 install script"

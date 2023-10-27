@@ -3,18 +3,20 @@
 .DESCRIPTION
   My default Windows PowerShell settings.
 .NOTES
+  Name:   Microsoft.PowerShell_profile.ps1
   Author: Daniel Ribeirinha-Braga
-  Name: Microsoft.PowerShell_profile.ps1
 #>
 
+Function Dotfiles-Help { Get-Content $PROFILE }
+Set-Alias -Name dh -Value Dotfiles-Help
 Set-Alias -Name i -Value $env:HOMEPATH/.dotfiles/install.ps1
 Set-Alias -Name u -Value $env:HOMEPATH/.dotfiles/uninstall.ps1
-Function Dotfiles-Help { bat $PROFILE }
-Set-Alias -Name dh -Value Dotfiles-Help
 Function Exit { exit }
 Set-Alias -Name e -Value Exit
 Set-Alias -Name c -Value Clear-Host
 Set-Alias -Name l -Value Get-ChildItem
+Function Git-Init { git init }
+Set-Alias -Name gi -Value Git-Init
 Function Git-Status { git status }
 Set-Alias -Name gs -Value Git-Status
 Function Git-Add { git add . }

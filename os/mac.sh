@@ -2,9 +2,9 @@
 #
 # Name: mac.sh
 #
-# Description: Installation script for my Mac environment.
-#
 # Author: Daniel Ribeirinha-Braga
+#
+# Description: Installation script for my Mac environment.
 #
 
 mkdir -p $HOME/.config/nvim/

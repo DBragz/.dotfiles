@@ -2,9 +2,9 @@
 #
 # Name: termux.sh
 #
-# Description: Installation script for my termux environment.
-#
 # Author: Daniel Ribeirinha-Braga
+#
+# Description: Installation script for my termux environment.
 #
 
 cp $HOME/.dotfiles/configs/profiles/.profile $HOME/
@@ -40,3 +40,4 @@ then
 fi
 
 echo "Completed Termux install script!"
+
