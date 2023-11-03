@@ -47,13 +47,19 @@ then
   brew install fzf
 fi
 
+if ! command -v rg &> /dev/null
+then
+  echo "Error: ripgrep could not be found"
+  echo "Installing rg"
+  brew install ripgrep
+fi
+
 if ! command -v bat &> /dev/null
 then
   echo "Error: Bat could not be found"
   echo "Installing bat"
   brew install bat
 fi
-
 
 if ! command -v nvim &> /dev/null
 then
