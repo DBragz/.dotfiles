@@ -16,7 +16,7 @@ if os.getenv("HOME") ~= nil
   then
     HOME = tostring(os.getenv("HOME"))
     vim.keymap.set('n', '<leader>tgr', ":Telescope grep_string<CR>")
-    vim.keymap.set('n', '<leader>ps', function()
+    vim.keymap.set('n', '<leader>ttgr', function()
 	require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ")})
 end)
   else
