@@ -23,10 +23,9 @@ set incsearch
 set exrc
 set hidden
 
-let mapleader = " "
 let maplocalleader = "g"
+let mapleader = " "
 
-map <leader>e :E<CR>
 map <localleader>e :E<CR>
 
 let data_dir = has("nvim") ? stdpath("data") . "/site" : "~/.vim"
@@ -45,7 +44,7 @@ call plug#end()
 
 let NERDTreeShowHidden=1
 
-nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
 
 execute pathogen#infect()
 
