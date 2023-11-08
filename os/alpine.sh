@@ -26,18 +26,18 @@ then
   apk add tmux
 fi
 
-if ! command -v rg &> /dev/null
-then
-  echo "Error: ripgrep could not be found"
-  echo "Installing rg"
-  apk add ripgrep
-fi
-
 if ! command -v fzf  &> /dev/null
 then
   echo "Error: fzf could not be found"
   echo "Installing fzf"
   apk add fzf
+fi
+
+if ! command -v rg &> /dev/null
+then
+  echo "Error: ripgrep could not be found"
+  echo "Installing rg"
+  apk add ripgrep
 fi
 
 if ! command -v bat &> /dev/null

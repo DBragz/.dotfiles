@@ -23,13 +23,6 @@ then
   brew install tmux
 fi
 
-if ! command -v starship &> /dev/null
-then
-  echo "Error: Starship could not be found"
-  echo "Installing starship"
-  brew install starship
-fi
-
 if ! command -v fzf &> /dev/null
 then
   echo "Error: Command-line fuzzy finder could not be found"
@@ -49,6 +42,13 @@ then
   echo "Error: Bat could not be found"
   echo "Installing bat"
   brew install bat
+fi
+
+if ! command -v starship &> /dev/null
+then
+  echo "Error: Starship could not be found"
+  echo "Installing starship"
+  brew install starship
 fi
 
 if ! command -v nvim &> /dev/null
