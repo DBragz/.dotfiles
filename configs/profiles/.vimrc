@@ -58,12 +58,12 @@ nnoremap <localleader>e :E<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>so :so<CR>
 nnoremap <leader>w :w<CR>
+nnoremap <leader>x :x<CR>
 nnoremap <leader>gini :G ini<CR>
 nnoremap <leader>gs :G status<CR>
 nnoremap <leader>ga :G add .<CR>
 nnoremap <leader>gco :G commit -m 
 nnoremap <leader>gpus :G push<CR>
-nnoremap <leader>gpul :G pull<CR>
 nnoremap <leader>gpul :G pull<CR>
 nnoremap <leader>grhh :G reset --hard HEAD<CR>
 nnoremap <leader>grh :G reset --hard 

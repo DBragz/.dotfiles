@@ -11,5 +11,6 @@ vim.keymap.set("n", "<localleader>E", ":E<CR>")
 vim.keymap.set("t", "<leader>e", "<C-\\><C-n>")
 vim.keymap.set("n", "<leader>so", ":so<CR>")
 vim.keymap.set("n", "<leader>w", ":w<CR>")
+vim.keymap.set("n", "<leader>x", ":x<CR>")
 vim.keymap.set("n", "<leader>ps", ":PackerSync<CR>")
 
