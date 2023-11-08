@@ -7,25 +7,6 @@
 # Description: Installation script for my Mac environment.
 #
 
-mkdir -p $HOME/.config/nvim/
-mkdir -p $HOME/.config/nvim/lua/
-mkdir -p $HOME/.config/nvim/after/plugin/
-
-cp $HOME/.dotfiles/configs/profiles/.zshrc $HOME
-cp $HOME/.dotfiles/configs/lua/init.lua $HOME/.config/nvim/
-cp $HOME/.dotfiles/configs/lua/options.lua $HOME/.config/nvim/lua/
-cp $HOME/.dotfiles/configs/lua/plugins.lua $HOME/.config/nvim/lua/
-cp $HOME/.dotfiles/configs/lua/colors.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/lua/remap.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/lua/tive.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/lua/tree.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/lua/treesitter.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/lua/undotree.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/lua/server.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/lua/telescope.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/lua/harpoon.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/json/vscode.json $HOME/Library/Application\ Support/Code/User/settings.json 
-
 if ! command -v tmux &> /dev/null
 then
   echo "Error: Terminal multiplexer could not be found"
@@ -72,6 +53,25 @@ if [ ! -d ~/.local/share/nvim/site/pack/packer/start/packer.nvim ]; then
   git clone --depth 1 https://github.com/wbthomason/packer.nvim\
     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 fi
+
+mkdir -p $HOME/.config/nvim/
+mkdir -p $HOME/.config/nvim/lua/
+mkdir -p $HOME/.config/nvim/after/plugin/
+
+cp $HOME/.dotfiles/configs/profiles/.zshrc $HOME
+cp $HOME/.dotfiles/configs/lua/init.lua $HOME/.config/nvim/
+cp $HOME/.dotfiles/configs/lua/options.lua $HOME/.config/nvim/lua/
+cp $HOME/.dotfiles/configs/lua/plugins.lua $HOME/.config/nvim/lua/
+cp $HOME/.dotfiles/configs/lua/colors.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/lua/remap.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/lua/tive.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/lua/tree.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/lua/treesitter.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/lua/undotree.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/lua/server.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/lua/telescope.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/lua/harpoon.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/json/vscode.json $HOME/Library/Application\ Support/Code/User/settings.json 
 
 if ! command -v brew &> /dev/null
 then

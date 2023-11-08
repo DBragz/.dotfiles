@@ -15,8 +15,9 @@ Function Exit { exit }
 Set-Alias -Name e -Value Exit
 Set-Alias -Name c -Value Clear-Host
 Set-Alias -Name l -Value Get-ChildItem
+// Add man equivalent 
 Function Git-Init { git init }
-Set-Alias -Name gint -Value Git-Init
+Set-Alias -Name gini -Value Git-Init
 Function Git-Status { git status }
 Set-Alias -Name gs -Value Git-Status
 Function Git-Add { git add . }
@@ -24,19 +25,17 @@ Set-Alias -Name ga -Value Git-Add
 Function Git-Diff { git diff }
 Set-Alias -Name gd -Value Git-Diff
 Function Git-Commit { git commit -m $args[0] }
-Set-Alias -Name gct -Value Git-Commit
+Set-Alias -Name gco -Value Git-Commit
 Function Git-Push { git push origin }
-Set-Alias -Name gph -Value Git-Push
+Set-Alias -Name gpus -Value Git-Push
 Function Git-Pull { git pull }
-Set-Alias -Name gpl -Value Git-Pull
+Set-Alias -Name gpul -Value Git-Pull
 Function Git-Reset-Hard-Head { git reset --hard HEAD }
 Set-Alias -Name grhh -Value Git-Reset-Hard-Head
 Function Git-Reset-Hard { git reset --hard $args[0] }
 Set-Alias -Name grh -Value Git-Reset-Hard
 Function Git-Log { git log $args[0] }
-Set-Alias -Name glg -Value Git-Log
-Function Git-Diff { git diff $args[0] }
-Set-Alias -Name gd -Value Git-Diff
+Set-Alias -Name glo -Value Git-Log
 
 Invoke-Expression (&starship init powershell)
 

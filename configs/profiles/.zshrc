@@ -7,25 +7,24 @@
 # Description: Profile file for Oh My Zsh shell.
 #
 
-alias dh="cat $HOME/.zshrc"
+alias dh="bat $HOME/.zshrc"
 alias i=$HOME/.dotfiles/install.sh
 alias u=$HOME/.dotfiles/uninstall.sh
 alias e=exit
 alias c=clear
 alias l="ls -la"
-alias gint="git init"
+alias m="man $1"
+alias t=tmux
+alias gini="git init"
 alias gs="git status"
 alias ga="git add ."
 alias gd="git diff"
-alias gct="git commit -m $1"
-alias gph="git push origin"
-alias gpl="git pull"
+alias gco="git commit -m $1"
+alias gpus="git push origin"
+alias gpul="git pull"
 alias grhh="git reset --hard HEAD"
 alias grh="git reset --hard $1"
-alias glg="git log $1"
-alias gd="git diff $1"
-alias m="man $1"
-alias t=tmux
+alias glo="git log $1"
 
 eval "$(starship init zsh)"
 
