@@ -4,7 +4,7 @@
 #
 # Author: Daniel Ribeirinha-Braga
 #
-# Description: Profile file for Alpine unix operating system.
+# Description: Profile file for Alpine Unix operating system.
 #
 
 alias dh="cat $HOME/.profile"

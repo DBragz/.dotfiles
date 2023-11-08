@@ -3,7 +3,7 @@
 "
 " Author: Daniel Ribeirinha-Braga
 "
-" Description: Profile vim file.
+" Description: Profile Vim file.
 "
 
 colorscheme murphy
