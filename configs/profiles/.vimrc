@@ -53,7 +53,7 @@ let g:syntastic_check_on_wq = 0
 let maplocalleader = "g"
 let mapleader = " "
 
-nnoremap <localleader>e :E<CR>
+nnoremap <localleader>e :Ex<CR>
 
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>so :so<CR>
