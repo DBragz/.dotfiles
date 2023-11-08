@@ -7,6 +7,15 @@
 # Description: Installation script for my Mac environment.
 #
 
+if ! command -v brew &> /dev/null
+then
+  echo "Error: Homebrew could not be found"
+  echo "Installing brew"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo "Installing Meslo Nerd Font"
+  brew install font-meslo-lg-nerd-font
+fi
+
 if ! command -v tmux &> /dev/null
 then
   echo "Error: Terminal multiplexer could not be found"
@@ -72,15 +81,6 @@ cp $HOME/.dotfiles/configs/lua/server.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/lua/telescope.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/lua/harpoon.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/json/vscode.json $HOME/Library/Application\ Support/Code/User/settings.json 
-
-if ! command -v brew &> /dev/null
-then
-  echo "Error: Homebrew could not be found"
-  echo "Installing brew"
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  echo "Installing Meslo Nerd Font"
-  brew install font-meslo-lg-nerd-font
-fi
 
 if ! command -v code &> /dev/null
 then
