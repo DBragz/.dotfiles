@@ -7,10 +7,12 @@
 # Description: Profile file for Alpine Unix operating system.
 #
 
+alias h=help
 alias dh="cat $HOME/.profile"
 alias i=$HOME/.dotfiles/install.sh
 alias u=$HOME/.dotfiles/uninstall.sh
 alias e=exit
+alias c=clear
 alias l="ls -la"
 alias m="man $1"
 alias t=tmux
