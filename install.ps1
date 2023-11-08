@@ -133,6 +133,12 @@ if (-not (Get-Command code -errorAction silentlyContinue)) {
   scoop reset vscode
 }
 
+if (-not (Test-Path $env:HOMEPATH\AppData\Roaming\Code\User\ -PathType Container)) {
+  New-Item -Type Directory -Path $env:HOMEPATH\AppData\Roaming\Code\User\
+}
+
+Copy-Item $env:HOMEPATH\.dotfiles\configs\json\vscode.json $env:HOMEPATH\AppData\Roaming\Code\User\settings.json 
+
 if (-not (Get-Command docker -errorAction silentlyContinue)) {
   Write-Host "Error: Docker could not be found"
   Write-Host "Installing docker-desktop"
@@ -141,12 +147,6 @@ if (-not (Get-Command docker -errorAction silentlyContinue)) {
   }
   wsl --update
 }
-
-if (-not (Test-Path $env:HOMEPATH\AppData\Roaming\Code\User\ -PathType Container)) {
-  New-Item -Type Directory -Path $env:HOMEPATH\AppData\Roaming\Code\User\
-}
-
-Copy-Item $env:HOMEPATH\.dotfiles\configs\json\vscode.json $env:HOMEPATH\AppData\Roaming\Code\User\settings.json 
 
 if (-not (Get-Command java -errorAction silentlyContinue)) {
   Write-Host "Error: Java could not be found"

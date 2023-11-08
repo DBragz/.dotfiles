@@ -80,7 +80,6 @@ cp $HOME/.dotfiles/configs/lua/undotree.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/lua/server.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/lua/telescope.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/lua/harpoon.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/json/vscode.json $HOME/Library/Application\ Support/Code/User/settings.json 
 
 if ! command -v code &> /dev/null
 then
@@ -88,6 +87,8 @@ then
   echo "Installing code"
   brew install code
 fi
+
+cp $HOME/.dotfiles/configs/json/vscode.json $HOME/Library/Application\ Support/Code/User/settings.json 
 
 java=$(java -version 2>&1)
 
