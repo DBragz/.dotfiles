@@ -83,16 +83,16 @@ if ((Get-ChildItem C:\Windows\Fonts\ | Out-String -Stream | Select-String -Patte
   } 
 }
 
-if (-not (Get-Command bat -errorAction silentlyContinue)) {
-  Write-Host "Error: Bat could not be found"
-  Write-Host "Installing bat"
-  scoop install bat
-}
-
 if (-not (Get-Command fzf -errorAction silentlyContinue)) {
   Write-Host "Error: Command-line fuzzy finder could not be found"
   Write-Host "Installing fzf"
   scoop install fzf
+}
+
+if (-not (Get-Command bat -errorAction silentlyContinue)) {
+  Write-Host "Error: Bat could not be found"
+  Write-Host "Installing bat"
+  scoop install bat
 }
 
 if (-not (Get-Command nvim -errorAction silentlyContinue)) {
