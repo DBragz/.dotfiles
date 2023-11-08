@@ -7,6 +7,7 @@
   Author: Daniel Ribeirinha-Braga
 #>
 
+Set-Alias -Name h -Value help
 Function Dotfiles-Help { bat $PROFILE }
 Set-Alias -Name dh -Value Dotfiles-Help
 Set-Alias -Name i -Value $env:HOMEPATH/.dotfiles/install.ps1
@@ -15,7 +16,6 @@ Function Exit { exit }
 Set-Alias -Name e -Value Exit
 Set-Alias -Name c -Value Clear-Host
 Set-Alias -Name l -Value Get-ChildItem
-// Add man equivalent 
 Function Git-Init { git init }
 Set-Alias -Name gini -Value Git-Init
 Function Git-Status { git status }
