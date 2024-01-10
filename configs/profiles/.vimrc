@@ -35,6 +35,7 @@ call plug#begin()
   Plug 'ryanoasis/vim-devicons'
   Plug 'tpope/vim-fugitive'
   Plug 'scrooloose/syntastic'
+  Plug 'Exafunction/codeium.vim'
 call plug#end()
 
 let NERDTreeShowHidden=1
