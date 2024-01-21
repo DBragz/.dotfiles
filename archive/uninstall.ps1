@@ -3,7 +3,7 @@
 .DESCRIPTION
   Uninstallation script for my Windows 10 environment.
 .NOTES
-  Name:   uninstall_10.ps1
+  Name:   uninstall.ps1
   Author: Daniel Ribeirinha-Braga
 #>
 

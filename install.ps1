@@ -4,7 +4,7 @@
   Installation script for my Windows 11 environment.
 .NOTES
   Author: Daniel Ribeirinha-Braga
-  Name:   install_11.ps1
+  Name:   install.ps1
 #>
 
 Write-Host "Running Windows 11 install script"
