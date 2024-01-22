@@ -1,0 +1,18 @@
+-- Create a function and name it hi to return a string
+function hi()
+  return "Hello, World!"
+end
+
+-- Create a function and name it oi to return a complex data structure for crypto
+function oi()
+  return {
+    name = "DBragz",
+    age = 21
+  }
+end
+
+-- Watch language is this?
+function watch()
+  return "Hyperscript"
+end
+
