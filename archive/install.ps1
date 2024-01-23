@@ -3,7 +3,7 @@
 .DESCRIPTION
   Installation script for my Windows 10 environment.
 .NOTES
-  Name:   install_10.ps1
+  Name:   install.ps1
   Author: Daniel Ribeirinha-Braga
 #>
 
