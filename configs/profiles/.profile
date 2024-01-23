@@ -8,14 +8,13 @@
 #
 
 alias h=help
-alias dh="cat $HOME/.profile"
+alias m="man $1"
+alias l="ls -la"
+alias c=clear
+alias e=exit
 alias i=$HOME/.dotfiles/install.sh
 alias u=$HOME/.dotfiles/uninstall.sh
-alias e=exit
-alias c=clear
-alias l="ls -la"
-alias m="man $1"
-alias t=tmux
+alias dh="cat $HOME/.profile"
 alias gini="git init"
 alias gs="git status"
 alias ga="git add ."
@@ -26,4 +25,5 @@ alias gpul="git pull"
 alias grhh="git reset --hard HEAD"
 alias grh="git reset --hard $1"
 alias glo="git log $1"
+alias t=tmux
 
