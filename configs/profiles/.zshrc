@@ -35,7 +35,6 @@ set_proxy() {
   export https_proxy="$1"
 }
 
-
 get_proxy() {
   echo "http_proxy: $http_proxy"
   echo "https_proxy: $https_proxy"
