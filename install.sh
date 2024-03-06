@@ -22,6 +22,9 @@ else
     "cat: /etc/os-release: No such file or directory " )
       /data/data/com.termux/files/use/bin/bash $HOME/.dotfiles/os/termux.sh
       ;;
+    *"rhel"* )
+      echo "Red Hat!"
+      ;;
   esac
 
 fi
