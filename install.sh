@@ -23,7 +23,7 @@ else
       /data/data/com.termux/files/use/bin/bash $HOME/.dotfiles/os/termux.sh
       ;;
     *"rhel"* )
-      echo "Red Hat!"
+      /bin/sh $HOME/.dotfiles/os/rhel.sh
       ;;
   esac
 
