@@ -19,9 +19,9 @@ else
     *"alpine"* )
       /bin/sh $HOME/.dotfiles/os/alpine.sh
       ;;
-    "cat: /etc/os-release: No such file or directory" )
-     /data/data/com.termux/files/use/bin/bash $HOME/.dotfiles/os/termux.sh
-     ;;
+    "cat: /etc/os-release: No such file or directory " )
+      /data/data/com.termux/files/use/bin/bash $HOME/.dotfiles/os/termux.sh
+      ;;
   esac
 
 fi
