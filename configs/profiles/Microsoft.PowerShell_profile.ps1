@@ -47,7 +47,7 @@ Set-Alias -Name grhh -Value Git-Reset-Hard-Head
 Function Git-Reset-Hard { git reset --hard $args[0] }
 Set-Alias -Name grh -Value Git-Reset-Hard
 
-Function Git-Log { git log $args[0] }
+Function Git-Log { git log "-$($args[0])" }
 Set-Alias -Name glo -Value Git-Log
 
 Invoke-Expression (&starship init powershell)
