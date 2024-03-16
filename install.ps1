@@ -128,7 +128,7 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\harpoon.lua $env:LOCALAPPDATA\nvim
 
 if (-not (Get-Command code -errorAction silentlyContinue)) {
   Write-Host "Error: Visual Studio Code could not be found"
-  Write-Host "Installing vscode"
+  Write-Host "Installing code"
   winget install -e --id Microsoft.VisualStudioCode
 }
 
