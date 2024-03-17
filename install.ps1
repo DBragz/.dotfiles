@@ -30,7 +30,7 @@ if (-not (Get-Command choco -errorAction SilentlyContinue)) {
 if (-not (Get-Command starship -errorAction silentlyContinue)) {
   Write-Host "Error: Starship could not be found"
   Write-Host "Installing starship"
-  scoop install starship
+  winget install -e --id Starship.Starship
 }
 
 if (-not (Get-Command clink -errorAction SilentlyContinue)) {
