@@ -21,7 +21,7 @@ if (-not (Get-Command scoop -errorAction SilentlyContinue)) {
 if (-not (Get-Command choco -errorAction SilentlyContinue)) {
   Write-Host "Error: Chocolately could not be found"
   Write-Host "Installing choco"
-  if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)){
+  if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     Start-Process -Wait powershell -Verb runAs "& Invoke-WebRequest -useb chocolatey.org/install.ps1 | Invoke-Expression"
     Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
   }
@@ -78,7 +78,7 @@ if (-not (Get-Command oh-my-posh -errorAction SilentlyContinue)) {
 }
 
 if ((Get-ChildItem C:\Windows\Fonts\ | Out-String -Stream | Select-String -Pattern "Meslo").Count -eq 0) {
-  if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)){
+  if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     Start-Process -Wait powershell -Verb runAs "oh-my-posh font install Meslo"
   } 
 }
@@ -98,7 +98,7 @@ if (-not (Get-Command bat -errorAction silentlyContinue)) {
 if (-not (Get-Command nvim -errorAction silentlyContinue)) {
   Write-Host "Error: Neovim could not be found"
   Write-Host "Installing neovim"
-  scoop install neovim
+  winget install -e --id Neovim.Neovim
 }
 
 if (-not (Test-Path $env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim -PathType Container)) {
@@ -141,7 +141,7 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\json\vscode.json $env:HOMEPATH\AppData
 if (-not (Get-Command docker -errorAction silentlyContinue)) {
   Write-Host "Error: Docker could not be found"
   Write-Host "Installing docker-desktop"
-  if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)){
+  if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     Start-Process -Wait powershell -Verb runAs "choco install docker-desktop -y"
   }
   wsl --update
