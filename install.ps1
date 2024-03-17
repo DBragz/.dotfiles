@@ -36,7 +36,7 @@ if (-not (Get-Command starship -errorAction silentlyContinue)) {
 if (-not (Get-Command clink -errorAction SilentlyContinue)) {
   Write-Host "Error: Clink could not be found"
   Write-Host "Installing clink"
-  scoop install clink
+  winget install -e --id chrisant996.Clink
 }
 
 if (-not (Test-Path $env:LOCALAPPDATA\clink -PathType Container)) {
