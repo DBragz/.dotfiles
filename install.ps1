@@ -71,36 +71,32 @@ if (-not (Get-Command bat -errorAction silentlyContinue)) {
 
 if (-not (Get-Command java -errorAction silentlyContinue)) {
   Write-Host "Error: Java could not be found"
-  Write-Host "Installing openjdk"
-  scoop bucket add java
-  scoop install openjdk
-  scoop reset openjdk
+  Write-Host "Installing Oracle.JDK.21"
+  winget install -e --id Oracle.JDK.21
 }
 
 if (-not (Get-Command python -errorAction silentlyContinue)) {
   Write-Host "Error: Python could not be found"
   Write-Host "Installing python"
-  scoop install python
+  winget install -e --id Python.Python.3.12
 }
 
 if (-not (Get-Command node -errorAction silentlyContinue)) {
   Write-Host "Error: Node.js could not be found"
   Write-Host "Installing node"
-  scoop install nodejs-lts
-  scoop reset nodejs-lts
+  winget install -e --id OpenJS.NodeJS.LTS
 }
 
 if (-not (Get-Command lua -errorAction silentlyContinue)) {
   Write-Host "Error: Lua could not be found"
   Write-Host "Installing lua"
-  scoop install lua 
+  winget install -e --id DEVCOM.Lua
 }
 
 if (-not (Get-Command gcc -errorAction silentlyContinue)) {
   Write-Host "Error: GNU Compiler Collection could not be found"
   Write-Host "Installing gcc"
-  scoop install gcc
-  scoop reset gcc
+  winget install -e --id Codeblocks.Codeblocks
 }
 
 if (-not (Get-Command nvim -errorAction silentlyContinue)) {
