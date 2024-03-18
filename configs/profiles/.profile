@@ -24,6 +24,6 @@ alias gpus="git push origin"
 alias gpul="git pull"
 alias grhh="git reset --hard HEAD"
 alias grh="git reset --hard $1"
-alias glo="git log -$1"
+alias glo="git log $1"
 alias t=tmux
 
