@@ -13,12 +13,12 @@ vim.keymap.set("n", "<leader>tl", ":Telescope lsp_references<CR>")
 HOME = ""
 
 if os.getenv("HOME") ~= nil then
-    HOME = tostring(os.getenv("HOME"))
-    vim.keymap.set('n', '<leader>tgr', function()
-	require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ")})
-end, { desc = "telescope.builtin.grep_string" })
+  HOME = tostring(os.getenv("HOME"))
+  vim.keymap.set('n', '<leader>tgr', function()
+    require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ")})
+  end, { desc = "telescope.builtin.grep_string" })
 else
-    HOME = tostring(os.getenv("HOMEPATH"))
-    print("No grep_string :(")
+  HOME = tostring(os.getenv("HOMEPATH"))
+  print("No grep_string :(")
 end
 
