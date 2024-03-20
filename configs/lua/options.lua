@@ -6,14 +6,13 @@
 
 HOME = ""
 
-if os.getenv("HOME") ~= nil
-  then
-    HOME = tostring(os.getenv("HOME"))
-    print("Unix")
-  else
-    HOME = tostring(os.getenv("HOMEPATH"))
-    print("Windows")
-  end
+if os.getenv("HOME") ~= nil then
+  HOME = tostring(os.getenv("HOME"))
+  print("Unix")
+else
+  HOME = tostring(os.getenv("HOMEPATH"))
+  print("Windows")
+end
 
 vim.opt.ts = 2
 vim.opt.sts = 2
