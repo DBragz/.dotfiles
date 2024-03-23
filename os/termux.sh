@@ -18,6 +18,13 @@ fi
 cd ~/.vim/bundle && \
   git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
 
+if ! command -v gh &> /dev/null
+then
+  echo "Error: GitHub CLI could not be found"
+  echo "Installing gh"
+  pkg install gh
+fi
+
 if ! command -v man &> /dev/null
 then
   echo "Error: man could not be found"

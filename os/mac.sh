@@ -7,6 +7,13 @@
 # Description: Installation script for my Mac environment.
 #
 
+if ! command -v gh &> /dev/null
+then
+  echo "Error: GitHub CLI could not be found"
+  echo "Installing gh"
+  brew install gh
+fi
+
 if ! command -v brew &> /dev/null
 then
   echo "Error: Homebrew could not be found"

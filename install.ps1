@@ -27,6 +27,12 @@ if (-not (Get-Command choco -errorAction SilentlyContinue)) {
   }
 }
 
+if (-not (Get-Command gh -errorAction silentlyContinue)) {
+  Write-Host "Error: GitHub CLI could not be found"
+  Write-Host "Installing gh"
+  winget install -e --id GitHub.cli
+}
+
 if (-not (Get-Command starship -errorAction silentlyContinue)) {
   Write-Host "Error: Starship could not be found"
   Write-Host "Installing starship"
