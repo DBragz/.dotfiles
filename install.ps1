@@ -59,7 +59,7 @@ if (-not (Get-Command oh-my-posh -errorAction SilentlyContinue)) {
 
 if (-not (Get-Command pwsh -errorAction SilentlyContinue)) {
   Write-Host "Error: PowerShell 7 not found"
-  Write-Host "Installing Microsoft.PowerShell"
+  Write-Host "Installing pwsh"
   winget install -e --id Microsoft.PowerShell
 }
 
@@ -77,14 +77,14 @@ if (-not (Get-Command bat -errorAction silentlyContinue)) {
 
 if (-not (Get-Command java -errorAction silentlyContinue)) {
   Write-Host "Error: Java could not be found"
-  Write-Host "Installing Oracle.JDK.21"
-  winget install -e --id Oracle.JDK.21
+  Write-Host "Installing java"
+  winget install -e --id Oracle.JDK.22
 }
 
 if (-not (Get-Command python -errorAction silentlyContinue)) {
   Write-Host "Error: Python could not be found"
   Write-Host "Installing python"
-  winget install -e --id Python.Python.3.12
+  winget install -e --id Python.Python.3.13
 }
 
 if (-not (Get-Command node -errorAction silentlyContinue)) {
@@ -107,7 +107,7 @@ if (-not (Get-Command gcc -errorAction silentlyContinue)) {
 
 if (-not (Get-Command nvim -errorAction silentlyContinue)) {
   Write-Host "Error: Neovim could not be found"
-  Write-Host "Installing neovim"
+  Write-Host "Installing nvim"
   winget install -e --id Neovim.Neovim
 }
 
