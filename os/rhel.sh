@@ -9,8 +9,6 @@
 
 cp $HOME/.dotfiles/configs/profiles/.vimrc $HOME/
 
-echo "Red Hat Enterprise Linux script!"
-
 if ! command -v gh &> /dev/null
 then
   echo "Error: GitHub CLI could not be found"
@@ -18,4 +16,6 @@ then
   # sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
   dnf install gh
 fi
+
+echo "Completed Red Hat Enterprise Linux install script!"
 

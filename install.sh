@@ -9,7 +9,7 @@
 
 echo "Running Unix install script!"
 
-if [ "$(uname)" == "Darwin" ]; then
+if [ "$(uname)" = "Darwin" ]; then
    /bin/sh $HOME/.dotfiles/os/mac.sh
 else
 
@@ -24,6 +24,9 @@ else
       ;;
     *"rhel"* )
       /bin/sh $HOME/.dotfiles/os/rhel.sh
+      ;;
+    *"kali"* )
+      /bin/sh $HOME/.dotfiles/os/kali.sh
       ;;
   esac
 
