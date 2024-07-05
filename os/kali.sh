@@ -7,7 +7,7 @@
 # Description: Installation script for my Kali Linux environment.
 #
 
-if ! command -v wezterm &> /dev/null
+if ! command -v wezterm > /dev/null
 then
   echo "Error: Wezterm could not be found"
   echo "Installing wezterm"
@@ -16,6 +16,10 @@ then
   sudo apt update
   sudo apt install wezterm
 fi
+
+mkdir -p $HOME/.config/wezterm/
+
+cp $HOME/.dotfiles/configs/wezterm/wezterm.lua $HOME/.config/wezterm/
 
 echo "Completed Kali Linux install script!"
 

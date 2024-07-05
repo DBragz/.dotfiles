@@ -7,11 +7,6 @@
 # Description: Installation script for my alpine environment.
 #
 
-rm /etc/motd
-
-cp $HOME/.dotfiles/configs/motd /etc/
-cp $HOME/.dotfiles/configs/profiles/.profile $HOME/
-
 if ! command -v man &> /dev/null
 then
   echo "Error: GitHub CLI could not be found"
@@ -87,6 +82,11 @@ cp $HOME/.dotfiles/configs/profiles/.vimrc $HOME/
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+rm /etc/motd
+
+cp $HOME/.dotfiles/configs/motd /etc/
+cp $HOME/.dotfiles/configs/profiles/.profile $HOME/
 
 echo "Completed Alpine install script!"
 

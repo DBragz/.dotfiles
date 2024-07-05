@@ -4,11 +4,8 @@
 #
 # Author: Daniel Ribeirinha-Braga
 #
-# Description: Installation script for my termux environment.
+# Description: Installation script for my Termux environment.
 #
-
-cp $HOME/.dotfiles/configs/profiles/.profile $HOME/
-cp $HOME/.dotfiles/configs/profiles/.vimrc $HOME/
 
 if [ ! -d ~/.vim/autoload || ! -d ~/.vim/bundle ]; then
   mkdir -p ~/.vim/autoload ~/.vim/bundle && \
@@ -45,6 +42,9 @@ then
   echo "Installing vim"
   pkg install vim
 fi
+
+cp $HOME/.dotfiles/configs/profiles/.profile $HOME/
+cp $HOME/.dotfiles/configs/profiles/.vimrc $HOME/
 
 echo "Completed Termux install script!"
 
