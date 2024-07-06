@@ -45,7 +45,7 @@ if (-not (Get-Command starship -errorAction silentlyContinue)) {
   winget install -e --id Starship.Starship
 }
 
-if (-not (Test-Path 'C:Program Files (x86)\clink\' )) {
+if (-not (Test-Path 'C:\Program Files (x86)\clink\' )) {
   Write-Host "Error: Clink could not be found"
   Write-Host "Installing clink"
   winget install -e --id chrisant996.Clink
