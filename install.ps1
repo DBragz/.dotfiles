@@ -108,7 +108,7 @@ if (-not (Get-Command lua -errorAction silentlyContinue)) {
 if (-not (Get-Command gcc -errorAction silentlyContinue)) {
   Write-Host "Error: GNU Compiler Collection could not be found"
   Write-Host "Installing gcc"
-  winget install -e --id Codeblocks.Codeblocks
+  winget install -e --id mingw-w64-x86_64-gcc
 }
 
 if (-not (Get-Command nvim -errorAction silentlyContinue)) {
