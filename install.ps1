@@ -33,11 +33,11 @@ if (-not (Get-Command wezterm -errorAction silentlyContinue)) {
   winget install -e --id wez.wezterm
 }
 
-if (-not (Test-Path $env:LOCALAPPDATA\.config\wezterm\ -PathType Container)) {
-  New-Item -Type Directory $env:LOCALAPPDATA\.config\wezterm\
+if (-not (Test-Path $env:HOMEPATH\.config\wezterm\ -PathType Container)) {
+  New-Item -Type Directory $env:HOMEPATH\.config\wezterm\
 }
 
-Copy-Item $env:HOMEPATH\.dotfiles\configs\wezterm\wezterm.lua $env:LOCALAPPDATA\wezterm\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\wezterm\wezterm.lua $env:HOMEPATH\.config\wezterm\
 
 if (-not (Get-Command starship -errorAction silentlyContinue)) {
   Write-Host "Error: Starship could not be found"
