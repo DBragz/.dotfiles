@@ -37,7 +37,7 @@ if (-not (Test-Path $env:LOCALAPPDATA\wezterm\ -PathType Container)) {
   New-Item -Type Directory $env:LOCALAPPDATA\wezterm\
 }
 
-Copy-Item $env:HOMEPATH\.dotfiles\configs\wezterm\wezterm.lua $env:LOCALAPPDATA\wezterm\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\wezterm\wezterm.lua $env:LOCALAPPDATA\.config\wezterm\
 
 if (-not (Get-Command starship -errorAction silentlyContinue)) {
   Write-Host "Error: Starship could not be found"
