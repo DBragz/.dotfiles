@@ -27,11 +27,13 @@ if (-not (Get-Command choco -errorAction SilentlyContinue)) {
   }
 }
 
-if (-not (Get-Command gh -errorAction silentlyContinue)) {
-  Write-Host "Error: GitHub CLI could not be found"
-  Write-Host "Installing gh"
-  winget install -e --id GitHub.cli
+if (-not (Get-Command wezterm -errorAction silentlyContinue)) {
+  Write-Host "Error: Wezterm could not be found"
+  Write-Host "Installing wezterm"
+  winget install -e --id wez.wezterm
 }
+
+Copy-Item $env:HOMEPATH\.dotfiles\configs\wezterm\wezterm.lua $env:LOCALAPPDATA\wezterm\
 
 if (-not (Get-Command starship -errorAction silentlyContinue)) {
   Write-Host "Error: Starship could not be found"
@@ -175,6 +177,12 @@ if (-not (Get-Command docker -errorAction silentlyContinue)) {
     Start-Process -Wait powershell -Verb runAs "choco install docker-desktop -y"
   }
   wsl --update
+}
+
+if (-not (Get-Command gh -errorAction silentlyContinue)) {
+  Write-Host "Error: GitHub CLI could not be found"
+  Write-Host "Installing gh"
+  winget install -e --id GitHub.cli
 }
 
 Write-Host "Completed Windows 11 install script"
