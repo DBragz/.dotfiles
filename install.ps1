@@ -105,12 +105,6 @@ if (-not (Get-Command lua -errorAction silentlyContinue)) {
   winget install -e --id DEVCOM.Lua
 }
 
-if (-not (Get-Command gcc -errorAction silentlyContinue)) {
-  Write-Host "Error: GNU Compiler Collection could not be found"
-  Write-Host "Installing gcc"
-  winget install -e --id mingw-w64-x86_64-gcc
-}
-
 if (-not (Get-Command nvim -errorAction silentlyContinue)) {
   Write-Host "Error: Neovim could not be found"
   Write-Host "Installing nvim"
