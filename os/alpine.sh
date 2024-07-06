@@ -9,13 +9,6 @@
 
 if ! command -v man &> /dev/null
 then
-  echo "Error: GitHub CLI could not be found"
-  echo "Installing gh"
-  apk add gh
-fi
-
-if ! command -v man &> /dev/null
-then
   echo "Error: Mandoc could not be found"
   echo "Installing man"
   apk add mandoc man-pages
@@ -82,6 +75,13 @@ cp $HOME/.dotfiles/configs/profiles/.vimrc $HOME/
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+if ! command -v man &> /dev/null
+then
+  echo "Error: GitHub CLI could not be found"
+  echo "Installing gh"
+  apk add gh
+fi
 
 rm /etc/motd
 
