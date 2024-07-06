@@ -33,8 +33,8 @@ if (-not (Get-Command wezterm -errorAction silentlyContinue)) {
   winget install -e --id wez.wezterm
 }
 
-if (-not (Test-Path $env:LOCALAPPDATA\wezterm\ -PathType Container)) {
-  New-Item -Type Directory $env:LOCALAPPDATA\wezterm\
+if (-not (Test-Path $env:LOCALAPPDATA\.config\wezterm\ -PathType Container)) {
+  New-Item -Type Directory $env:LOCALAPPDATA\.config\wezterm\
 }
 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\wezterm\wezterm.lua $env:LOCALAPPDATA\wezterm\
