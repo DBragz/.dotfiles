@@ -75,18 +75,18 @@ mkdir -p $HOME/.config/nvim/lua/
 mkdir -p $HOME/.config/nvim/after/plugin/
 
 cp $HOME/.dotfiles/configs/profiles/.zshrc $HOME
-cp $HOME/.dotfiles/configs/lua/init.lua $HOME/.config/nvim/
-cp $HOME/.dotfiles/configs/lua/options.lua $HOME/.config/nvim/lua/
-cp $HOME/.dotfiles/configs/lua/plugins.lua $HOME/.config/nvim/lua/
-cp $HOME/.dotfiles/configs/lua/colors.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/lua/remap.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/lua/tive.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/lua/tree.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/lua/treesitter.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/lua/undotree.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/lua/server.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/lua/telescope.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/lua/harpoon.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/neovim/init.lua $HOME/.config/nvim/
+cp $HOME/.dotfiles/configs/neovim/options.lua $HOME/.config/nvim/lua/
+cp $HOME/.dotfiles/configs/neovim/plugins.lua $HOME/.config/nvim/lua/
+cp $HOME/.dotfiles/configs/neovim/colors.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/neovim/remap.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/neovim/tive.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/neovim/tree.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/neovim/treesitter.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/neovim/undotree.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/neovim/server.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/neovim/telescope.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/neovim/harpoon.lua $HOME/.config/nvim/after/plugin/
 
 if ! command -v code &> /dev/null
 then
