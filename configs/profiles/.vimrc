@@ -61,7 +61,7 @@ nnoremap <leader>so :so<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>x :x<CR>
 nnoremap <leader>q :q<CR>
-nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>e :NERDTreeToggle<CR>
 nnoremap <leader>gini :G ini<CR>
 nnoremap <leader>gs :G status<CR>
 nnoremap <leader>ga :G add .<CR>
