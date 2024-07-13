@@ -15,13 +15,6 @@ fi
 cd ~/.vim/bundle && \
   git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
 
-if ! command -v gh &> /dev/null
-then
-  echo "Error: GitHub CLI could not be found"
-  echo "Installing gh"
-  pkg install gh
-fi
-
 if ! command -v man &> /dev/null
 then
   echo "Error: man could not be found"
@@ -45,6 +38,13 @@ fi
 
 cp $HOME/.dotfiles/configs/profiles/.profile $HOME/
 cp $HOME/.dotfiles/configs/profiles/.vimrc $HOME/
+
+if ! command -v gh &> /dev/null
+then
+  echo "Error: GitHub CLI could not be found"
+  echo "Installing gh"
+  pkg install gh
+fi
 
 echo "Completed Termux install script!"
 

@@ -7,13 +7,6 @@
 # Description: Installation script for my Mac environment.
 #
 
-if ! command -v gh &> /dev/null
-then
-  echo "Error: GitHub CLI could not be found"
-  echo "Installing gh"
-  brew install gh
-fi
-
 if ! command -v brew &> /dev/null
 then
   echo "Error: Homebrew could not be found"
@@ -132,6 +125,13 @@ then
   echo "Error: GNU Compiler Collection could not be found"
   echo "Installing gcc"
   brew install gcc
+fi
+
+if ! command -v gh &> /dev/null
+then
+  echo "Error: GitHub CLI could not be found"
+  echo "Installing gh"
+  brew install gh
 fi
 
 echo "Completed Mac install script!"
