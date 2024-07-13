@@ -21,7 +21,7 @@ mkdir -p $HOME/.config/wezterm/
 
 cp $HOME/.dotfiles/configs/wezterm/wezterm.lua $HOME/.config/wezterm/
 
-if ! command -v gh &> /dev/null
+if ! command -v gh > /dev/null
 then
   echo "Error: GitHub CLI could not be found"
   echo "Installing gh"
