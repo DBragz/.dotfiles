@@ -1,5 +1,5 @@
 --
--- Name:        server.lua
+-- Name:        zero.lua
 -- Description: Neovim Language Server Processing (LSP) zero plugin settings.
 -- Author:      Daniel Ribeirinha-Braga
 --
@@ -20,21 +20,6 @@ local lsp_zero = require('lsp-zero')
 lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 end)
-
-require('mason').setup({})
-require('mason-lspconfig').setup({
-  ensure_installed = {
-    'bashls',
-    'lua_ls',
-    'jdtls',
-    'powershell_es',
-    'pylsp',
-    'tsserver',
-  },
-  handlers = {
-    lsp_zero.default_setup,
-  },
-})
 
 local lspconfig = require('lspconfig')
 
