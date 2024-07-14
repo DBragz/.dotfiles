@@ -84,13 +84,13 @@ if (-not (Get-Command bat -errorAction silentlyContinue)) {
 if (-not (Get-Command java -errorAction silentlyContinue)) {
   Write-Host "Error: Java could not be found"
   Write-Host "Installing java"
-  winget install -e --id Oracle.JDK.22
+  winget install -e --id Oracle.JDK
 }
 
 if (-not (Get-Command python -errorAction silentlyContinue)) {
   Write-Host "Error: Python could not be found"
   Write-Host "Installing python"
-  winget install -e --id Python.Python.3.13
+  winget install -e --id Python.Python
 }
 
 if (-not (Get-Command node -errorAction silentlyContinue)) {

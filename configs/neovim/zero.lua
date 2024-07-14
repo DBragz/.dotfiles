@@ -24,6 +24,7 @@ require('mason-lspconfig').setup({
     'lua_ls',
     'jdtls',
     'powershell_es',
+    'pylyzer'
  },
   handlers = {
     lsp_zero.default_setup,
