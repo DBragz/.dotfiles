@@ -17,9 +17,17 @@ vim.keymap.set("n", "<leader>lbs", vim.lsp.buf.signature_help, { desc = "vim.lsp
 
 local lsp_zero = require('lsp-zero')
 
-lsp_zero.on_attach(function(client, bufnr)
-  lsp_zero.default_keymaps({buffer = bufnr})
-end)
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = {
+    'lua_ls',
+    'jdtls',
+    'powershell_es',
+ },
+  handlers = {
+    lsp_zero.default_setup,
+  },
+})
 
 local lspconfig = require('lspconfig')
 
@@ -34,3 +42,4 @@ lspconfig.lua_ls.setup {
     },
   },
 }
+
