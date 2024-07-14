@@ -4,8 +4,8 @@
 -- Author:      Daniel Ribeirinha-Braga
 --
 
+vim.cmd [[colorscheme elflord]]
+
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-
-vim.api.nvim_set_hl(0, "", { bg = "none" })
 
