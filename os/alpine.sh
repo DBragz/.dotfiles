@@ -39,7 +39,7 @@ if ! command -v bat &> /dev/null
 then
   echo "Error: Bat could not be found"
   echo "Installing bat"
-  apk add vim
+  apk add bat
 fi
 
 if ! command -v starship &> /dev/null
@@ -63,25 +63,20 @@ then
   apk add vim
 fi
 
-#if [ ! -d ~/.vim/autoload || ! -d ~/.vim/bundle ]; then
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-#fi
-
-cd ~/.vim/bundle && \
-  git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
-
 cp $HOME/.dotfiles/configs/profiles/.vimrc $HOME/
 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+#if [ ! -d ~/.vim/autoload || ! -d ~/.vim/bundle ]; then
+#mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+#  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+#fi
 
-rm /etc/motd
+#cd ~/.vim/bundle && \
+#  git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
 
-cp $HOME/.dotfiles/configs/motd /etc/
-cp $HOME/.dotfiles/configs/profiles/.profile $HOME/
+#curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+#    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-if ! command -v man &> /dev/null
+if ! command -v gh &> /dev/null
 then
   echo "Error: GitHub CLI could not be found"
   echo "Installing gh"
