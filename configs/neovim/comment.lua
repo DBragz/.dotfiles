@@ -7,6 +7,6 @@
 require('Comment').setup()
 
 vim.api.nvim_set_keymap('i', '<C-_>', '<Esc>gccA', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-_>', 'gcc', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', '<C-_>', 'gc', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-_>', 'gcc', { noremap = false, silent = true })
+vim.api.nvim_set_keymap('v', '<C-_>', 'gc', { noremap = false, silent = true })
 
