@@ -44,6 +44,7 @@ return require("packer").startup {
         {'L3MON4D3/LuaSnip'},
       }
     }
+    use('numToStr/Comment.nvim')
     use 'Exafunction/codeium.vim'
   end
 }
