@@ -51,6 +51,13 @@ cp $HOME/.dotfiles/configs/neovim/telescope.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/neovim/harpoon.lua $HOME/.config/nvim/after/plugin/
 # cp $HOME/.dotfiles/configs/neovim/comment.lua $HOME/.config/nvim/after/plugin/
 
+if type nvm > /dev/null
+then
+  echo "Error: Node Version Manager could not be found"
+  echo "Installing nvm"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+fi
+
 if ! command -v gh > /dev/null
 then
   echo "Error: GitHub CLI could not be found"
