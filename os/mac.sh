@@ -88,7 +88,7 @@ then
   brew install code
 fi
 
-cp $HOME/.dotfiles/configs/json/vscode.json $HOME/Library/Application\ Support/Code/User/settings.json 
+cp $HOME/.dotfiles/configs/profiles/mac/vscode.json $HOME/Library/Application\ Support/Code/User/settings.json 
 
 java=$(java -version 2>&1)
 
