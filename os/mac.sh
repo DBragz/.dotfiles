@@ -77,7 +77,7 @@ cp $HOME/.dotfiles/configs/neovim/tive.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/neovim/tree.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/neovim/treesitter.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/neovim/undotree.lua $HOME/.config/nvim/after/plugin/
-cp $HOME/.dotfiles/configs/neovim/server.lua $HOME/.config/nvim/after/plugin/
+cp $HOME/.dotfiles/configs/neovim/zero.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/neovim/telescope.lua $HOME/.config/nvim/after/plugin/
 cp $HOME/.dotfiles/configs/neovim/harpoon.lua $HOME/.config/nvim/after/plugin/
 
