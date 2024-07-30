@@ -18,7 +18,7 @@
   "explorer.confirmDragAndDrop": false,
   "git.confirmSync": true,
   "security.workspace.trust.untrustedFiles": "newWindow",
-  "terminal.integrated.fontFamily": "MesloLGS Nerd Font",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.zoomLevel": 1,
   "workbench.colorCustomizations": {
