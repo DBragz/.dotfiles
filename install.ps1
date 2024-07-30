@@ -167,7 +167,7 @@ if (-not (Test-Path $env:HOMEPATH\AppData\Roaming\Code\User\ -PathType Container
   New-Item -Type Directory -Path $env:HOMEPATH\AppData\Roaming\Code\User\
 }
 
-Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\windows\vscode.json $env:HOMEPATH\AppData\Roaming\Code\User\settings.json 
+Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\vscode.json $env:HOMEPATH\AppData\Roaming\Code\User\settings.json 
 
 if (-not (Get-Command docker -errorAction silentlyContinue)) {
   Write-Host "Error: Docker could not be found"
