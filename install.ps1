@@ -90,7 +90,7 @@ if (-not (Get-Command java -errorAction silentlyContinue)) {
 if (-not (Get-Command python -errorAction silentlyContinue)) {
   Write-Host "Error: Python could not be found"
   Write-Host "Installing python"
-  winget install -e --id Python.Python
+  winget install -e --id Python.Python.3.12
 }
 
 if (-not (Get-Command node -errorAction silentlyContinue)) {
