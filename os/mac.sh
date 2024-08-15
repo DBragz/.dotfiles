@@ -7,6 +7,18 @@
 # Description: Installation script for my Mac environment.
 #
 
+
+if ! command -v wezterm &> /dev/null
+then
+  echo "Error: Wezterm could not be found"
+  echo "Installing wezterm"
+  brew install wezterm
+fi
+
+mkdir -p $HOME/.config/wezterm/
+
+cp $HOME/.dotfiles/configs/wezterm/wezterm.lua $HOME/.config/wezterm/
+
 if ! command -v brew &> /dev/null
 then
   echo "Error: Homebrew could not be found"
@@ -88,7 +100,7 @@ then
   brew install code
 fi
 
-cp $HOME/.dotfiles/configs/json/vscode.json $HOME/Library/Application\ Support/Code/User/settings.json 
+cp $HOME/.dotfiles/configs/profiles/vscode.json $HOME/Library/Application\ Support/Code/User/settings.json 
 
 java=$(java -version 2>&1)
 

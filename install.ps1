@@ -84,13 +84,13 @@ if (-not (Get-Command bat -errorAction silentlyContinue)) {
 if (-not (Get-Command java -errorAction silentlyContinue)) {
   Write-Host "Error: Java could not be found"
   Write-Host "Installing java"
-  winget install -e --id Oracle.JDK
+  winget install -e --id Oracle.JDK.22
 }
 
 if (-not (Get-Command python -errorAction silentlyContinue)) {
   Write-Host "Error: Python could not be found"
   Write-Host "Installing python"
-  winget install -e --id Python.Python
+  winget install -e --id Python.Python.3.12
 }
 
 if (-not (Get-Command node -errorAction silentlyContinue)) {
@@ -149,7 +149,7 @@ if (-not (Test-Path $env:USERPROFILE\OneDrive\Documents\PowerShell\Microsoft.Pow
 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\Microsoft.PowerShell_profile.ps1 $env:USERPROFILE\OneDrive\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
 
-Copy-Item $env:HOMEPATH\.dotfiles\configs\json\terminal.json $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json 
+Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\terminal.json $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json 
 
 if ((Get-ChildItem C:\Windows\Fonts\ | Out-String -Stream | Select-String -Pattern "Meslo").Count -eq 0) {
   if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
@@ -167,7 +167,7 @@ if (-not (Test-Path $env:HOMEPATH\AppData\Roaming\Code\User\ -PathType Container
   New-Item -Type Directory -Path $env:HOMEPATH\AppData\Roaming\Code\User\
 }
 
-Copy-Item $env:HOMEPATH\.dotfiles\configs\json\vscode.json $env:HOMEPATH\AppData\Roaming\Code\User\settings.json 
+Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\vscode.json $env:HOMEPATH\AppData\Roaming\Code\User\settings.json 
 
 if (-not (Get-Command docker -errorAction silentlyContinue)) {
   Write-Host "Error: Docker could not be found"
