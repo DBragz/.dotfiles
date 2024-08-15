@@ -7,6 +7,7 @@
 # Description: Installation script for my Mac environment.
 #
 
+cp $HOME/.dotfiles/configs/profiles/.tmux.conf $HOME
 
 if ! command -v wezterm &> /dev/null
 then
