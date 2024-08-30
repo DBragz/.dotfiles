@@ -40,3 +40,11 @@ get_proxy() {
   echo "https_proxy: $https_proxy"
 }
 
+set_no_proxy() {
+  export no_proxy="$1"
+}
+
+get_no_proxy() {
+  echo "no_proxy: $no_proxy"
+}
+
