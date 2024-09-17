@@ -6,7 +6,7 @@
 " Description: Profile Vim file.
 "
 
-colorscheme murphy
+colorscheme elflord
 
 set ts=2 sts=2 shiftwidth=2
 set et
