@@ -40,7 +40,7 @@ call plug#end()
 
 let NERDTreeShowHidden=1
 
-execute pathogen#infect()
+" execute pathogen#infect()
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
