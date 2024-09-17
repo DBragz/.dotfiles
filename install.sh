@@ -28,6 +28,9 @@ else
     *"kali"* )
       /bin/sh $HOME/.dotfiles/os/kali.sh
       ;;
+    *"amzn"* )
+      /bin/sh $HOME/.dotfiles/os/amzn.sh
+      ;;
   esac
 
 fi
