@@ -9,6 +9,22 @@
 
 cp $HOME/.dotfiles/configs/profiles/.tmux.conf $HOME
 
+if ! command -v brew &> /dev/null
+then
+  echo "Error: Homebrew could not be found"
+  echo "Installing brew"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo "Installing Meslo Nerd Font"
+  brew install font-meslo-lg-nerd-font
+fi
+
+if ! brew list | grep iterm2 &> /dev/null
+then
+  echo "Error: iTerm2 could not be found"
+  echo "Installing iterm2"
+  brew install --cask iterm2
+fi
+
 if ! command -v wezterm &> /dev/null
 then
   echo "Error: Wezterm could not be found"
@@ -20,14 +36,6 @@ mkdir -p $HOME/.config/wezterm/
 
 cp $HOME/.dotfiles/configs/wezterm/wezterm.lua $HOME/.config/wezterm/
 
-if ! command -v brew &> /dev/null
-then
-  echo "Error: Homebrew could not be found"
-  echo "Installing brew"
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  echo "Installing Meslo Nerd Font"
-  brew install font-meslo-lg-nerd-font
-fi
 
 if ! command -v tmux &> /dev/null
 then
