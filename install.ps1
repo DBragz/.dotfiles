@@ -81,6 +81,12 @@ if (-not (Get-Command bat -errorAction silentlyContinue)) {
   winget install -e --id sharkdp.bat
 }
 
+if (-not (Get-Command gcc -errorAction silentlyContinue)) {
+  Write-Host "Error: GNU compiler collection could not be found"
+  Write-Host "Installing gcc"
+  scoop install gcc
+}
+
 if (-not (Get-Command java -errorAction silentlyContinue)) {
   Write-Host "Error: Java could not be found"
   Write-Host "Installing java"
