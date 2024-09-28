@@ -24,7 +24,7 @@ require('mason-lspconfig').setup({
     'jdtls',
     'powershell_es',
     'pylsp',
-    'tsserver'
+    'ts_ls',
  },
   handlers = {
     lsp_zero.default_setup,
