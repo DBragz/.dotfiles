@@ -45,7 +45,7 @@ return require("packer").startup {
       }
     }
     use('numToStr/Comment.nvim')
-    use 'Exafunction/codeium.vim'
+    -- use 'Exafunction/codeium.vim'
   end
 }
 
