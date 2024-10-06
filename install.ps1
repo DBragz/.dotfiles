@@ -143,19 +143,13 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\telescope.lua $env:LOCALAPPDATA
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\harpoon.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\comment.lua $env:LOCALAPPDATA\nvim\after\plugin\
 
-if (-not (Test-Path $env:USERPROFILE\OneDrive\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1 -PathType Leaf)) {
-  New-Item -Type File $env:USERPROFILE\OneDrive\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1 -Force
+if (-not (Test-Path $env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 -PathType Leaf)) {
+  New-Item -Type Directory $env:USERPROFILE\Documents\PowerShell\
 }
 
-Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\Microsoft.PowerShell_profile.ps1 $env:USERPROFILE\OneDrive\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\Microsoft.PowerShell_profile.ps1 $env:USERPROFILE\OneDrive\Documents\PowerShell\
 
-if (-not (Test-Path $env:USERPROFILE\OneDrive\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 -PathType Leaf)) {
-  New-Item -Type File $env:USERPROFILE\OneDrive\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 -Force
-}
-
-Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\Microsoft.PowerShell_profile.ps1 $env:USERPROFILE\OneDrive\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
-
-Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\terminal.json $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json 
+Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\windows_terminal\terminal.json $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json 
 
 if ((Get-ChildItem C:\Windows\Fonts\ | Out-String -Stream | Select-String -Pattern "Meslo").Count -eq 0) {
   if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
