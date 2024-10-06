@@ -31,21 +31,21 @@ if (-not (Test-Path $PROFILE -PathType Leaf)) {
 }
 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\Microsoft.PowerShell_profile.ps1 $PROFILE
-Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\windows_terminal\archive\terminal.json $env:LOCALAPPDATA\Microsoft\"Windows Terminal" 
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\starship.lua $env:LOCALAPPDATA\clink\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\init.lua $env:LOCALAPPDATA\nvim\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\options.lua $env:LOCALAPPDATA\nvim\lua\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\plugins.lua $env:LOCALAPPDATA\nvim\lua\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\colors.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\remap.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\tive.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\tree.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\treesitter.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\undotree.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\server.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\telescope.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\lua\harpoon.lua $env:LOCALAPPDATA\nvim\after\plugin\
-cp $env:HOMEPATH\.dotfiles\configs\json\vscode.json $env:HOMEPATH\AppData\Roaming\Code\User\settings.json 
+Copy-Item $env:HOMEPATH\.dotfiles\configs\windows_terminal\archive\terminal.json $env:LOCALAPPDATA\Microsoft\"Windows Terminal" 
+Copy-Item $env:HOMEPATH\.dotfiles\configs\startship\starship.lua $env:LOCALAPPDATA\clink\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\init.lua $env:LOCALAPPDATA\nvim\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\options.lua $env:LOCALAPPDATA\nvim\lua\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\plugins.lua $env:LOCALAPPDATA\nvim\lua\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\colors.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\remap.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\tive.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\tree.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\treesitter.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\undotree.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\archive\zero.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\telescope.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\harpoon.lua $env:LOCALAPPDATA\nvim\after\plugin\
+cp $env:HOMEPATH\.dotfiles\configs\profiles\vscode.json $env:HOMEPATH\AppData\Roaming\Code\User\settings.json 
 
 if (-not (Get-Command scoop -errorAction SilentlyContinue)) {
   Write-Host "Error: Scoop could not be found"
@@ -146,5 +146,5 @@ if (-not (Test-Path $env:SystemRoot\Fonts\Meslo* -PathType Leaf)) {
   oh-my-posh font install Meslo
 }
 
-Write-Host "Completed Windows install script"
+Write-Host "Completed Windows 10 install script"
 

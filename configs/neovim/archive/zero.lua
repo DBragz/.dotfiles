@@ -19,13 +19,6 @@ local lsp_zero = require('lsp-zero')
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {
-    'lua_ls',
-    'jdtls',
-    'powershell_es',
-    'pylyzer',
-    'ts_ls',
-  },
   handlers = {
     lsp_zero.default_setup,
   },
