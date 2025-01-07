@@ -13,5 +13,6 @@ vim.keymap.set("n", "<leader>gpul", ":G pull<CR>")
 vim.keymap.set("n", "<leader>grhh", ":G reset --hard HEAD<CR>")
 vim.keymap.set("n", "<leader>grh", ":G reset --hard ")
 vim.keymap.set("n", "<leader>glo", ":G log ")
-vim.keymap.set("n", "<leader>g", ":G diff<CR>")
+vim.keymap.set("n", "<leader>gd", ":G diff<CR>")
+vim.keymap.set("n", "<leader>gf", ":G fetch<CR>")
 

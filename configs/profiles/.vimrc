@@ -71,4 +71,6 @@ nnoremap <leader>gpul :G pull<CR>
 nnoremap <leader>grhh :G reset --hard HEAD<CR>
 nnoremap <leader>grh :G reset --hard 
 nnoremap <leader>glo :G log 
+nnoremap <leader>gd :G dif<CR> 
+nnoremap <leader>gf :G fetch<CR> 
 

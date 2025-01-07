@@ -25,5 +25,7 @@ alias gpul="git pull"
 alias grhh="git reset --hard HEAD"
 alias grh="git reset --hard $1"
 alias glo="git log $1"
+alias gd="git diff"
+alias gf="git fetch"
 alias t=tmux
 

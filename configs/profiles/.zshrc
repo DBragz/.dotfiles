@@ -24,11 +24,21 @@ alias gpul="git pull"
 alias grhh="git reset --hard HEAD"
 alias grh="git reset --hard $1"
 alias glo="git log $1"
+alias gd="git diff"
+alias gf="git fetch"
 alias t=tmux
 
 eval "$(starship init zsh)"
 
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
+
+sp() {
+  set_proxy "$1"
+}
+
+gp() {
+  get_proxy
+}
 
 set_proxy() {
   export http_proxy="$1"

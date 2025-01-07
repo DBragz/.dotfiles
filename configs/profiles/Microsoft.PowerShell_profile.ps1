@@ -50,5 +50,11 @@ Set-Alias -Name grh -Value Invoke-Git-Reset-Hard
 Function Invoke-Git-Log { git log $args[0] }
 Set-Alias -Name glo -Value Invoke-Git-Log
 
+Function Invoke-Git-Diff { git diff }
+Set-Alias -Name gd -Value Invoke-Git-Diff
+
+Function Invoke-Git-Fetch { git fetch }
+Set-Alias -Name gf -Value Invoke-Git-Fetch
+
 Invoke-Expression (&starship init powershell)
 
