@@ -27,7 +27,7 @@ if (-not (Get-Command choco -errorAction SilentlyContinue)) {
   Write-Host "Error: Chocolately could not be found"
   Write-Host "Installing choco"
   if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
-    Start-Process -Wait powershell -Verb runAs "& Invoke-WebRequest -useb chocolatey.org/install.ps1 | Invoke-Expression"
+    Start-Process -Wait pwsh -Verb runAs "& Invoke-WebRequest -useb chocolatey.org/install.ps1 | Invoke-Expression"
     Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
   }
 }
