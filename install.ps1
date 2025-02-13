@@ -154,7 +154,8 @@ if (-not (Test-Path $env:USERPROFILE\Documents\PowerShell\)) {
 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\Microsoft.PowerShell_profile.ps1 $env:USERPROFILE\OneDrive\Documents\PowerShell\
 
-Copy-Item $env:HOMEPATH\.dotfiles\configs\windows_terminal\terminal.json $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json 
+Copy-Item $env:HOMEPATH\.dotfiles\configs\windows_terminal\terminal.json "$env:LOCALAPPDATA\Microsoft\Windows Terminal\settings.json" 
+
 
 if ((Get-ChildItem C:\Windows\Fonts\ | Out-String -Stream | Select-String -Pattern "Meslo").Count -eq 0) {
   if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
