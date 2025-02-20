@@ -23,27 +23,13 @@ require('mason-lspconfig').setup({
     'lua_ls',
     'jdtls',
     'powershell_es',
-    'pylyzer',
+    'pylsp',
     'ts_ls',
   },
   handlers = {
     lsp_zero.default_setup,
   },
 })
-
-local lspconfig = require('lspconfig')
-
-lspconfig.lua_ls.setup {
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = {
-          'vim',
-        },
-      },
-    },
-  },
-}
 
 local cmp = require'cmp'
 cmp.setup({
