@@ -15,7 +15,7 @@ if ! command -v bat &> /dev/null
 then
   echo "Error: Bat could not be found"
   echo "Installing bat"
-  brew install bat
+  apt install bat
 fi
 
 echo "Completed Ubuntu Linux install script!"
