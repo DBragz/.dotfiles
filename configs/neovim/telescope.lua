@@ -9,6 +9,7 @@ vim.keymap.set("n", "<leader>tf", ":Telescope find_files<CR>")
 vim.keymap.set("n", "<leader>tg", ":Telescope git_files<CR>")
 vim.keymap.set("n", "<leader>td", ":Telescope diagnostics<CR>")
 vim.keymap.set("n", "<leader>tl", ":Telescope lsp_references<CR>")
+vim.keymap.set("n", "<leader>tlp", ":Telescope live_grep<CR>")
 
 HOME = ""
 
