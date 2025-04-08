@@ -19,17 +19,20 @@ else
     *"alpine"* )
       /bin/sh $HOME/.dotfiles/os/alpine.sh
       ;;
+    *"amzn"* )
+      /bin/sh $HOME/.dotfiles/os/amzn.sh
+      ;;
     "cat: /etc/os-release: No such file or directory " )
       /data/data/com.termux/files/use/bin/bash $HOME/.dotfiles/os/termux.sh
-      ;;
-    *"rhel"* )
-      /bin/sh $HOME/.dotfiles/os/rhel.sh
       ;;
     *"kali"* )
       /bin/sh $HOME/.dotfiles/os/kali.sh
       ;;
-    *"amzn"* )
-      /bin/sh $HOME/.dotfiles/os/amzn.sh
+    *"rhel"* )
+      /bin/sh $HOME/.dotfiles/os/rhel.sh
+      ;;
+    *"ubuntu"* )
+      /bin/sh $HOME/.dotfiles/os/ubuntu.sh
       ;;
   esac
 
