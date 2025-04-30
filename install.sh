@@ -34,6 +34,9 @@ else
     *"ubuntu"* )
       /bin/sh $HOME/.dotfiles/os/ubuntu.sh
       ;;
+    *"debian"* )
+      /bin/sh $HOME/.dotfiles/os/debian.sh
+      ;;
   esac
 
 fi
