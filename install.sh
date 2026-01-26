@@ -11,8 +11,9 @@ echo "Running Unix install script!"
 
 if [ "$(uname)" = "Darwin" ]; then
    /bin/sh $HOME/.dotfiles/os/mac.sh
+elif [ -n "$TERMUX_VERSION" ]; then
+   /data/data/com.termux/files/use/bin/bash $HOME/.dotfiles/os/termux.sh
 else
-
   OS="$(cat /etc/os-release | grep ID)"
 
   case $OS in 
@@ -21,9 +22,6 @@ else
       ;;
     *"amzn"* )
       /bin/sh $HOME/.dotfiles/os/amzn.sh
-      ;;
-    "cat: /etc/os-release: No such file or directory " )
-      /data/data/com.termux/files/use/bin/bash $HOME/.dotfiles/os/termux.sh
       ;;
     *"kali"* )
       /bin/sh $HOME/.dotfiles/os/kali.sh
