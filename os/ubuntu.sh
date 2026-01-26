@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# Name: ubuntu.sh
+# Name:         ubuntu.sh
 #
-# Author: Daniel Ribeirinha-Braga
+# Author:       Daniel Ribeirinha-Braga
 #
-# Description: Installation script for my Ubuntu Linux environment.
+# Description:  Installation script for my Linux Ubuntu environment.
 #
 
 cp $HOME/.dotfiles/configs/profiles/.bashrc $HOME

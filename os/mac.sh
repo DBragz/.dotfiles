@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# Name: mac.sh
+# Name:         mac.sh
 #
-# Author: Daniel Ribeirinha-Braga
+# Author:       Daniel Ribeirinha-Braga
 #
-# Description: Installation script for my Mac environment.
+# Description:  Installation script for my Mac environment.
 #
 
 cp $HOME/.dotfiles/configs/profiles/.tmux.conf $HOME

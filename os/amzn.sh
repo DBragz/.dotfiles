@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# Name: amzn.sh
+# Name:         amzn.sh
 #
-# Author: Daniel Ribeirinha-Braga
+# Author:       Daniel Ribeirinha-Braga
 #
-# Description: Installation script for my Amazon Linux environment.
+# Description:  Installation script for my Linux Amazon environment.
 #
 
 cp $HOME/.dotfiles/configs/profiles/.vimrc $HOME/

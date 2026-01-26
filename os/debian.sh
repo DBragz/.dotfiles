@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# Name: debian.sh
+# Name:         debian.sh
 #
-# Author: Daniel Ribeirinha-Braga
+# Author:       Daniel Ribeirinha-Braga
 #
-# Description: Installation script for my Debian environment.
+# Description:  Installation script for my Linux Debian environment.
 #
 
 cp $HOME/.dotfiles/configs/profiles/.bashrc $HOME/.bash_aliases

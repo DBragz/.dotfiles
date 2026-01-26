@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# Name: kali.sh
+# Name:         kali.sh
 #
-# Author: Daniel Ribeirinha-Braga
+# Author:       Daniel Ribeirinha-Braga
 #
-# Description: Installation script for my Kali Linux environment.
+# Description:  Installation script for my Linux Kali environment.
 #
 
 if ! command -v wezterm > /dev/null

@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# Name: rhel.sh
+# Name:         rhel.sh
 #
-# Author: Daniel Ribeirinha-Braga
+# Author:       Daniel Ribeirinha-Braga
 #
-# Description: Installation script for my Red Hat Enterprise Linux environment.
+# Description:  Installation script for my Linux Red Hat Enterprise environment.
 #
 
 cp $HOME/.dotfiles/configs/profiles/.vimrc $HOME/

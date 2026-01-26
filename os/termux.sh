@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# Name: termux.sh
+# Name:         termux.sh
 #
-# Author: Daniel Ribeirinha-Braga
+# Author:       Daniel Ribeirinha-Braga
 #
-# Description: Installation script for my Termux environment.
+# Description:  Installation script for my Termux environment.
 #
 
 if [ ! -d ~/.vim/autoload || ! -d ~/.vim/bundle ]; then

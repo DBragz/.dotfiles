@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# Name: alpine.sh
+# Name:         alpine.sh
 #
-# Author: Daniel Ribeirinha-Braga
+# Author:       Daniel Ribeirinha-Braga
 #
-# Description: Installation script for my alpine environment.
+# Description:  Installation script for my Linux Alpine environment.
 #
 
 if ! command -v man &> /dev/null
