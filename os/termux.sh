@@ -48,5 +48,12 @@ then
   pkg install gh
 fi
 
+if ! command -v tmux &> /dev/null
+then
+  echo "Error: Tmux could not be found"
+  echo "Installing tmux"
+  pkg install tmux
+fi
+
 echo "Completed Termux install script!"
 
