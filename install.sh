@@ -12,7 +12,7 @@ echo "Running Unix install script!"
 if [ "$(uname)" = "Darwin" ]; then
    /bin/sh $HOME/.dotfiles/os/mac.sh
 elif [ -n "$TERMUX_VERSION" ]; then
-   /data/data/com.termux/files/use/bin/bash $HOME/.dotfiles/os/termux.sh
+   /data/data/com.termux/files/usr/bin/bash $HOME/.dotfiles/os/termux.sh
 else
   OS="$(cat /etc/os-release | grep ID)"
 
