@@ -8,12 +8,14 @@
 #
 
 if [ ! -d ~/.vim/autoload ] || [ ! -d ~/.vim/bundle ]; then
-  mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+  mkdir -p ~/.vim/autoload ~/.vim/bundle
 fi
 
-cd ~/.vim/bundle && \
-  git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
+if [ ! -d ~/.vim/pathogen ] || [ ! -d ~/.vim/bundle/syntastix ]; then
+  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+  cd ~/.vim/bundle && \
+    git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
+fi
 
 if ! command -v man &> /dev/null
 then
@@ -26,7 +28,7 @@ if ! command -v bat &> /dev/null
 then
   echo "Error: Bat could not be found"
   echo "Installing bat"
-  pkg install vim
+  pkg install bat
 fi
 
 if ! command -v vim &> /dev/null
