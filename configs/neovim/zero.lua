@@ -23,7 +23,7 @@ require('mason-lspconfig').setup({
     'lua_ls',
     'jdtls',
     'powershell_es',
-    'pylsp',
+    'ruff',
     'ts_ls',
   },
   handlers = {
