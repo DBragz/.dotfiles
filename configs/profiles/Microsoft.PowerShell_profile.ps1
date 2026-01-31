@@ -15,7 +15,6 @@ Function Exit { exit }
 Set-Alias -Name e -Value Exit
 
 Set-Alias -Name i -Value $env:HOMEPATH/.dotfiles/install.ps1
-Set-Alias -Name u -Value $env:HOMEPATH/.dotfiles/uninstall.ps1
 
 Function Read-Dotfiles-Help { bat $PROFILE }
 Set-Alias -Name dh -Value Read-Dotfiles-Help
