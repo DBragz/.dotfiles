@@ -9,7 +9,7 @@ Repository for setting up my virtual environments.
 2. Install Git.
 
 ```pwsh
-winget install --id Git.Git -e --source winget
+winget install -e --id Git.Git --source winget
 ```
 
 3. Exit **Terminal**.
