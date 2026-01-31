@@ -18,7 +18,6 @@ if (-not (Get-Command scoop -errorAction SilentlyContinue)) {
   Write-Host "Error: Scoop could not be found"
   Write-Host "Installing scoop"
   Invoke-WebRequest -useb get.scoop.sh | Invoke-Expression
-  scoop bucket add main
   scoop bucket add extras
   scoop bucket add versions
 }
