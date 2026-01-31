@@ -14,7 +14,7 @@ winget install -e --id Git.Git --source winget
 
 3. Exit **Terminal**.
 
-4. Open a new **Terminal**.
+4. Open a new **Terminal** as an **Administrator**.
 
 5. Enable PowerShell scripts.
 
