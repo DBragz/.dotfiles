@@ -183,6 +183,7 @@ if (-not (Get-Command cursor -errorAction silentlyContinue)) {
   Write-Host "Error: Cursor could not be found"
   Write-Host "Installing cursor"
   winget install -e --id Anysphere.Cursor
+  [Environment]::SetEnvironmentVariable('Path', ($env:Path + ';' + "$env:LOCALAPPDATA\Programs\cursor"), 'User')
 }
 
 if (-not (Get-Command replit -errorAction silentlyContinue)) {
