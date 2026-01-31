@@ -189,6 +189,7 @@ if (-not (Get-Command replit -errorAction silentlyContinue)) {
   Write-Host "Error: Replit could not be found"
   Write-Host "Installing replit"
   winget install -e --id Replit.Replit
+  [Environment]::SetEnvironmentVariable('Path', ($env:Path + ';' + "$env:LOCALAPPDATA\replit"), 'User')
 }
 
 if (-not (Test-Path $env:HOMEPATH\AppData\Roaming\Code\User\ -PathType Container)) {
