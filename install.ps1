@@ -163,10 +163,28 @@ if ((Get-ChildItem C:\Windows\Fonts\ | Out-String -Stream | Select-String -Patte
   } 
 }
 
+if (-not (Get-Command gh -errorAction silentlyContinue)) {
+  Write-Host "Error: GitHub CLI could not be found"
+  Write-Host "Installing gh"
+  winget install -e --id GitHub.cli
+}
+
 if (-not (Get-Command code -errorAction silentlyContinue)) {
   Write-Host "Error: Visual Studio Code could not be found"
   Write-Host "Installing code"
   winget install -e --id Microsoft.VisualStudioCode
+}
+
+if (-not (Get-Command cursor -errorAction silentlyContinue)) {
+  Write-Host "Error: Cursor could not be found"
+  Write-Host "Installing cursor"
+  winget install -e --id Anysphere.Cursor
+}
+
+if (-not (Get-Command replit -errorAction silentlyContinue)) {
+  Write-Host "Error: Replit could not be found"
+  Write-Host "Installing replit"
+  winget install -e --id Replit.Replit
 }
 
 if (-not (Test-Path $env:HOMEPATH\AppData\Roaming\Code\User\ -PathType Container)) {
@@ -182,12 +200,6 @@ if (-not (Get-Command docker -errorAction silentlyContinue)) {
     Start-Process -Wait powershell -Verb runAs "choco install docker-desktop -y"
   }
   wsl --update
-}
-
-if (-not (Get-Command gh -errorAction silentlyContinue)) {
-  Write-Host "Error: GitHub CLI could not be found"
-  Write-Host "Installing gh"
-  winget install -e --id GitHub.cli
 }
 
 Write-Host "Completed Windows 11 install script"
