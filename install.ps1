@@ -109,11 +109,19 @@ if (-not (Get-Command python -errorAction silentlyContinue)) {
   winget install -e --id Python.Python.3.12
 }
 
-if (-not (Get-Command node -errorAction silentlyContinue)) {
-  Write-Host "Error: Node.js could not be found"
-  Write-Host "Installing node"
-  winget install -e --id OpenJS.NodeJS.LTS
+if (-not (Get-Command nvm -errorAction silentlyContinue)) {
+  Write-Host "Error: NVM for Windows could not be found"
+  Write-Host "Installing nvm"
+  winget install -e --id CoreyButler.NVMforWindows
+
+  if (-not (Get-Command node -errorAction silentlyContinue)) {
+    Write-Host "Error: Node.js could not be found"
+    Write-Host "Installing node"
+    nvm install 20.20.0
+    nvm use 20.20.0
+  }
 }
+
 
 if (-not (Get-Command lua -errorAction silentlyContinue)) {
   Write-Host "Error: Lua could not be found"
