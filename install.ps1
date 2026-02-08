@@ -122,7 +122,6 @@ if (-not (Get-Command nvm -errorAction silentlyContinue)) {
   }
 }
 
-
 if (-not (Get-Command lua -errorAction silentlyContinue)) {
   Write-Host "Error: Lua could not be found"
   Write-Host "Installing lua"
