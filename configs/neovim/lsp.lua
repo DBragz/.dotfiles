@@ -1,6 +1,6 @@
 --
--- Name:        zero.lua
--- Description: Neovim Language Server Processing (LSP) zero plugin settings.
+-- Name:        lsp.lua
+-- Description: Neovim Language Server Processing (LSP) native configuration.
 -- Author:      Daniel Ribeirinha-Braga
 --
 
@@ -15,20 +15,37 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "vim.diagnostic.got
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "vim.diagnostic.goto_prev" })
 vim.keymap.set("n", "<leader>lbs", vim.lsp.buf.signature_help, { desc = "vim.lsp.buf.signature_help" })
 
-local lsp_zero = require('lsp-zero')
-
 require('mason').setup({})
+
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+local lspconfig = require('lspconfig')
+
 require('mason-lspconfig').setup({
   ensure_installed = {
-    'lua_ls',
-    'jdtls',
     'powershell_es',
-    'ruff',
-    'ts_ls',
+    'lua_ls',
+    'marksman',
   },
   handlers = {
-    lsp_zero.default_setup,
-  },
+    function(server_name)
+      lspconfig[server_name].setup({
+        capabilities = capabilities,
+      })
+    end,
+    ['lua_ls'] = function()
+      lspconfig.lua_ls.setup({
+        capabilities = capabilities,
+        settings = {
+          Lua = {
+            diagnostics = {
+              globals = { 'vim' }
+            }
+          }
+        }
+      })
+    end,
+  }
 })
 
 local cmp = require'cmp'

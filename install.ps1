@@ -72,11 +72,11 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\options.lua $env:LOCALAPPDATA\n
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\plugins.lua $env:LOCALAPPDATA\nvim\lua\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\colors.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\remap.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\lsp.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\tree.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\tive.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\treesitter.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\undotree.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\zero.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\telescope.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\harpoon.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\comment.lua $env:LOCALAPPDATA\nvim\after\plugin\
@@ -117,7 +117,7 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\startship\starship.lua $env:LOCALAPPDA
 if (-not (Get-Command oh-my-posh -errorAction SilentlyContinue)) {
   Write-Host "Error: Oh My Posh could not be found"
   Write-Host "Installing oh-my-posh"
-  winget install JanDeDobbeleer.OhMyPosh -s winget
+  winget install -e --id JanDeDobbeleer.OhMyPosh -s winget
 }
 
 if (-not (Get-Command pwsh -errorAction SilentlyContinue)) {
@@ -136,37 +136,6 @@ if (-not (Get-Command bat -errorAction silentlyContinue)) {
   Write-Host "Error: Bat could not be found"
   Write-Host "Installing bat"
   winget install -e --id sharkdp.bat
-}
-
-if (-not (Get-Command gcc -errorAction silentlyContinue)) {
-  Write-Host "Error: GNU compiler collection could not be found"
-  Write-Host "Installing gcc"
-  scoop install gcc
-}
-
-if (-not (Get-Command java -errorAction silentlyContinue)) {
-  Write-Host "Error: Java could not be found"
-  Write-Host "Installing java"
-  winget install -e --id Oracle.JDK.22
-}
-
-if (-not (Get-Command python -errorAction silentlyContinue)) {
-  Write-Host "Error: Python could not be found"
-  Write-Host "Installing python"
-  winget install -e --id Python.Python.3.12
-}
-
-if (-not (Get-Command nvm -errorAction silentlyContinue)) {
-  Write-Host "Error: NVM for Windows could not be found"
-  Write-Host "Installing nvm"
-  winget install -e --id CoreyButler.NVMforWindows
-
-  if (-not (Get-Command node -errorAction silentlyContinue)) {
-    Write-Host "Error: Node.js could not be found"
-    Write-Host "Installing node"
-    nvm install 20.20.0
-    nvm use 20.20.0
-  }
 }
 
 if (-not (Get-Command lua -errorAction silentlyContinue)) {
