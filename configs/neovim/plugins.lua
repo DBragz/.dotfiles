@@ -28,12 +28,6 @@ require("lazy").setup({
       require("which-key").setup {}
     end
   },
-  {
-    'kyazdani42/nvim-tree.lua',
-    dependencies = {
-      'kyazdani42/nvim-web-devicons',
-    },
-  },
   'williamboman/mason.nvim',
   'williamboman/mason-lspconfig.nvim',
   'neovim/nvim-lspconfig',
@@ -44,5 +38,11 @@ require("lazy").setup({
   'hrsh7th/cmp-cmdline',
   'L3MON4D3/LuaSnip',
   'saadparwaiz1/cmp_luasnip',
+  {
+    'kyazdani42/nvim-tree.lua',
+    dependencies = {
+      'kyazdani42/nvim-web-devicons',
+    },
+  },
 })
 
