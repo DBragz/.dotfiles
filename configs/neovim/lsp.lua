@@ -4,16 +4,21 @@
 -- Author:      Daniel Ribeirinha-Braga
 --
 
-vim.keymap.set("n", "<leader>lbd", vim.lsp.buf.definition, { desc = "vim.lsp.buf.definition" })
-vim.keymap.set("n", "<leader>lbh", vim.lsp.buf.hover, { desc = "vim.lsp.buf.hover" })
-vim.keymap.set("n", "<leader>lbc", vim.lsp.buf.code_action, { desc = "vim.lsp.buf.code_action" })
-vim.keymap.set("n", "<leader>lbr", vim.lsp.buf.rename, { desc = "vim.lsp.buf.rename" })
-
-vim.keymap.set("n", "<leader>lbw", vim.lsp.buf.workspace_symbol, { desc = "vim.lsp.buf.workspace_symbol" })
-vim.keymap.set("n", "<leader>do", vim.diagnostic.open_float, { desc = "vim.diagnostic.goto_next" })
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "vim.diagnostic.goto_next" })
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "vim.diagnostic.goto_prev" })
-vim.keymap.set("n", "<leader>lbs", vim.lsp.buf.signature_help, { desc = "vim.lsp.buf.signature_help" })
+vim.api.nvim_create_autocmd('LspAttach', {
+  group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+  callback = function(ev)
+    local opts = { buffer = ev.buf }
+    vim.keymap.set("n", "<leader>lbd", vim.lsp.buf.definition, vim.tbl_extend("force", opts, { desc = "Go to definition" }))
+    vim.keymap.set("n", "<leader>lbh", vim.lsp.buf.hover, vim.tbl_extend("force", opts, { desc = "Hover documentation" }))
+    vim.keymap.set("n", "<leader>lbc", vim.lsp.buf.code_action, vim.tbl_extend("force", opts, { desc = "Code actions" }))
+    vim.keymap.set("n", "<leader>lbr", vim.lsp.buf.rename, vim.tbl_extend("force", opts, { desc = "Rename symbol" }))
+    vim.keymap.set("n", "<leader>lbw", vim.lsp.buf.workspace_symbol, vim.tbl_extend("force", opts, { desc = "Workspace symbols" }))
+    vim.keymap.set("n", "<leader>do", vim.diagnostic.open_float, vim.tbl_extend("force", opts, { desc = "Open diagnostic" }))
+    vim.keymap.set("n", "]d", vim.diagnostic.goto_next, vim.tbl_extend("force", opts, { desc = "Next diagnostic" }))
+    vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, vim.tbl_extend("force", opts, { desc = "Previous diagnostic" }))
+    vim.keymap.set("n", "<leader>lbs", vim.lsp.buf.signature_help, vim.tbl_extend("force", opts, { desc = "Signature help" }))
+  end,
+})
 
 require('mason').setup({})
 
