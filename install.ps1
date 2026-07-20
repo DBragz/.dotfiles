@@ -37,17 +37,20 @@ if (-not (Get-Command choco -errorAction SilentlyContinue)) {
   }
 }
 
-if (-not (Get-Command wezterm -errorAction silentlyContinue)) {
-  Write-Host "Error: Wezterm could not be found"
-  Write-Host "Installing wezterm"
-  winget install -e --id wez.wezterm
+if (-not (Get-Command docker -errorAction silentlyContinue)) {
+  Write-Host "Error: Docker could not be found"
+  Write-Host "Installing docker-desktop"
+  if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Start-Process -Wait powershell -Verb runAs "choco install docker-desktop -y"
+  }
+  wsl --update
 }
 
-if (-not (Test-Path $env:HOMEPATH\.config\wezterm\ -PathType Container)) {
-  New-Item -Type Directory $env:HOMEPATH\.config\wezterm\
+if (-not (Get-Command ollama -errorAction silentlyContinue)) {
+  Write-Host "Error: Ollama could not be found"
+  Write-Host "Installing ollama"
+  winget install -e --id Ollama.Ollama
 }
-
-Copy-Item $env:HOMEPATH\.dotfiles\configs\wezterm\wezterm.lua $env:HOMEPATH\.config\wezterm\
 
 if (-not (Get-Command starship -errorAction silentlyContinue)) {
   Write-Host "Error: Starship could not be found"
@@ -205,15 +208,6 @@ if (-not (Test-Path $env:HOMEPATH\AppData\Roaming\Code\User\ -PathType Container
 }
 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\vscode.json $env:HOMEPATH\AppData\Roaming\Code\User\settings.json 
-
-if (-not (Get-Command docker -errorAction silentlyContinue)) {
-  Write-Host "Error: Docker could not be found"
-  Write-Host "Installing docker-desktop"
-  if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
-    Start-Process -Wait powershell -Verb runAs "choco install docker-desktop -y"
-  }
-  wsl --update
-}
 
 Write-Host "Completed Windows 11 install script"
 
