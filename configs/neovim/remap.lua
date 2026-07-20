@@ -13,5 +13,5 @@ vim.keymap.set("n", "<leader>so", ":so<CR>")
 vim.keymap.set("n", "<leader>w", ":w<CR>")
 vim.keymap.set("n", "<leader>x", ":x<CR>")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
-vim.keymap.set("n", "<leader>ps", ":PackerSync<CR>")
+vim.keymap.set("n", "<leader>ls", ":Lazy Sync<CR>")
 

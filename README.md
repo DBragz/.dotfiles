@@ -37,13 +37,6 @@ Set-Location .\.dotfiles\
 
 > **Tip:** For organizational environments, use `.\install.ps1 -org <profile>` to skip personal development tools. Run `Get-Help .\install.ps1` for details.
 
-8. Open up nvim and install plugins using Packer.
-
-```pwsh
-nvim
-:PackerSync
-```
-
 ## Windows 10
 
 1. Download and install [**App Installer**](https://apps.microsoft.com/store/detail/app-installer/9NBLGGH4NNS1?hl=en-us&gl=us).

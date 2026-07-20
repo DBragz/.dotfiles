@@ -59,10 +59,6 @@ if (-not (Get-Command nvim -errorAction silentlyContinue)) {
   winget install -e --id Neovim.Neovim
 }
 
-if (-not (Test-Path $env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim -PathType Container)) {
-  git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
-}
-
 if (-not (Test-Path $env:LOCALAPPDATA\nvim\lua\ -PathType Container)) {
   New-Item -Type Directory $env:LOCALAPPDATA\nvim\lua\
 }

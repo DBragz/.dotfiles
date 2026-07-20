@@ -6,46 +6,27 @@
 
 vim.cmd("echo \"Oi from plugins!\"")
 
-return require("packer").startup {
-  function(use)
-    use('wbthomason/packer.nvim')
-    use {
-      "folke/which-key.nvim",
-      config = function()
-        vim.o.timeout = true
-        vim.o.timeoutlen = 300
-        require("which-key").setup {
-        }
-      end
-    }
-    use({
-      'kyazdani42/nvim-tree.lua',
-      requires = {
-        'kyazdani42/nvim-web-devicons',
-      },
-    })
-    use('mbbill/undotree')
-    use('tpope/vim-fugitive')
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-    use {
-      'nvim-telescope/telescope.nvim', tag = '0.1.8',
-      requires = { {'nvim-lua/plenary.nvim'} }
-    }
-    use('theprimeagen/harpoon')
-    use {
-      'VonHeikemen/lsp-zero.nvim',
-      branch = 'v3.x',
-      requires = {
-        {'williamboman/mason.nvim'},
-        {'williamboman/mason-lspconfig.nvim'},
-        {'neovim/nvim-lspconfig'},
-        {'hrsh7th/nvim-cmp'},
-        {'hrsh7th/cmp-nvim-lsp'},
-        {'L3MON4D3/LuaSnip'},
-      }
-    }
-    use('numToStr/Comment.nvim')
-    -- use 'Exafunction/codeium.vim'
-  end
-}
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+require("lazy").setup({
+  {
+    "folke/which-key.nvim",
+    config = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+      require("which-key").setup {}
+    end
+  }
+})
 
