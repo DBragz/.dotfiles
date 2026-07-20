@@ -34,3 +34,6 @@ vim.opt.so = 8
 
 vim.opt.updatetime = 50
 
+vim.opt.spell = true
+vim.opt.spelllang = 'en_us'
+
