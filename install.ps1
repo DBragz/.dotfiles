@@ -37,6 +37,38 @@ if (-not (Get-Command choco -errorAction SilentlyContinue)) {
   }
 }
 
+if (-not (Get-Command nvim -errorAction silentlyContinue)) {
+  Write-Host "Error: Neovim could not be found"
+  Write-Host "Installing nvim"
+  winget install -e --id Neovim.Neovim
+}
+
+if (-not (Test-Path $env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim -PathType Container)) {
+  git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
+}
+
+if (-not (Test-Path $env:LOCALAPPDATA\nvim\lua\ -PathType Container)) {
+  New-Item -Type Directory $env:LOCALAPPDATA\nvim\lua\
+}
+
+if (-not (Test-Path $env:LOCALAPPDATA\nvim\after\plugin\ -PathType Container)) {
+  New-Item -Type Directory $env:LOCALAPPDATA\nvim\after\plugin\
+}
+
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\init.lua $env:LOCALAPPDATA\nvim\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\options.lua $env:LOCALAPPDATA\nvim\lua\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\plugins.lua $env:LOCALAPPDATA\nvim\lua\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\colors.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\remap.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\tree.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\tive.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\treesitter.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\undotree.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\zero.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\telescope.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\harpoon.lua $env:LOCALAPPDATA\nvim\after\plugin\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\comment.lua $env:LOCALAPPDATA\nvim\after\plugin\
+
 if (-not (Get-Command docker -errorAction silentlyContinue)) {
   Write-Host "Error: Docker could not be found"
   Write-Host "Installing docker-desktop"
@@ -130,38 +162,6 @@ if (-not (Get-Command lua -errorAction silentlyContinue)) {
   Write-Host "Installing lua"
   winget install -e --id DEVCOM.Lua
 }
-
-if (-not (Get-Command nvim -errorAction silentlyContinue)) {
-  Write-Host "Error: Neovim could not be found"
-  Write-Host "Installing nvim"
-  winget install -e --id Neovim.Neovim
-}
-
-if (-not (Test-Path $env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim -PathType Container)) {
-  git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
-}
-
-if (-not (Test-Path $env:LOCALAPPDATA\nvim\lua\ -PathType Container)) {
-  New-Item -Type Directory $env:LOCALAPPDATA\nvim\lua\
-}
-
-if (-not (Test-Path $env:LOCALAPPDATA\nvim\after\plugin\ -PathType Container)) {
-  New-Item -Type Directory $env:LOCALAPPDATA\nvim\after\plugin\
-}
-
-Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\init.lua $env:LOCALAPPDATA\nvim\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\options.lua $env:LOCALAPPDATA\nvim\lua\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\plugins.lua $env:LOCALAPPDATA\nvim\lua\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\colors.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\remap.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\tree.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\tive.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\treesitter.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\undotree.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\zero.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\telescope.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\harpoon.lua $env:LOCALAPPDATA\nvim\after\plugin\
-Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\comment.lua $env:LOCALAPPDATA\nvim\after\plugin\
 
 if (-not (Test-Path $env:USERPROFILE\Documents\PowerShell\)) {
   New-Item -Type Directory $env:USERPROFILE\Documents\PowerShell\
