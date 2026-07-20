@@ -35,6 +35,8 @@ Set-Location .\.dotfiles\
 .\install.ps1
 ```
 
+> **Tip:** For organizational environments, use `.\install.ps1 -org <profile>` to skip personal development tools. Run `Get-Help .\install.ps1` for details.
+
 8. Open up nvim and install plugins using Packer.
 
 ```pwsh

@@ -5,6 +5,10 @@
 .DESCRIPTION
   Installation script for my Windows 11 environment.
 
+.PARAMETER org
+  Organizational profile. Currently only accepts 'MITLL'.
+  When specified, skips installation of personal development tools (VSCode, Cursor, Replit).
+
 .FILE
   install.ps1
 
@@ -12,7 +16,19 @@
   Author: Daniel Ribeirinha-Braga
 #>
 
+[CmdletBinding()]
+param(
+  [Parameter(Mandatory=$false)]
+  [ValidateSet('MITLL')]
+  [string]$org
+)
+
 Write-Host "Running Windows 11 install script"
+
+if ($org -eq 'MITLL') {
+  Write-Host "Running in organizational mode: $org"
+  Write-Host "Skipping personal development tools (VSCode, Cursor, Replit)"
+}
 
 if (-not (Get-Command scoop -errorAction SilentlyContinue)) {
   Write-Host "Error: Scoop could not be found"
@@ -183,31 +199,34 @@ if (-not (Get-Command gh -errorAction silentlyContinue)) {
   winget install -e --id GitHub.cli
 }
 
-if (-not (Get-Command code -errorAction silentlyContinue)) {
-  Write-Host "Error: Visual Studio Code could not be found"
-  Write-Host "Installing code"
-  winget install -e --id Microsoft.VisualStudioCode
-}
+# Personal development tools - skip if org mode is MITLL
+if ($org -ne 'MITLL') {
+  if (-not (Get-Command code -errorAction silentlyContinue)) {
+    Write-Host "Error: Visual Studio Code could not be found"
+    Write-Host "Installing code"
+    winget install -e --id Microsoft.VisualStudioCode
+  }
 
-if (-not (Get-Command cursor -errorAction silentlyContinue)) {
-  Write-Host "Error: Cursor could not be found"
-  Write-Host "Installing cursor"
-  winget install -e --id Anysphere.Cursor
-  [Environment]::SetEnvironmentVariable('Path', ($env:Path + ';' + "$env:LOCALAPPDATA\Programs\cursor"), 'User')
-}
+  if (-not (Get-Command cursor -errorAction silentlyContinue)) {
+    Write-Host "Error: Cursor could not be found"
+    Write-Host "Installing cursor"
+    winget install -e --id Anysphere.Cursor
+    [Environment]::SetEnvironmentVariable('Path', ($env:Path + ';' + "$env:LOCALAPPDATA\Programs\cursor"), 'User')
+  }
 
-if (-not (Get-Command replit -errorAction silentlyContinue)) {
-  Write-Host "Error: Replit could not be found"
-  Write-Host "Installing replit"
-  winget install -e --id Replit.Replit
-  [Environment]::SetEnvironmentVariable('Path', ($env:Path + ';' + "$env:LOCALAPPDATA\replit"), 'User')
-}
+  if (-not (Get-Command replit -errorAction silentlyContinue)) {
+    Write-Host "Error: Replit could not be found"
+    Write-Host "Installing replit"
+    winget install -e --id Replit.Replit
+    [Environment]::SetEnvironmentVariable('Path', ($env:Path + ';' + "$env:LOCALAPPDATA\replit"), 'User')
+  }
 
-if (-not (Test-Path $env:HOMEPATH\AppData\Roaming\Code\User\ -PathType Container)) {
-  New-Item -Type Directory -Path $env:HOMEPATH\AppData\Roaming\Code\User\
-}
+  if (-not (Test-Path $env:HOMEPATH\AppData\Roaming\Code\User\ -PathType Container)) {
+    New-Item -Type Directory -Path $env:HOMEPATH\AppData\Roaming\Code\User\
+  }
 
-Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\vscode.json $env:HOMEPATH\AppData\Roaming\Code\User\settings.json 
+  Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\vscode.json $env:HOMEPATH\AppData\Roaming\Code\User\settings.json
+} 
 
 Write-Host "Completed Windows 11 install script"
 
