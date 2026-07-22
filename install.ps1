@@ -53,6 +53,30 @@ if (-not (Get-Command choco -errorAction SilentlyContinue)) {
   }
 }
 
+if (-not (Get-Command rg -errorAction silentlyContinue)) {
+  Write-Host "Error: ripgrep could not be found"
+  Write-Host "Installing rg"
+  choco install ripgrep
+}
+
+if (-not (Get-Command lua -errorAction silentlyContinue)) {
+  Write-Host "Error: Lua could not be found"
+  Write-Host "Installing lua"
+  winget install -e --id DEVCOM.Lua
+}
+
+if (-not (Get-Command npm -errorAction silentlyContinue)  ) {
+  Write-Host "Error: Node Package Manager could not be found"
+  Write-Host "Installing npm and node"
+  winget install -e --id OpenJS.NodeJS.LTS
+}
+
+if (-not (Get-Command tree-sitter -errorAction silentlyContinue)) {
+  Write-Host "Error: tree-sitter could not be found"
+  Write-Host "Installing tree-sitter"
+  winget install -e --id tree-sitter.tree-sitter-cli
+}
+
 if (-not (Get-Command nvim -errorAction silentlyContinue)) {
   Write-Host "Error: Neovim could not be found"
   Write-Host "Installing nvim"
@@ -74,9 +98,9 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\colors.lua $env:LOCALAPPDATA\nv
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\remap.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\lsp.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\tree.lua $env:LOCALAPPDATA\nvim\after\plugin\
-
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\treesitter.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\telescope.lua $env:LOCALAPPDATA\nvim\after\plugin\
+
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\tive.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\undotree.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\harpoon.lua $env:LOCALAPPDATA\nvim\after\plugin\

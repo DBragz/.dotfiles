@@ -28,9 +28,9 @@ local lspconfig = require('lspconfig')
 
 require('mason-lspconfig').setup({
   ensure_installed = {
-    'powershell_es',
     'lua_ls',
     'marksman',
+    'powershell_es',
   },
   handlers = {
     function(server_name)
