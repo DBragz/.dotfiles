@@ -4,6 +4,8 @@
 -- Author:      Daniel Ribeirinha-Braga
 --
 
+local builtin = require('telescope.builtin')
+
 vim.keymap.set("n", "<leader>th", ":Telescope help_tags<CR>")
 vim.keymap.set("n", "<leader>tf", ":Telescope find_files<CR>")
 vim.keymap.set("n", "<leader>tg", ":Telescope git_files<CR>")
@@ -11,15 +13,7 @@ vim.keymap.set("n", "<leader>td", ":Telescope diagnostics<CR>")
 vim.keymap.set("n", "<leader>tl", ":Telescope lsp_references<CR>")
 vim.keymap.set("n", "<leader>tlg", ":Telescope live_grep<CR>")
 
-HOME = ""
-
-if os.getenv("HOME") ~= nil then
-  HOME = tostring(os.getenv("HOME"))
-  vim.keymap.set('n', '<leader>tgr', function()
-    require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ")})
-  end, { desc = "telescope.builtin.grep_string" })
-else
-  HOME = tostring(os.getenv("HOMEPATH"))
-  print("No grep_string :(")
-end
-
+vim.keymap.set("n", "<leader>tlg", builtin.live_grep, { desc = "Telescope: Live grep" })
+vim.keymap.set("n", "<leader>tgr", function()
+  builtin.grep_string({ search = vim.fn.input("Grep > ") })
+end, { desc = "Telescope: Grep string" })

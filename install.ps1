@@ -119,7 +119,6 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\treesitter.lua $env:LOCALAPPDAT
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\telescope.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\tive.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\undotree.lua $env:LOCALAPPDATA\nvim\after\plugin\
-
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\harpoon.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\comment.lua $env:LOCALAPPDATA\nvim\after\plugin\
 
