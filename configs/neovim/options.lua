@@ -6,7 +6,7 @@
 
 HOME = ""
 
-if os.getenv("HOME") ~= nil then
+if vim.fn.has('win32') == 1 or vim.fn.has('win64') == 1 then
   HOME = tostring(os.getenv("HOME"))
   print("Unix")
 else

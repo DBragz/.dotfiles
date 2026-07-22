@@ -54,5 +54,6 @@ require("lazy").setup({
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
   'tpope/vim-fugitive',
+  'mbbill/undotree',
 })
 

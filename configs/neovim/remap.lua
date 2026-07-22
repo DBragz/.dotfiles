@@ -13,6 +13,7 @@ vim.keymap.set("n", "<leader>so", ":so<CR>")
 vim.keymap.set("n", "<leader>w", ":w<CR>")
 vim.keymap.set("n", "<leader>x", ":x<CR>")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
+vim.keymap.set("n", "<leader>ch", ":checkhealth<CR>")
 vim.keymap.set("n", "<leader>ls", ":Lazy Sync<CR>")
 
 vim.keymap.set("n", "<leader>sn", "]s", { desc = "Next spelling error" })

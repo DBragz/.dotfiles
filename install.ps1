@@ -34,7 +34,6 @@ if (-not (Get-Command scoop -errorAction SilentlyContinue)) {
   Write-Host "Error: Scoop could not be found"
   Write-Host "Installing scoop"
   Invoke-WebRequest -useb get.scoop.sh | Invoke-Expression
-  scoop bucket add extras
   scoop bucket add versions
 }
 
@@ -53,10 +52,10 @@ if (-not (Get-Command choco -errorAction SilentlyContinue)) {
   }
 }
 
-if (-not (Get-Command rg -errorAction silentlyContinue)) {
-  Write-Host "Error: ripgrep could not be found"
-  Write-Host "Installing rg"
-  choco install ripgrep
+if (-not (Get-Command gcc -errorAction silentlyContinue)) {
+  Write-Host "Error: GNU Compiler Collection could not be found"
+  Write-Host "Installing gcc"
+  scoop install gcc
 }
 
 if (-not (Get-Command lua -errorAction silentlyContinue)) {
@@ -69,6 +68,24 @@ if (-not (Get-Command npm -errorAction silentlyContinue)  ) {
   Write-Host "Error: Node Package Manager could not be found"
   Write-Host "Installing npm and node"
   winget install -e --id OpenJS.NodeJS.LTS
+}
+
+if (-not (Get-Command 7z -errorAction silentlyContinue)) {
+  Write-Host "Error: 7-Zip could not be found"
+  Write-Host "Installing 7z"
+  scoop install 7z
+}
+
+if (-not (Get-Command rg -errorAction silentlyContinue)) {
+  Write-Host "Error: ripgrep could not be found"
+  Write-Host "Installing rg"
+  scoop install ripgrep
+}
+
+if (-not (Get-Command fd -errorAction silentlyContinue)) {
+  Write-Host "Error: fd could not be found"
+  Write-Host "Installing fd"
+  scoop install fd
 }
 
 if (-not (Get-Command tree-sitter -errorAction silentlyContinue)) {
@@ -100,9 +117,9 @@ Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\lsp.lua $env:LOCALAPPDATA\nvim\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\tree.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\treesitter.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\telescope.lua $env:LOCALAPPDATA\nvim\after\plugin\
-
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\tive.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\undotree.lua $env:LOCALAPPDATA\nvim\after\plugin\
+
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\harpoon.lua $env:LOCALAPPDATA\nvim\after\plugin\
 Copy-Item $env:HOMEPATH\.dotfiles\configs\neovim\comment.lua $env:LOCALAPPDATA\nvim\after\plugin\
 
