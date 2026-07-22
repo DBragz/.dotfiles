@@ -55,5 +55,10 @@ require("lazy").setup({
   },
   'tpope/vim-fugitive',
   'mbbill/undotree',
+  {
+    'ThePrimeagen/harpoon',
+    branch = 'harpoon2',
+    dependencies = { 'nvim-lua/plenary.nvim' }
+  },
 })
 
