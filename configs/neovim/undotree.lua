@@ -16,3 +16,4 @@ if vim.fn.has('win32') == 1 or vim.fn.has('win64') == 1 then
   end
 end
 
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "Toggle Undotree" })

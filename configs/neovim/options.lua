@@ -8,10 +8,10 @@ HOME = ""
 
 if vim.fn.has('win32') == 1 or vim.fn.has('win64') == 1 then
   HOME = tostring(os.getenv("HOME"))
-  print("Unix")
+  print("Windows")
 else
   HOME = tostring(os.getenv("HOMEPATH"))
-  print("Windows")
+  print("Unix")
 end
 
 vim.opt.ts = 2

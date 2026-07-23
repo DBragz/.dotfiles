@@ -52,6 +52,12 @@ if (-not (Get-Command choco -errorAction SilentlyContinue)) {
   }
 }
 
+if (-not (Get-Command pwsh -errorAction SilentlyContinue)) {
+  Write-Host "Error: PowerShell 7 not found"
+  Write-Host "Installing pwsh"
+  winget install -e --id Microsoft.PowerShell
+}
+
 if (-not (Get-Command gcc -errorAction silentlyContinue)) {
   Write-Host "Error: GNU Compiler Collection could not be found"
   Write-Host "Installing gcc"
@@ -159,12 +165,6 @@ if (-not (Get-Command oh-my-posh -errorAction SilentlyContinue)) {
   Write-Host "Error: Oh My Posh could not be found"
   Write-Host "Installing oh-my-posh"
   winget install -e --id JanDeDobbeleer.OhMyPosh -s winget
-}
-
-if (-not (Get-Command pwsh -errorAction SilentlyContinue)) {
-  Write-Host "Error: PowerShell 7 not found"
-  Write-Host "Installing pwsh"
-  winget install -e --id Microsoft.PowerShell
 }
 
 if (-not (Get-Command fzf -errorAction silentlyContinue)) {

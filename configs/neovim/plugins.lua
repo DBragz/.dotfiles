@@ -60,5 +60,12 @@ require("lazy").setup({
     branch = 'harpoon2',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
+  {
+    'echasnovski/mini.comment',
+    version = false,
+    event = 'VeryLazy',
+    config = function()
+    end,
+  },
 })
 
