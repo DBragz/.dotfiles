@@ -205,12 +205,13 @@ if (-not (Get-Command gh -errorAction silentlyContinue)) {
   winget install -e --id GitHub.cli
 }
 
-# Personal development tools - skip if org mode is MITLL
 if ($org -ne 'MITLL') {
   if (-not (Get-Command code -errorAction silentlyContinue)) {
     Write-Host "Error: Visual Studio Code could not be found"
     Write-Host "Installing code"
     winget install -e --id Microsoft.VisualStudioCode
+
+    Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\vscode.json $env:HOMEPATH\AppData\Roaming\Code\User\settings.json
   }
 
   if (-not (Get-Command cursor -errorAction silentlyContinue)) {
@@ -230,8 +231,6 @@ if ($org -ne 'MITLL') {
   if (-not (Test-Path $env:HOMEPATH\AppData\Roaming\Code\User\ -PathType Container)) {
     New-Item -Type Directory -Path $env:HOMEPATH\AppData\Roaming\Code\User\
   }
-
-  Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\vscode.json $env:HOMEPATH\AppData\Roaming\Code\User\settings.json
 } 
 
 Write-Host "Completed Windows 11 install script"
