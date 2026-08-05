@@ -189,7 +189,7 @@ if (-not (Test-Path $env:USERPROFILE\Documents\PowerShell\)) {
   New-Item -Type Directory $env:USERPROFILE\Documents\PowerShell\
 }
 
-Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\Microsoft.PowerShell_profile.ps1 $env:USERPROFILE\OneDrive\Documents\PowerShell\
+Copy-Item $env:HOMEPATH\.dotfiles\configs\profiles\Microsoft.PowerShell_profile.ps1 $PROFILE
 
 Copy-Item $env:HOMEPATH\.dotfiles\configs\windows_terminal\terminal.json "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
 
