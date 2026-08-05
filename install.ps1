@@ -42,7 +42,7 @@ if (-not (Get-Command choco -errorAction SilentlyContinue)) {
   Write-Host "Installing choco"
   if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     Set-ExecutionPolicy Bypass -Scope Process -Force
-    [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+    [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
     Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
   }
   else {
@@ -147,6 +147,7 @@ if (-not (Get-Command starship -errorAction silentlyContinue)) {
   Write-Host "Error: Starship could not be found"
   Write-Host "Installing starship"
   winget install -e --id Starship.Starship
+  starship preset no-nerd-font -o "$env:USERPROFILE\.config\starship.toml"
 }
 
 if (-not (Test-Path 'C:\Program Files (x86)\clink\' )) {

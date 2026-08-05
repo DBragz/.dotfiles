@@ -7,7 +7,7 @@
   Author: Daniel Ribeirinha-Braga
 #>
 
-Set-Alias -Name h -Value help
+Set-Alias -Name he -Value help
 Set-Alias -Name l -Value Get-ChildItem
 Set-Alias -Name c -Value Clear-Host
 
