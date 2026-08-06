@@ -46,8 +46,8 @@ if (-not (Get-Command choco -errorAction SilentlyContinue)) {
     Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
   }
   else {
-    Write-Host "Error: Not running as an Administrator."
-    Write-Host "Terminating program."
+    Write-Host "Error: Not running as an Administrator"
+    Write-Host "Terminating program"
     exit
   }
 }
@@ -56,6 +56,62 @@ if (-not (Get-Command pwsh -errorAction SilentlyContinue)) {
   Write-Host "Error: PowerShell 7 not found"
   Write-Host "Installing pwsh"
   winget install -e --id Microsoft.PowerShell
+}
+
+$powerToysInstalled = Get-ItemProperty -Path @(
+    "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*",
+    "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*",
+    "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*"
+) -ErrorAction SilentlyContinue | Where-Object { $_.DisplayName -like "*PowerToys*" }
+
+if (-not $powerToysInstalled) {
+    Write-Host "Error: Microsoft PowerToys could not be found"
+    Write-Host "Installing Microsoft.PowerToys"
+    winget install --id Microsoft.PowerToys --silent --accept-source-agreements --accept-package-agreements
+}
+
+$NerdFontsUrl = "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.zip"
+$TempDir      = Join-Path $env:TEMP "MesloLGSNFInstall"
+$ZipPath      = Join-Path $TempDir "Meslo.zip"
+$FontsDir     = "$env:WINDIR\Fonts"
+$RegPath      = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts"
+
+$existingFonts = Get-ChildItem -Path $FontsDir -Filter "*Meslo*" -ErrorAction SilentlyContinue
+$existingRegEntries = Get-ItemProperty -Path $RegPath -ErrorAction SilentlyContinue |
+    Get-Member -MemberType NoteProperty |
+    Where-Object { $_.Name -like "*Meslo*" }
+
+if ((-not $existingFonts) -and (-not $existingRegEntries)) {
+  Write-Host "Error: MesloLGS Nerd Fonts not found"
+  Write-Host "Downloading and installing Meslo"
+
+  New-Item -ItemType Directory -Path $TempDir -Force | Out-Null
+  Invoke-WebRequest -Uri $NerdFontsUrl -OutFile $ZipPath -UseBasicParsing
+
+  Add-Type -AssemblyName System.IO.Compression.FileSystem
+  [System.IO.Compression.ZipFile]::ExtractToDirectory($ZipPath, $TempDir)
+
+  Get-ChildItem -Path $TempDir -Recurse -Include *.ttf | ForEach-Object {
+    $dest = Join-Path $FontsDir $_.Name
+    if (-not (Test-Path $dest)) {
+      Copy-Item $_.FullName $dest -Force
+    }
+
+    $shell  = New-Object -ComObject Shell.Application
+    $folder = $shell.Namespace($_.DirectoryName)
+    $file   = $folder.ParseName($_.Name)
+    $fontName = $folder.GetDetailsOf($file, 21)
+    if ([string]::IsNullOrWhiteSpace($fontName)) {
+      $fontName = [System.IO.Path]::GetFileNameWithoutExtension($_.Name)
+    }
+
+    $regValueName = "$fontName (TrueType)"
+    if (-not (Get-ItemProperty -Path $RegPath -Name $regValueName -ErrorAction SilentlyContinue)) {
+      New-ItemProperty -Path $RegPath -Name $regValueName -Value $_.Name -PropertyType String -Force | Out-Null
+    }
+  }
+
+  Remove-Item -Path $TempDir -Recurse -Force -ErrorAction SilentlyContinue
 }
 
 if (-not (Get-Command gcc -errorAction silentlyContinue)) {
